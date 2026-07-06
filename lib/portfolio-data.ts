@@ -210,28 +210,11 @@ export const contact = {
 
 export const toolCategories: ToolCategory[] = [
   {
-    title: "Desarrollo, código y despliegue",
-    items: [
-      "GitHub",
-      "Vercel",
-      "Node.js",
-      "HTML",
-      "CSS",
-      "SCSS",
-      "JavaScript",
-      "TypeScript",
-      "PHP",
-      "Next.js",
-      "OpenCode",
-      "GitHub Copilot",
-    ],
+    title: "Publicidad digital",
+    items: ["Meta Ads", "Google Ads", "Google Merchant Center"],
   },
   {
-    title: "Ecommerce",
-    items: ["Shopify", "Google Merchant Center", "Catálogo digital", "WordPress"],
-  },
-  {
-    title: "Analítica y medición",
+    title: "Analítica, tracking y medición",
     items: [
       "Google Analytics 4",
       "Google Tag Manager",
@@ -239,10 +222,6 @@ export const toolCategories: ToolCategory[] = [
       "Microsoft Clarity",
       "Looker Studio",
     ],
-  },
-  {
-    title: "Publicidad digital",
-    items: ["Meta Ads", "Google Ads"],
   },
   {
     title: "Inteligencia Artificial y automatización",
@@ -257,6 +236,27 @@ export const toolCategories: ToolCategory[] = [
       "n8n",
       "Chatbots",
       "AI Operations",
+    ],
+  },
+  {
+    title: "Ecommerce y CMS",
+    items: ["Shopify", "Catálogo digital", "WordPress"],
+  },
+  {
+    title: "Desarrollo, código y despliegue",
+    items: [
+      "GitHub",
+      "Vercel",
+      "Node.js",
+      "HTML",
+      "CSS",
+      "SCSS",
+      "JavaScript",
+      "TypeScript",
+      "PHP",
+      "Next.js",
+      "OpenCode",
+      "GitHub Copilot",
     ],
   },
   {
