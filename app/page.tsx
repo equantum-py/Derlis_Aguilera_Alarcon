@@ -16,6 +16,14 @@ const workflow = [
   "Decisión",
 ];
 
+const contact = {
+  email: "derlisa567@gmail.com",
+  whatsapp: "595985194953",
+  whatsappLabel: "0985194953",
+  linkedin:
+    "https://www.linkedin.com/in/derlis-alexander-aguilera?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+};
+
 const metrics = [
   ["Ecommerce Management", 94],
   ["AI Operations", 88],
@@ -26,6 +34,14 @@ const metrics = [
 export default function Home() {
   return (
     <main>
+      <a
+        className="mobile-whatsapp"
+        href={`https://wa.me/${contact.whatsapp}`}
+        aria-label="Contactar por WhatsApp"
+      >
+        WhatsApp
+      </a>
+
       <nav className="nav">
         <a className="brand" href="#top">
           Derlis Aguilera
@@ -42,21 +58,17 @@ export default function Home() {
           <p className="eyebrow">
             Ecommerce Strategy & AI Operations Specialist
           </p>
-          <h1>
-            Operación ecommerce, estrategia digital y automatización con
-            criterio de negocio.
-          </h1>
+          <h1>Ecommerce, estrategia digital y operaciones con IA.</h1>
           <p className="hero-copy">
-            Soy Derlis Aguilera. Trabajo con canales digitales, equipos
-            comerciales y datos para ordenar la operación, mejorar la conversión
-            y encontrar oportunidades reales de crecimiento.
+            Soy Derlis Aguilera. Ayudo a ordenar canales ecommerce, medir mejor
+            y automatizar tareas para vender con más claridad.
           </p>
           <div className="actions">
-            <a className="button primary" href="#projects">
-              Ver casos
+            <a className="button primary" href={`https://wa.me/${contact.whatsapp}`}>
+              WhatsApp
             </a>
-            <a className="button" href="#contact">
-              Contactar
+            <a className="button" href="#projects">
+              Ver casos
             </a>
           </div>
         </Reveal>
@@ -64,10 +76,7 @@ export default function Home() {
         <Reveal delay={0.08}>
           <aside className="intro-card">
             <span className="portrait">DA</span>
-            <p>
-              Más de 6 años trabajando entre ecommerce, ventas, analítica y back
-              office digital.
-            </p>
+            <p>+6 años entre ecommerce, ventas, analítica y operación digital.</p>
             <ul>
               {focusAreas.map((area) => (
                 <li key={area}>{area}</li>
@@ -93,25 +102,20 @@ export default function Home() {
         <Reveal>
           <div>
             <p className="eyebrow">Sobre mí</p>
-            <h2>
-              Un perfil orientado a ordenar, medir y hacer crecer canales
-              digitales.
-            </h2>
+            <h2>Ordenar, medir y mejorar canales digitales.</h2>
           </div>
         </Reveal>
 
         <Reveal>
           <div className="prose">
             <p>
-              Mi experiencia combina operación ecommerce, análisis comercial,
-              coordinación de equipos y adopción práctica de IA. Me interesa que
-              la tecnología ayude a vender mejor, reducir tareas repetitivas y
-              tomar decisiones con información más clara.
+              Combino operación ecommerce, análisis comercial, coordinación de
+              equipos y uso práctico de IA. La prioridad es simple: vender mejor,
+              reducir trabajo repetitivo y decidir con datos claros.
             </p>
             <p>
-              He trabajado en Inverfin S.A.E.C.A., Fortis Mayorista, Teo S.A. y
-              Casa Paraná, con responsabilidades que van desde gestión de
-              catálogo y Shopify hasta reporting, procesos comerciales y
+              Trabajé en Inverfin S.A.E.C.A., Fortis Mayorista, Teo S.A. y Casa
+              Paraná, conectando catálogo, reporting, procesos comerciales y
               seguimiento de KPIs.
             </p>
           </div>
@@ -121,10 +125,7 @@ export default function Home() {
       <section className="section" id="experience">
         <Reveal>
           <p className="eyebrow">Experiencia laboral</p>
-          <h2>
-            Una evolución ligada al ecommerce, la operación y la estrategia
-            digital.
-          </h2>
+          <h2>Experiencia en ecommerce, operación y estrategia digital.</h2>
         </Reveal>
 
         <div className="timeline">
@@ -150,7 +151,7 @@ export default function Home() {
       <section className="section metrics-section">
         <Reveal>
           <p className="eyebrow">KPI Impact</p>
-          <h2>Indicadores personales de especialización.</h2>
+          <h2>Áreas de especialización.</h2>
         </Reveal>
 
         <div className="metrics-card">
@@ -169,19 +170,45 @@ export default function Home() {
       <section className="section" id="projects">
         <Reveal>
           <p className="eyebrow">Proyectos y casos</p>
-          <h2>Trabajo presentado como problema, acción y resultado.</h2>
+          <h2>Casos resumidos para lectura rápida.</h2>
         </Reveal>
 
         <div className="project-grid">
           {projects.map((project) => (
             <Reveal key={project.title}>
               <article className="project-card">
+                <div className="project-image-wrap">
+                  <img
+                    src={project.image}
+                    alt={`Captura del proyecto ${project.title}`}
+                    className="project-image"
+                  />
+                </div>
+
                 <div className="project-topline">
                   <span>{project.metric}</span>
-                  <p>{project.stack.join(" · ")}</p>
+                  <a
+                    href={`https://${project.website}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {project.website}
+                  </a>
                 </div>
+
                 <h3>{project.title}</h3>
+                <p className="project-role">{project.role}</p>
+                <p className="project-ownership">{project.ownership}</p>
                 <p className="project-description">{project.description}</p>
+
+                <div
+                  className="project-tags"
+                  aria-label={`Stack de ${project.title}`}
+                >
+                  {project.stack.map((tech) => (
+                    <span key={tech}>{tech}</span>
+                  ))}
+                </div>
 
                 <dl className="case-list">
                   <div>
@@ -197,6 +224,15 @@ export default function Home() {
                     <dd>{project.result}</dd>
                   </div>
                 </dl>
+
+                <a
+                  className="case-link"
+                  href={`https://${project.website}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Ver caso
+                </a>
               </article>
             </Reveal>
           ))}
@@ -241,8 +277,8 @@ export default function Home() {
           <p className="eyebrow">Criterio de crecimiento</p>
           <h2>Cómo entiendo el crecimiento digital</h2>
           <p>
-            No miro solamente ROAS. Analizo margen, conversión, experiencia de
-            usuario, capacidad operativa y rentabilidad.
+            Crecimiento digital es vender mejor, operar con menos fricción y
+            cuidar la rentabilidad.
           </p>
         </Reveal>
       </section>
@@ -250,35 +286,26 @@ export default function Home() {
       <section className="section contact" id="contact">
         <Reveal>
           <p className="eyebrow">Contacto</p>
-          <h2>
-            Si tu ecommerce necesita más orden, medición o automatización,
-            conversemos.
-          </h2>
+          <h2>¿Tu ecommerce necesita más orden, medición o automatización?</h2>
           <p>
-            Puedo ayudar en estrategia, operación Shopify, análisis comercial y
-            adopción práctica de IA.
+            Conversemos sobre estrategia ecommerce, analítica, Shopify y
+            operaciones con IA.
           </p>
 
           <div className="contact-links">
-            <a href="mailto:derlisa567@gmail.com">Email</a>
-            <a
-              href="https://www.linkedin.com/in/derlis-alexander-aguilera"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={`https://wa.me/${contact.whatsapp}`}>WhatsApp</a>
+            <a href={`mailto:${contact.email}`}>Email</a>
+            <a href={contact.linkedin} target="_blank" rel="noreferrer">
               LinkedIn
-            </a>
-            <a
-              href="https://github.com/equantum-py"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
             </a>
           </div>
 
-          <a className="button primary" href="mailto:derlisa567@gmail.com">
-            Trabajemos juntos
+          <p className="contact-detail">
+            {contact.whatsappLabel} · {contact.email}
+          </p>
+
+          <a className="button primary" href={`https://wa.me/${contact.whatsapp}`}>
+            Escribirme por WhatsApp
           </a>
         </Reveal>
       </section>

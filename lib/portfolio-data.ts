@@ -7,6 +7,10 @@ export type Experience = {
 
 export type Project = {
   title: string;
+  website: string;
+  image: string;
+  role: string;
+  ownership: string;
   description: string;
   stack: string[];
   problem: string;
@@ -26,6 +30,7 @@ export const experiences: Experience[] = [
       "Supervisión en tiempo real de stocks y actualización dinámica de precios para mantener coherencia comercial en el canal digital.",
       "Implementación y configuración de plugins de Shopify para mejorar funcionalidad, experiencia de usuario y conversión.",
       "Ejecución de acciones de posicionamiento SEO dentro de la plataforma para mejorar la visibilidad de productos en buscadores.",
+      "Implementación de automatizaciones, IA, chatbots y flujos operativos para mejorar la atención digital y reducir tareas repetitivas.",
       "Dirección de la estrategia de ecommerce y análisis de mercado para acompañar la expansión digital de la marca.",
       "Supervisión de operaciones de venta online y coordinación de equipos para el cumplimiento de KPIs comerciales.",
     ],
@@ -35,6 +40,8 @@ export const experiences: Experience[] = [
     role: "Ecommerce Manager",
     period: "2023 – 2025",
     impact: [
+      "Participación desde la etapa inicial hasta la publicación final del ecommerce mayorista.",
+      "Coordinación de estructura de catálogo, carga de productos, pruebas funcionales y revisión de experiencia de usuario.",
       "Mantenimiento y optimización de la página web para mejorar la conversión y la satisfacción del cliente.",
       "Desarrollo e implementación de estrategias de marketing digital, incluyendo SEO, SEM, email marketing y redes sociales.",
       "Supervisión del catálogo de productos, incluyendo descripciones, imágenes y precios.",
@@ -69,57 +76,89 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
-    title: "Dashboard Ejecutivo Inverfin",
+    title: "Inverfin Ecommerce",
+    website: "inverfin.com.py",
+    image: "/projects/inverfin.jpg",
+    role: "Ecommerce Strategy & Operations",
+    ownership:
+      "Sitio creado por otros desarrolladores. Optimización, operación y crecimiento ecommerce a mi cargo.",
     description:
-      "Vista de indicadores comerciales para seguimiento de ventas, operación y prioridades.",
-    stack: ["Excel", "Analytics", "BI"],
+      "Operación y optimización ecommerce sobre Shopify, con foco en catálogo, SEO, automatización, IA, chatbots, n8n, analítica y mejora comercial.",
+    stack: [
+      "Shopify",
+      "SEO",
+      "IA",
+      "Chatbots",
+      "n8n",
+      "Analytics",
+      "Ecommerce Operations",
+    ],
     problem:
-      "La información clave estaba distribuida y costaba convertirla en una lectura clara para dirección.",
+      "El canal necesitaba mayor orden operativo, mejor visibilidad, automatización y una gestión más estratégica sobre Shopify.",
     action:
-      "Ordené los indicadores por ventas, conversión, margen y operación para facilitar reuniones y seguimiento.",
+      "Implementé mejoras de catálogo, SEO, configuración de apps, automatización, uso de IA, chatbots, flujos operativos y análisis de rendimiento.",
     result:
-      "El equipo puede revisar el estado del canal con mayor claridad y decidir próximos pasos con menos fricción.",
-    metric: "Lectura ejecutiva",
+      "El ecommerce cuenta con una operación más ordenada, mejor capacidad de atención digital y una base más sólida para crecer.",
+    metric: "Optimización ecommerce",
   },
   {
-    title: "Automatización IA WhatsApp",
+    title: "Fortis Ecommerce Mayorista",
+    website: "fortis.com.py",
+    image: "/projects/fortis.jpg",
+    role: "Ecommerce Manager",
+    ownership:
+      "Desarrollo realizado por otros desarrolladores. Participación desde etapa inicial hasta publicación final.",
     description:
-      "Flujo de trabajo para clasificar imágenes y consultas frecuentes de forma asistida.",
-    stack: ["AI", "AWS S3", "Automatización"],
+      "Participación integral en el lanzamiento del primer ecommerce mayorista en Paraguay, desde la visión operativa y comercial.",
+    stack: [
+      "Desarrollo Web",
+      "Ecommerce B2B",
+      "Catálogo",
+      "Analytics",
+      "Growth",
+    ],
     problem:
-      "Las consultas repetitivas consumían tiempo y hacían más lenta la respuesta del equipo comercial.",
+      "El negocio necesitaba llevar su operación mayorista a un canal digital ordenado, funcional y preparado para clientes B2B.",
     action:
-      "Definí una arquitectura para recibir imágenes, organizar archivos y preparar respuestas o derivaciones.",
+      "Acompañé la creación desde el inicio, coordinando estructura de catálogo, pruebas funcionales, revisión de experiencia, carga de productos y preparación comercial.",
     result:
-      "La operación queda mejor preparada para atender más consultas sin depender únicamente de tareas manuales.",
-    metric: "Menos carga manual",
+      "Se publicó un canal ecommerce mayorista con una base operativa clara para ventas digitales B2B.",
+    metric: "Primer ecommerce mayorista",
   },
   {
-    title: "Cooperativa Vida y Luz",
+    title: "Marmolería Pietra",
+    website: "marmoleriapietra.com",
+    image: "/projects/marmoleria-pietra.jpg",
+    role: "Creación web y estrategia digital",
+    ownership: "Proyecto creado y desarrollado por mí/eQuantum.",
     description:
-      "Diseño de una base digital para ordenar la gestión de socios y procesos internos.",
-    stack: ["Next.js", "PostgreSQL", "Prisma"],
+      "Creación de sitio web institucional para fortalecer presencia digital, presentar servicios y generar consultas comerciales.",
+    stack: ["Web Design", "Desarrollo Web", "UX", "SEO", "Captación"],
     problem:
-      "La administración necesitaba una estructura más ordenada para datos, procesos y trazabilidad.",
+      "La marca necesitaba una presencia digital profesional para mostrar trabajos, servicios y generar confianza.",
     action:
-      "Planteé una arquitectura simple para centralizar información, roles y flujos administrativos.",
+      "Diseñé y desarrollé una web clara, visual y orientada a servicios, con estructura comercial y llamadas a la acción.",
     result:
-      "El proyecto cuenta con una base más clara para crecer sin perder control operativo.",
-    metric: "Gestión ordenada",
+      "La empresa cuenta con una presencia digital más profesional y un canal más claro para recibir consultas.",
+    metric: "Sitio creado desde cero",
   },
   {
-  title: "Fortis Ecommerce",
-  description:
-    "Gestión y mejora operativa de un canal ecommerce desarrollado a medida, con foco en catálogo, campañas, medición y experiencia de usuario.",
-  stack: ["Desarrollo Web", "Analytics", "Growth"],
-  problem:
-    "El canal necesitaba mayor consistencia entre catálogo, comunicación comercial, medición, experiencia de usuario y atención al cliente.",
-  action:
-    "Organicé rutinas de actualización, revisión de métricas, mejora de contenidos y coordinación con áreas comerciales y técnicas.",
-  result:
-    "El ecommerce ganó mayor orden operativo, mejor lectura de oportunidades y una gestión más alineada a los objetivos comerciales.",
-  metric: "Canal más consistente",
-},
+    title: "Corpicia",
+    website: "corpicia.com.py",
+    image: "/projects/corpicia.jpg",
+    role: "Creación web, analítica y captación digital",
+    ownership: "Proyecto creado y desarrollado por mí/eQuantum.",
+    description:
+      "Creación de sitio web institucional con foco en presentación de servicios, captación de prospectos y medición comercial.",
+    stack: ["Web Design", "Desarrollo Web", "Analytics", "SEO", "Captación"],
+    problem:
+      "La empresa necesitaba ordenar su presencia digital y mejorar la forma de presentar sus servicios.",
+    action:
+      "Desarrollé la estructura web, contenidos, experiencia de navegación y base de medición para acompañar acciones comerciales.",
+    result:
+      "Corpicia cuenta con una web más clara, profesional y preparada para captar y medir oportunidades comerciales.",
+    metric: "Presencia digital creada",
+  },
 ];
 
 export const stack = [
@@ -130,6 +169,8 @@ export const stack = [
   "Looker Studio",
   "Claude",
   "ChatGPT",
+  "n8n",
+  "Chatbots",
   "GitHub",
   "JavaScript",
   "HTML",
