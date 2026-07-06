@@ -1,0 +1,218 @@
+/* Visual refinement layer: agency-style AI/performance look without changing structure */
+:root {
+  --surface-glass: color-mix(in srgb, var(--surface) 88%, transparent);
+  --surface-glow: rgba(53, 92, 222, 0.08);
+}
+
+body::before {
+  opacity: 1;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(53, 92, 222, 0.14), transparent 24%),
+    radial-gradient(circle at 88% 10%, rgba(53, 92, 222, 0.10), transparent 26%),
+    radial-gradient(circle at 76% 70%, rgba(53, 92, 222, 0.08), transparent 28%),
+    linear-gradient(120deg, transparent 0%, rgba(53, 92, 222, 0.035) 50%, transparent 100%);
+}
+
+body::after {
+  opacity: 0.28;
+  background-image:
+    radial-gradient(circle, rgba(53, 92, 222, 0.2) 1px, transparent 1.6px),
+    linear-gradient(rgba(53, 92, 222, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(53, 92, 222, 0.075) 1px, transparent 1px);
+  background-size:
+    72px 72px,
+    72px 72px,
+    72px 72px;
+  mask-image: radial-gradient(circle at center, black, transparent 76%);
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.nav {
+  border-radius: 999px;
+  margin-top: 14px;
+  padding: 14px 18px;
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  background: color-mix(in srgb, var(--surface) 78%, transparent);
+  box-shadow: 0 14px 36px rgba(23, 23, 23, 0.055);
+}
+
+.hero {
+  min-height: 620px;
+  gap: 48px;
+  padding-top: 56px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border: 1px solid rgba(53, 92, 222, 0.18);
+  border-radius: 999px;
+  background: rgba(233, 238, 255, 0.7);
+  padding: 8px 12px;
+  line-height: 1.1;
+}
+
+.kpi-grid {
+  padding-top: 12px;
+  padding-bottom: 44px;
+}
+
+.intro-card,
+.kpi-card,
+.timeline-item,
+.metrics-card,
+.project-card,
+.workflow-card,
+.philosophy,
+.tool-card,
+.profile-photo-card {
+  background: var(--surface-glass);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 55px rgba(23, 23, 23, 0.055);
+}
+
+.kpi-card,
+.timeline-item,
+.project-card,
+.tool-card,
+.philosophy {
+  position: relative;
+  overflow: hidden;
+}
+
+.kpi-card::before,
+.timeline-item::before,
+.project-card::before,
+.tool-card::before,
+.philosophy::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 46%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(53, 92, 222, 0.45), transparent);
+}
+
+.kpi-card:hover,
+.timeline-item:hover,
+.project-card:hover,
+.tool-card:hover {
+  border-color: rgba(53, 92, 222, 0.24);
+  transform: translateY(-2px);
+  box-shadow: 0 24px 70px rgba(23, 23, 23, 0.075);
+}
+
+.timeline-item,
+.kpi-card,
+.project-card,
+.tool-card {
+  transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.button.primary {
+  box-shadow: 0 14px 28px rgba(53, 92, 222, 0.18);
+}
+
+.tool-card h3 {
+  color: var(--text);
+}
+
+.tool-list span {
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+}
+
+.company-logo-large {
+  max-width: 430px;
+  max-height: 152px;
+}
+
+.experience-logo {
+  max-width: 270px;
+  max-height: 96px;
+}
+
+.experience-logo[src*="logo-casa-parana"] {
+  max-width: 310px;
+  max-height: 114px;
+  transform: scale(1.34);
+  transform-origin: left center;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    border-radius: 24px;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 34px 0;
+  }
+
+  .nav {
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+  .hero {
+    gap: 22px;
+    padding-top: 28px;
+    padding-bottom: 18px;
+  }
+
+  .eyebrow {
+    padding: 7px 10px;
+    font-size: 10.5px;
+  }
+
+  .actions {
+    gap: 10px;
+  }
+
+  .profile-photo-wrap {
+    aspect-ratio: 4 / 5;
+    max-height: none;
+  }
+
+  .profile-photo {
+    object-position: center top;
+  }
+
+  .company-logo-large {
+    max-width: 300px;
+    max-height: 110px;
+  }
+
+  .experience-logo {
+    max-width: 235px;
+    max-height: 84px;
+  }
+
+  .experience-logo[src*="logo-casa-parana"] {
+    max-width: 265px;
+    max-height: 98px;
+    transform: scale(1.42);
+    transform-origin: left center;
+  }
+
+  .kpi-grid {
+    padding-top: 6px;
+    padding-bottom: 22px;
+  }
+
+  .timeline-item,
+  .project-card,
+  .tool-card,
+  .philosophy {
+    box-shadow: 0 14px 42px rgba(23, 23, 23, 0.052);
+  }
+}
