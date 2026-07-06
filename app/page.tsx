@@ -44,7 +44,10 @@ export default function Home() {
           </p>
 
           <div className="actions">
-            <a className="button primary" href={`https://wa.me/${contact.whatsapp}`}>
+            <a
+              className="button primary"
+              href={`https://wa.me/${contact.whatsapp}`}
+            >
               WhatsApp
             </a>
 
@@ -195,7 +198,11 @@ export default function Home() {
           </p>
 
           <div className="actions">
-            <a className="button primary" href="/cv/derlis-aguilera-cv.pdf" download>
+            <a
+              className="button primary"
+              href="/cv/derlis-aguilera-cv.pdf"
+              download
+            >
               Descargar CV
             </a>
 
@@ -236,7 +243,7 @@ export default function Home() {
           </p>
 
           <a
-            className="button primary"
+            className="button primary desktop-only"
             href={`https://wa.me/${contact.whatsapp}`}
           >
             Escribirme por WhatsApp
