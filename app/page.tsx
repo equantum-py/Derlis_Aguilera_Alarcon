@@ -138,7 +138,7 @@ export default function Home() {
                 className="company-logo company-logo-large"
               />
 
-              <span>Inverfin S.A.E.C.A.</span>
+              <span className="sr-only">Inverfin S.A.E.C.A.</span>
             </div>
           </div>
         </Reveal>
@@ -189,7 +189,7 @@ export default function Home() {
                     />
                   </div>
 
-                  <h3>{item.company}</h3>
+                  <h3 className="sr-only">{item.company}</h3>
                   <p>{item.role}</p>
                 </div>
               </article>
