@@ -3,6 +3,8 @@ export type Experience = {
   role: string;
   period: string;
   impact: string[];
+  logo: string;
+  logoAlt: string;
 };
 
 export type Project = {
@@ -29,6 +31,8 @@ export const experiences: Experience[] = [
     company: "Inverfin S.A.E.C.A.",
     role: "Ecommerce Strategy & Operations",
     period: "abril 2025 – Actualidad",
+    logo: "/logo/logo-inverfin.png",
+    logoAlt: "Logo de Inverfin S.A.E.C.A.",
     impact: [
       "Plataforma principal: gestión integral y optimización avanzada sobre Shopify.",
       "Responsable de la carga masiva y actualización técnica de productos, asegurando la integridad de imágenes, descripciones optimizadas y categorización estratégica.",
@@ -44,6 +48,8 @@ export const experiences: Experience[] = [
     company: "Fortis Mayorista",
     role: "Ecommerce Manager",
     period: "2023 – 2025",
+    logo: "/logo/logo-fortis.png",
+    logoAlt: "Logo de Fortis Mayorista",
     impact: [
       "Participación desde la etapa inicial hasta la publicación final del ecommerce mayorista.",
       "Coordinación de estructura de catálogo, carga de productos, pruebas funcionales y revisión de experiencia de usuario.",
@@ -57,6 +63,8 @@ export const experiences: Experience[] = [
     company: "Teo S.A. Agencia de Desarrollo Web/App",
     role: "Account Manager Ecommerce | Back Office",
     period: "2021 – 2023",
+    logo: "/logo/logo-teo-sa.jpg",
+    logoAlt: "Logo de Teo S.A.",
     impact: [
       "Gestión comercial y mantenimiento de relaciones estratégicas con clientes.",
       "Control de facturación, cobros y seguimiento de reportes mensuales.",
@@ -68,6 +76,8 @@ export const experiences: Experience[] = [
     company: "Casa Paraná",
     role: "Supervisor de Ventas Digitales | Back Office Ecommerce",
     period: "2019 – 2021",
+    logo: "/logo/logo-casa-parana.jpg",
+    logoAlt: "Logo de Casa Paraná",
     impact: [
       "Administración integral del backend de la tienda online, asegurando la disponibilidad y el correcto funcionamiento del flujo de compra.",
       "Soporte técnico y atención tanto a usuarios internos como a clientes finales para resolver incidencias en la plataforma.",
