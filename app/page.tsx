@@ -1,5 +1,5 @@
-import { Reveal } from "@/components/reveal";
-import { experiences, kpis, projects, stack } from "@/lib/portfolio-data";
+import { Reveal } from "../components/reveal";
+import { experiences, kpis, projects, stack } from "../lib/portfolio-data";
 
 const focusAreas = [
   "Ecommerce management",
