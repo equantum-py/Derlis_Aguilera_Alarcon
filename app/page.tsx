@@ -1,78 +1,286 @@
 import { Reveal } from "@/components/reveal";
 import { experiences, kpis, projects, stack } from "@/lib/portfolio-data";
 
-const architectureNodes = ["Canales", "Data", "Automatización", "AI Ops", "Decisión"];
+const focusAreas = [
+  "Ecommerce management",
+  "Shopify operations",
+  "Analítica comercial",
+  "Automatización con IA",
+];
+
+const workflow = [
+  "Canal digital",
+  "Datos de operación",
+  "Automatización",
+  "Lectura comercial",
+  "Decisión",
+];
+
+const metrics = [
+  ["Ecommerce Management", 94],
+  ["AI Operations", 88],
+  ["Business Intelligence", 86],
+  ["Digital Growth", 90],
+] as const;
 
 export default function Home() {
   return (
     <main>
-      <nav className="nav glass">
-        <strong>Derlis Aguilera</strong>
-        <div><a href="#projects">Proyectos</a><a href="#contact">Contacto</a></div>
+      <nav className="nav">
+        <a className="brand" href="#top">
+          Derlis Aguilera
+        </a>
+        <div>
+          <a href="#experience">Experiencia</a>
+          <a href="#projects">Casos</a>
+          <a href="#contact">Contacto</a>
+        </div>
       </nav>
 
-      <section className="hero section">
-        <div className="gradient" />
+      <section className="hero section" id="top">
         <Reveal>
-          <span className="eyebrow">Ecommerce Strategy & AI Operations Specialist</span>
-          <h1>Derlis Aguilera</h1>
-          <p className="subtitle">Ecommerce Strategy<br />AI Operations<br />Digital Growth</p>
-          <p className="hero-copy">Ayudo a empresas a escalar ecommerce mediante estrategia, automatización e inteligencia artificial.</p>
-          <div className="actions"><a className="button primary" href="#projects">Ver Proyectos</a><a className="button" href="#contact">Contactar</a></div>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <div className="profile-card glass">
-            <div className="avatar">DA</div>
-            <p>Conecto negocio, tecnología y operación para transformar datos en crecimiento rentable.</p>
-            <div className="signal"><span /> Disponible para consultoría ecommerce & IA</div>
+          <p className="eyebrow">
+            Ecommerce Strategy & AI Operations Specialist
+          </p>
+          <h1>
+            Operación ecommerce, estrategia digital y automatización con
+            criterio de negocio.
+          </h1>
+          <p className="hero-copy">
+            Soy Derlis Aguilera. Trabajo con canales digitales, equipos
+            comerciales y datos para ordenar la operación, mejorar la conversión
+            y encontrar oportunidades reales de crecimiento.
+          </p>
+          <div className="actions">
+            <a className="button primary" href="#projects">
+              Ver casos
+            </a>
+            <a className="button" href="#contact">
+              Contactar
+            </a>
           </div>
+        </Reveal>
+
+        <Reveal delay={0.08}>
+          <aside className="intro-card">
+            <span className="portrait">DA</span>
+            <p>
+              Más de 6 años trabajando entre ecommerce, ventas, analítica y back
+              office digital.
+            </p>
+            <ul>
+              {focusAreas.map((area) => (
+                <li key={area}>{area}</li>
+              ))}
+            </ul>
+          </aside>
         </Reveal>
       </section>
 
       <section className="section kpi-grid" aria-label="KPI Impact">
-        {kpis.map((kpi) => <Reveal key={kpi.label}><div className="kpi glass"><b>{kpi.value}</b><span>{kpi.suffix}</span><p>{kpi.label}</p></div></Reveal>)}
+        {kpis.map((kpi) => (
+          <Reveal key={kpi.label}>
+            <article className="kpi-card">
+              <span>{kpi.label}</span>
+              <strong>{kpi.value}</strong>
+              <p>{kpi.suffix}</p>
+            </article>
+          </Reveal>
+        ))}
       </section>
 
       <section className="section two-col" id="about">
-        <Reveal><div><span className="eyebrow">Sobre mí</span><h2>Más de 6 años creando crecimiento digital con criterio de negocio.</h2></div></Reveal>
-        <Reveal><p className="large">Experiencia en Inverfin, Fortis Mayorista, Teo S.A. y Casa Paraná liderando iniciativas ecommerce, analítica, automatización y transformación digital. Mi enfoque no parte del código: parte del margen, la conversión, la experiencia de usuario y la capacidad operativa del negocio.</p></Reveal>
+        <Reveal>
+          <div>
+            <p className="eyebrow">Sobre mí</p>
+            <h2>
+              Un perfil orientado a ordenar, medir y hacer crecer canales
+              digitales.
+            </h2>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div className="prose">
+            <p>
+              Mi experiencia combina operación ecommerce, análisis comercial,
+              coordinación de equipos y adopción práctica de IA. Me interesa que
+              la tecnología ayude a vender mejor, reducir tareas repetitivas y
+              tomar decisiones con información más clara.
+            </p>
+            <p>
+              He trabajado en Inverfin S.A.E.C.A., Fortis Mayorista, Teo S.A. y
+              Casa Paraná, con responsabilidades que van desde gestión de
+              catálogo y Shopify hasta reporting, procesos comerciales y
+              seguimiento de KPIs.
+            </p>
+          </div>
+        </Reveal>
       </section>
 
       <section className="section" id="experience">
-        <Reveal><span className="eyebrow">Evolución profesional</span><h2>Timeline visual orientado a resultados</h2></Reveal>
-        <div className="timeline">{experiences.map((item) => <Reveal key={item.company}><article className="timeline-item glass"><time>{item.period}</time><h3>{item.company}</h3><strong>{item.role}</strong><ul>{item.impact.map((impact) => <li key={impact}>{impact}</li>)}</ul></article></Reveal>)}</div>
+        <Reveal>
+          <p className="eyebrow">Experiencia laboral</p>
+          <h2>
+            Una evolución ligada al ecommerce, la operación y la estrategia
+            digital.
+          </h2>
+        </Reveal>
+
+        <div className="timeline">
+          {experiences.map((item) => (
+            <Reveal key={item.company}>
+              <article className="timeline-item">
+                <div className="timeline-meta">
+                  <time>{item.period}</time>
+                  <h3>{item.company}</h3>
+                  <p>{item.role}</p>
+                </div>
+                <ul>
+                  {item.impact.map((impact) => (
+                    <li key={impact}>{impact}</li>
+                  ))}
+                </ul>
+              </article>
+            </Reveal>
+          ))}
+        </div>
       </section>
 
-      <section className="section dashboard">
-        <Reveal><span className="eyebrow">Dashboard personal</span><h2>Métricas de especialización</h2></Reveal>
-        <div className="metrics glass">
-          {[["Ecommerce Management", 94], ["AI Operations", 90], ["Business Intelligence", 88], ["Digital Growth", 92]].map(([label, value]) => (
-            <div className="bar" key={label as string}><div><span>{label}</span><b>{value}%</b></div><progress value={value as number} max="100" /></div>
+      <section className="section metrics-section">
+        <Reveal>
+          <p className="eyebrow">KPI Impact</p>
+          <h2>Indicadores personales de especialización.</h2>
+        </Reveal>
+
+        <div className="metrics-card">
+          {metrics.map(([label, value]) => (
+            <div className="metric-row" key={label}>
+              <div>
+                <span>{label}</span>
+                <strong>{value}%</strong>
+              </div>
+              <progress value={value} max="100" />
+            </div>
           ))}
         </div>
       </section>
 
       <section className="section" id="projects">
-        <Reveal><span className="eyebrow">Proyectos destacados</span><h2>Casos de negocio: problema → acción → resultado</h2></Reveal>
-        <div className="project-grid">{projects.map((project) => <Reveal key={project.title}><article className="project-card glass"><div className="screenshot"><span>{project.metric}</span></div><h3>{project.title}</h3><p>{project.description}</p><div className="case"><b>Problema</b><span>{project.problem}</span><b>Acción</b><span>{project.action}</span><b>Resultado</b><span>{project.result}</span></div><div className="tags">{project.stack.map((tech) => <span key={tech}>{tech}</span>)}</div></article></Reveal>)}</div>
+        <Reveal>
+          <p className="eyebrow">Proyectos y casos</p>
+          <h2>Trabajo presentado como problema, acción y resultado.</h2>
+        </Reveal>
+
+        <div className="project-grid">
+          {projects.map((project) => (
+            <Reveal key={project.title}>
+              <article className="project-card">
+                <div className="project-topline">
+                  <span>{project.metric}</span>
+                  <p>{project.stack.join(" · ")}</p>
+                </div>
+                <h3>{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+
+                <dl className="case-list">
+                  <div>
+                    <dt>Problema</dt>
+                    <dd>{project.problem}</dd>
+                  </div>
+                  <div>
+                    <dt>Acción</dt>
+                    <dd>{project.action}</dd>
+                  </div>
+                  <div>
+                    <dt>Resultado</dt>
+                    <dd>{project.result}</dd>
+                  </div>
+                </dl>
+              </article>
+            </Reveal>
+          ))}
+        </div>
       </section>
 
       <section className="section two-col">
-        <Reveal><div><span className="eyebrow">AI Native</span><h2>Automatización como ventaja operativa, no como experimento.</h2></div></Reveal>
-        <Reveal><div className="architecture glass">{architectureNodes.map((node, index) => <div className="node" key={node}><span>{String(index + 1).padStart(2, "0")}</span>{node}</div>)}</div></Reveal>
+        <Reveal>
+          <div>
+            <p className="eyebrow">AI Operations</p>
+            <h2>IA aplicada a procesos concretos, no a promesas abstractas.</h2>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div className="workflow-card">
+            {workflow.map((step, index) => (
+              <div className="workflow-step" key={step}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <p>{step}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </section>
 
-      <section className="section">
-        <Reveal><span className="eyebrow">Stack</span><h2>Herramientas para crecimiento, medición y ejecución</h2></Reveal>
-        <div className="stack">{stack.map((tool) => <span className="tool glass" key={tool}>{tool}</span>)}</div>
+      <section className="section stack-section">
+        <Reveal>
+          <p className="eyebrow">Herramientas de trabajo</p>
+          <h2>Stack usado para operar, medir y mejorar.</h2>
+        </Reveal>
+
+        <div className="tool-list">
+          {stack.map((tool) => (
+            <span key={tool}>{tool}</span>
+          ))}
+        </div>
       </section>
 
-      <section className="section philosophy glass">
-        <Reveal><span className="eyebrow">Filosofía</span><h2>Cómo entiendo el crecimiento digital</h2><p>No miro solamente ROAS. Analizo margen, conversión, experiencia de usuario, automatización y rentabilidad.</p></Reveal>
+      <section className="section philosophy">
+        <Reveal>
+          <p className="eyebrow">Criterio de crecimiento</p>
+          <h2>Cómo entiendo el crecimiento digital</h2>
+          <p>
+            No miro solamente ROAS. Analizo margen, conversión, experiencia de
+            usuario, capacidad operativa y rentabilidad.
+          </p>
+        </Reveal>
       </section>
 
       <section className="section contact" id="contact">
-        <Reveal><span className="eyebrow">Consultoría ecommerce & IA</span><h2>Trabajemos juntos</h2><p>Diseñemos un sistema de crecimiento digital medible, rentable y preparado para operar con inteligencia artificial.</p><div className="contact-links"><a href="mailto:derlis.aguilera@example.com">Email</a><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a><a href="https://github.com/" target="_blank">GitHub</a></div><a className="button primary" href="mailto:derlis.aguilera@example.com">Trabajemos juntos</a></Reveal>
+        <Reveal>
+          <p className="eyebrow">Contacto</p>
+          <h2>
+            Si tu ecommerce necesita más orden, medición o automatización,
+            conversemos.
+          </h2>
+          <p>
+            Puedo ayudar en estrategia, operación Shopify, análisis comercial y
+            adopción práctica de IA.
+          </p>
+
+          <div className="contact-links">
+            <a href="mailto:derlisa567@gmail.com">Email</a>
+            <a
+              href="https://www.linkedin.com/in/derlis-alexander-aguilera"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/equantum-py"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
+
+          <a className="button primary" href="mailto:derlisa567@gmail.com">
+            Trabajemos juntos
+          </a>
+        </Reveal>
       </section>
     </main>
   );
