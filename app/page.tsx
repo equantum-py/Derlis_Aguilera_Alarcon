@@ -55,7 +55,7 @@ export default function Home() {
               Ver experiencia
             </a>
 
-            <a className="button" href="/cv/derlis-aguilera-cv.pdf" download>
+            <a className="button" href={contact.cv} download>
               Descargar CV
             </a>
           </div>
@@ -130,7 +130,16 @@ export default function Home() {
         <Reveal>
           <div>
             <p className="eyebrow">Actualmente</p>
-            <h2>Inverfin S.A.E.C.A.</h2>
+
+            <div className="company-heading">
+              <img
+                src="/logo/logo-inverfin.png"
+                alt="Logo de Inverfin S.A.E.C.A."
+                className="company-logo company-logo-large"
+              />
+
+              <span>Inverfin S.A.E.C.A.</span>
+            </div>
           </div>
         </Reveal>
 
@@ -171,6 +180,15 @@ export default function Home() {
               <article className="timeline-item">
                 <div className="timeline-meta">
                   <time>{item.period}</time>
+
+                  <div className="experience-logo-wrap">
+                    <img
+                      src={item.logo}
+                      alt={item.logoAlt}
+                      className="experience-logo"
+                    />
+                  </div>
+
                   <h3>{item.company}</h3>
                   <p>{item.role}</p>
                 </div>
@@ -198,11 +216,7 @@ export default function Home() {
           </p>
 
           <div className="actions">
-            <a
-              className="button primary"
-              href="/cv/derlis-aguilera-cv.pdf"
-              download
-            >
+            <a className="button primary" href={contact.cv} download>
               Descargar CV
             </a>
 
@@ -233,7 +247,7 @@ export default function Home() {
               LinkedIn
             </a>
 
-            <a href="/cv/derlis-aguilera-cv.pdf" download>
+            <a href={contact.cv} download>
               Descargar CV
             </a>
           </div>
