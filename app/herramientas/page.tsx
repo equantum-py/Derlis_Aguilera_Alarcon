@@ -32,12 +32,11 @@ export default function HerramientasPage() {
         <Reveal>
           <p className="eyebrow">Herramientas</p>
 
-          <h1>Herramientas que manejo.</h1>
+          <h1>Paid media, analítica, IA y operación ecommerce.</h1>
 
           <p className="hero-copy">
-            Plataformas, herramientas de medición, publicidad, automatización,
-            desarrollo y ecommerce que utilizo para operar, analizar y mejorar
-            canales digitales.
+            Herramientas que utilizo para medir campañas, ordenar tracking,
+            automatizar procesos, operar ecommerce y mejorar canales digitales.
           </p>
         </Reveal>
       </section>
@@ -62,16 +61,14 @@ export default function HerramientasPage() {
         <Reveal>
           <p className="eyebrow">Contacto</p>
 
-          <h2>¿Necesitás ordenar herramientas, medición o automatizaciones?</h2>
+          <h2>¿Necesitás ordenar medición, campañas o automatizaciones?</h2>
 
           <p>
-            Conversemos sobre ecommerce, analytics, automatización, Shopify,
-            campañas o procesos digitales.
+            Conversemos sobre ecommerce, analytics, paid media, automatización,
+            Shopify o procesos digitales AI-native.
           </p>
 
           <div className="contact-links">
-            <a href={`https://wa.me/${contact.whatsapp}`}>WhatsApp</a>
-
             <a href={`mailto:${contact.email}`}>Email</a>
 
             <a href={contact.linkedin} target="_blank" rel="noreferrer">
@@ -81,6 +78,8 @@ export default function HerramientasPage() {
             <a href={contact.cv} download>
               Descargar CV
             </a>
+
+            <a href={`https://wa.me/${contact.whatsapp}`}>WhatsApp</a>
           </div>
 
           <p className="contact-detail">
