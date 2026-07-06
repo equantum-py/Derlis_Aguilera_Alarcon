@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
+import "./visual-overrides.css";
 
 export const metadata: Metadata = {
   title: "Derlis Aguilera | Ecommerce Strategy & AI Operations Specialist",
