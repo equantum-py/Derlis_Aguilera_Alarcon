@@ -381,8 +381,8 @@ h3 {
 }
 
 .company-logo-large {
-  max-width: 360px;
-  max-height: 120px;
+  max-width: 420px;
+  max-height: 150px;
 }
 
 .experience-logo-wrap {
@@ -394,8 +394,8 @@ h3 {
 .experience-logo {
   display: block;
   width: auto;
-  max-width: 180px;
-  max-height: 56px;
+  max-width: 240px;
+  max-height: 82px;
   object-fit: contain;
 }
 
@@ -977,11 +977,12 @@ progress::-webkit-progress-value {
   }
 
   .profile-photo-wrap {
-    aspect-ratio: 1 / 1;
-    max-height: 260px;
+    aspect-ratio: 4 / 5;
+    max-height: none;
   }
 
   .profile-photo {
+    object-fit: cover;
     object-position: center top;
   }
 
@@ -1016,17 +1017,17 @@ progress::-webkit-progress-value {
   }
 
   .company-logo-large {
-    max-width: 260px;
-    max-height: 86px;
+    max-width: 300px;
+    max-height: 110px;
   }
 
   .experience-logo {
-    max-width: 150px;
-    max-height: 46px;
+    max-width: 210px;
+    max-height: 72px;
   }
 
   .experience-logo-wrap {
-    margin-bottom: 12px;
+    margin-bottom: 18px;
   }
 
   .timeline-meta h3 {
