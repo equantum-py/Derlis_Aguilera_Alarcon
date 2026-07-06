@@ -64,7 +64,10 @@ export default function Home() {
             y automatizar tareas para vender con más claridad.
           </p>
           <div className="actions">
-            <a className="button primary" href={`https://wa.me/${contact.whatsapp}`}>
+            <a
+              className="button primary"
+              href={`https://wa.me/${contact.whatsapp}`}
+            >
               WhatsApp
             </a>
             <a className="button" href="#projects">
@@ -74,14 +77,27 @@ export default function Home() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <aside className="intro-card">
-            <span className="portrait">DA</span>
-            <p>+6 años entre ecommerce, ventas, analítica y operación digital.</p>
-            <ul>
-              {focusAreas.map((area) => (
-                <li key={area}>{area}</li>
-              ))}
-            </ul>
+          <aside className="profile-photo-card">
+            <div className="profile-photo-wrap">
+              <img
+                src="/profile/derlis.jpg"
+                alt="Foto profesional de Derlis Aguilera"
+                className="profile-photo"
+              />
+            </div>
+
+            <div className="profile-summary">
+              <h2>Derlis Aguilera</h2>
+              <p>
+                +6 años entre ecommerce, ventas, analítica y operación digital.
+              </p>
+
+              <ul>
+                {focusAreas.map((area) => (
+                  <li key={area}>{area}</li>
+                ))}
+              </ul>
+            </div>
           </aside>
         </Reveal>
       </section>
@@ -304,7 +320,10 @@ export default function Home() {
             {contact.whatsappLabel} · {contact.email}
           </p>
 
-          <a className="button primary" href={`https://wa.me/${contact.whatsapp}`}>
+          <a
+            className="button primary"
+            href={`https://wa.me/${contact.whatsapp}`}
+          >
             Escribirme por WhatsApp
           </a>
         </Reveal>
