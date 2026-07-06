@@ -22,7 +22,8 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--text);
-  font-family: var(--font-inter), Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-inter), Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 a {
@@ -75,7 +76,7 @@ a {
 .hero {
   min-height: 680px;
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 360px);
   gap: 56px;
   align-items: center;
   padding-top: 72px;
@@ -174,7 +175,8 @@ h3 {
 .metrics-card,
 .project-card,
 .workflow-card,
-.philosophy {
+.philosophy,
+.tool-card {
   border: 1px solid var(--border);
   border-radius: 28px;
   background: var(--surface);
@@ -214,6 +216,61 @@ h3 {
 .intro-card li + li,
 .timeline-item li + li {
   margin-top: 8px;
+}
+
+/* Hero profile photo */
+
+.profile-photo-card {
+  width: 100%;
+  max-width: 360px;
+  justify-self: end;
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  background: var(--surface);
+  box-shadow: 0 24px 60px rgba(23, 23, 23, 0.07);
+  overflow: hidden;
+}
+
+.profile-photo-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--surface-soft);
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.profile-summary {
+  padding: 24px;
+}
+
+.profile-summary h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.profile-summary p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.profile-summary ul {
+  margin: 18px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.profile-summary li + li {
+  margin-top: 6px;
 }
 
 .kpi-grid {
@@ -342,6 +399,23 @@ progress::-webkit-progress-value {
   box-shadow: 0 24px 50px rgba(23, 23, 23, 0.065);
 }
 
+.project-image-wrap {
+  aspect-ratio: 4 / 3;
+  margin: -10px -10px 22px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: #f3f1ed;
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
 .project-topline {
   display: flex;
   align-items: center;
@@ -363,6 +437,48 @@ progress::-webkit-progress-value {
   margin: 0;
   color: var(--muted);
   font-size: 13px;
+}
+
+.project-topline a,
+.case-link {
+  color: var(--accent);
+  font-weight: 750;
+}
+
+.project-role {
+  margin: -2px 0 10px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.project-ownership {
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.project-tags span {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  padding: 7px 9px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.case-link {
+  display: inline-flex;
+  margin-top: 22px;
+  font-size: 14px;
 }
 
 .case-list {
@@ -434,6 +550,22 @@ progress::-webkit-progress-value {
   font-size: 14px;
 }
 
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding-top: 24px;
+}
+
+.tool-card {
+  min-height: 100%;
+  padding: 28px;
+}
+
+.tool-card h3 {
+  margin-bottom: 20px;
+}
+
 .philosophy {
   padding: 40px;
 }
@@ -467,6 +599,32 @@ progress::-webkit-progress-value {
   font-weight: 700;
 }
 
+.mobile-whatsapp {
+  display: none;
+}
+
+.contact-detail {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* Inner pages */
+
+.page-hero {
+  min-height: auto;
+  padding-top: 78px;
+  padding-bottom: 42px;
+}
+
+.page-hero h1 {
+  max-width: 920px;
+}
+
+.section-actions {
+  margin-top: 28px;
+}
+
 @media (max-width: 860px) {
   .section {
     padding: 64px 0;
@@ -490,6 +648,11 @@ progress::-webkit-progress-value {
     padding-top: 56px;
   }
 
+  .profile-photo-card {
+    max-width: 420px;
+    justify-self: start;
+  }
+
   .timeline-item {
     gap: 18px;
   }
@@ -502,16 +665,6 @@ progress::-webkit-progress-value {
     align-items: flex-start;
     flex-direction: column;
   }
-}
-
-.mobile-whatsapp {
-  display: none;
-}
-
-.contact-detail {
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 15px;
 }
 
 @media (max-width: 640px) {
@@ -642,6 +795,51 @@ progress::-webkit-progress-value {
     line-height: 1;
   }
 
+  .profile-photo-card {
+    max-width: 100%;
+    justify-self: stretch;
+    border-radius: 24px;
+  }
+
+  .profile-photo-wrap {
+    aspect-ratio: 1 / 1;
+    max-height: 320px;
+  }
+
+  .profile-photo {
+    object-position: center top;
+  }
+
+  .profile-summary {
+    padding: 18px;
+  }
+
+  .profile-summary h2 {
+    font-size: 24px;
+  }
+
+  .profile-summary p {
+    font-size: 14.5px;
+  }
+
+  .profile-summary ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .profile-summary li {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface-soft);
+    padding: 7px 9px;
+    font-size: 12.5px;
+    line-height: 1;
+  }
+
   .kpi-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -737,6 +935,12 @@ progress::-webkit-progress-value {
     border-radius: 22px;
   }
 
+  .project-image-wrap {
+    aspect-ratio: 4 / 3;
+    margin: -8px -8px 16px;
+    border-radius: 18px;
+  }
+
   .project-topline {
     gap: 8px;
     margin-bottom: 16px;
@@ -756,12 +960,7 @@ progress::-webkit-progress-value {
   }
 
   .case-list {
-    gap: 12px;
-    margin-top: 16px;
-  }
-
-  .case-list div {
-    padding-top: 12px;
+    display: none;
   }
 
   .case-list dt,
@@ -769,11 +968,34 @@ progress::-webkit-progress-value {
     font-size: 13.5px;
   }
 
-  .case-list dd {
+  .project-role {
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+
+  .project-ownership {
     display: -webkit-box;
     overflow: hidden;
+    margin-bottom: 12px;
+    font-size: 12.5px;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+  }
+
+  .project-tags {
+    gap: 6px;
+    margin-top: 12px;
+    max-height: 27px;
+    overflow: hidden;
+  }
+
+  .project-tags span {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .case-link {
+    margin-top: 14px;
   }
 
   .workflow-card {
@@ -793,6 +1015,17 @@ progress::-webkit-progress-value {
   .tool-list span {
     padding: 8px 10px;
     font-size: 12.5px;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-top: 12px;
+  }
+
+  .tool-card {
+    padding: 18px;
+    border-radius: 22px;
   }
 
   .philosophy {
@@ -840,142 +1073,7 @@ progress::-webkit-progress-value {
     margin-bottom: 18px;
     font-size: 13.5px;
   }
-}
 
-.project-image-wrap {
-  aspect-ratio: 16 / 9;
-  margin: -10px -10px 22px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: 22px;
-  background: var(--surface-soft);
-}
-
-.project-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.project-role {
-  margin: -2px 0 10px;
-  color: var(--accent);
-  font-size: 14px;
-  font-weight: 750;
-}
-
-.project-ownership {
-  margin-bottom: 16px;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.55;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 18px;
-}
-
-.project-tags span {
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--surface-soft);
-  padding: 7px 9px;
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.project-topline a,
-.case-link {
-  color: var(--accent);
-  font-weight: 750;
-}
-
-.case-link {
-  display: inline-flex;
-  margin-top: 22px;
-  font-size: 14px;
-}
-
-@media (max-width: 640px) {
-  .project-image-wrap {
-    margin: -8px -8px 16px;
-    border-radius: 18px;
-  }
-
-  .project-role {
-    margin-bottom: 8px;
-    font-size: 13px;
-  }
-
-  .project-ownership {
-    display: -webkit-box;
-    overflow: hidden;
-    margin-bottom: 12px;
-    font-size: 12.5px;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-  }
-
-  .project-tags {
-    gap: 6px;
-    margin-top: 12px;
-    max-height: 27px;
-    overflow: hidden;
-  }
-
-  .project-tags span {
-    padding: 6px 8px;
-    font-size: 11px;
-  }
-
-  .case-list {
-    display: none;
-  }
-
-  .case-link {
-    margin-top: 14px;
-  }
-}
-
-.page-hero {
-  min-height: auto;
-  padding-top: 78px;
-  padding-bottom: 42px;
-}
-
-.page-hero h1 {
-  max-width: 920px;
-}
-
-.section-actions {
-  margin-top: 28px;
-}
-
-.tools-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  padding-top: 24px;
-}
-
-.tool-card {
-  min-height: 100%;
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  background: var(--surface);
-  padding: 28px;
-  box-shadow: 0 18px 45px rgba(23, 23, 23, 0.04);
-}
-
-.tool-card h3 {
-  margin-bottom: 20px;
-}
-
-@media (max-width: 640px) {
   .page-hero {
     padding-top: 38px;
     padding-bottom: 22px;
@@ -983,16 +1081,5 @@ progress::-webkit-progress-value {
 
   .section-actions {
     margin-top: 18px;
-  }
-
-  .tools-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    padding-top: 12px;
-  }
-
-  .tool-card {
-    padding: 18px;
-    border-radius: 22px;
   }
 }

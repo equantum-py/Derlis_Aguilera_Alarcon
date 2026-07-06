@@ -3,9 +3,9 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Derlis Aguilera | Ecommerce Strategy & AI Operations",
+  title: "Derlis Aguilera | Ecommerce Strategy & AI Operations Specialist",
   description:
-    "Portfolio profesional de Derlis Aguilera. Ecommerce, IA, automatización, analítica y transformación digital.",
+    "Portfolio profesional de Derlis Aguilera. Ecommerce, Shopify, analítica, automatización, inteligencia artificial y transformación digital.",
   keywords: [
     "Derlis Aguilera",
     "Ecommerce Strategy",
@@ -13,17 +13,22 @@ export const metadata: Metadata = {
     "Shopify",
     "Business Intelligence",
     "Digital Growth",
+    "Automatización",
+    "Inteligencia Artificial",
+    "Transformación Digital",
   ],
   openGraph: {
-    title: "Derlis Aguilera | Ecommerce Strategy & AI Operations",
+    title: "Derlis Aguilera | Ecommerce Strategy & AI Operations Specialist",
     description:
-      "Ecommerce, IA, automatización, analítica y transformación digital orientadas a resultados.",
+      "Ecommerce, Shopify, analítica, automatización, inteligencia artificial y transformación digital.",
     type: "website",
     locale: "es_PY",
   },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="es">
       <body>{children}</body>
