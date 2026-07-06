@@ -19,6 +19,11 @@ export type Project = {
   metric: string;
 };
 
+export type ToolCategory = {
+  title: string;
+  items: string[];
+};
+
 export const experiences: Experience[] = [
   {
     company: "Inverfin S.A.E.C.A.",
@@ -182,4 +187,50 @@ export const kpis = [
   { label: "Empresas", value: "4", suffix: "organizaciones" },
   { label: "Especialidad", value: "360°", suffix: "ecommerce" },
   { label: "Enfoque", value: "AI", suffix: "operations" },
+];
+
+export const contact = {
+  email: "derlisa567@gmail.com",
+  whatsapp: "595985194953",
+  whatsappLabel: "0985194953",
+  linkedin:
+    "https://www.linkedin.com/in/derlis-alexander-aguilera?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  cv: "/cv/derlis-aguilera-cv.pdf",
+};
+
+export const toolCategories: ToolCategory[] = [
+  {
+    title: "Desarrollo, código y despliegue",
+    items: [
+      "GitHub",
+      "Vercel",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "Next.js",
+    ],
+  },
+  {
+    title: "Ecommerce",
+    items: ["Shopify", "Google Merchant Center", "Catálogo digital"],
+  },
+  {
+    title: "Analítica y medición",
+    items: [
+      "Google Analytics 4",
+      "Google Tag Manager",
+      "Google Search Console",
+      "Microsoft Clarity",
+      "Looker Studio",
+    ],
+  },
+  {
+    title: "Publicidad digital",
+    items: ["Meta Ads", "Google Ads"],
+  },
+  {
+    title: "Inteligencia Artificial y automatización",
+    items: ["ChatGPT", "Claude", "n8n", "Chatbots", "AI Operations"],
+  },
 ];
