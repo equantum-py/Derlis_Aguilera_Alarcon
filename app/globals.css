@@ -287,6 +287,50 @@ h3 {
   margin-top: 6px;
 }
 
+/* Company logos */
+
+.company-heading {
+  display: grid;
+  gap: 14px;
+  align-items: start;
+}
+
+.company-heading span {
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.company-logo {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.company-logo-large {
+  max-width: 360px;
+  max-height: 120px;
+}
+
+.experience-logo-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.experience-logo {
+  display: block;
+  width: auto;
+  max-width: 180px;
+  max-height: 56px;
+  object-fit: contain;
+}
+
+.timeline-meta h3 {
+  font-size: 18px;
+}
+
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -897,6 +941,24 @@ progress::-webkit-progress-value {
     padding: 7px 9px;
     font-size: 12.5px;
     line-height: 1;
+  }
+
+  .company-logo-large {
+    max-width: 260px;
+    max-height: 86px;
+  }
+
+  .experience-logo {
+    max-width: 150px;
+    max-height: 46px;
+  }
+
+  .experience-logo-wrap {
+    margin-bottom: 12px;
+  }
+
+  .timeline-meta h3 {
+    font-size: 16px;
   }
 
   .kpi-grid {
