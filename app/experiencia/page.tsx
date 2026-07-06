@@ -58,6 +58,15 @@ export default function ExperienciaPage() {
               <article className="timeline-item">
                 <div className="timeline-meta">
                   <time>{item.period}</time>
+
+                  <div className="experience-logo-wrap">
+                    <img
+                      src={item.logo}
+                      alt={item.logoAlt}
+                      className="experience-logo"
+                    />
+                  </div>
+
                   <h3>{item.company}</h3>
                   <p>{item.role}</p>
                 </div>
