@@ -78,7 +78,7 @@ export default function HerramientasPage() {
               LinkedIn
             </a>
 
-            <a href="/cv/derlis-aguilera-cv.pdf" download>
+            <a href={contact.cv} download>
               Descargar CV
             </a>
           </div>
