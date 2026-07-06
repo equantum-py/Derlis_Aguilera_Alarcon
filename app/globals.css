@@ -890,9 +890,10 @@ progress::-webkit-progress-value {
   }
 
   .project-image-wrap {
-    margin: -8px -8px 16px;
-    border-radius: 18px;
-  }
+  aspect-ratio: 4 / 3;
+  margin: -8px -8px 16px;
+  border-radius: 18px;
+}
 
   .project-role {
     margin-bottom: 8px;
