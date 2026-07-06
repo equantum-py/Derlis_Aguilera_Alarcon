@@ -108,18 +108,18 @@ export const projects: Project[] = [
     metric: "Gestión ordenada",
   },
   {
-    title: "Fortis Ecommerce",
-    description:
-      "Gestión diaria del canal ecommerce con foco en catálogo, campañas y análisis de mejora.",
-    stack: ["Shopify", "Analytics", "Growth"],
-    problem:
-      "El canal requería consistencia entre catálogo, comunicación comercial, medición y atención al cliente.",
-    action:
-      "Organicé rutinas de actualización, revisión de métricas y coordinación con áreas comerciales.",
-    result:
-      "El ecommerce ganó mayor orden operativo y una lectura más clara de oportunidades de crecimiento.",
-    metric: "Canal más consistente",
-  },
+  title: "Fortis Ecommerce",
+  description:
+    "Gestión y mejora operativa de un canal ecommerce desarrollado a medida, con foco en catálogo, campañas, medición y experiencia de usuario.",
+  stack: ["Desarrollo Web", "Analytics", "Growth"],
+  problem:
+    "El canal necesitaba mayor consistencia entre catálogo, comunicación comercial, medición, experiencia de usuario y atención al cliente.",
+  action:
+    "Organicé rutinas de actualización, revisión de métricas, mejora de contenidos y coordinación con áreas comerciales y técnicas.",
+  result:
+    "El ecommerce ganó mayor orden operativo, mejor lectura de oportunidades y una gestión más alineada a los objetivos comerciales.",
+  metric: "Canal más consistente",
+},
 ];
 
 export const stack = [
