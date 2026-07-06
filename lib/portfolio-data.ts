@@ -214,16 +214,21 @@ export const toolCategories: ToolCategory[] = [
     items: [
       "GitHub",
       "Vercel",
+      "Node.js",
       "HTML",
       "CSS",
+      "SCSS",
       "JavaScript",
       "TypeScript",
+      "PHP",
       "Next.js",
+      "OpenCode",
+      "GitHub Copilot",
     ],
   },
   {
     title: "Ecommerce",
-    items: ["Shopify", "Google Merchant Center", "Catálogo digital"],
+    items: ["Shopify", "Google Merchant Center", "Catálogo digital", "WordPress"],
   },
   {
     title: "Analítica y medición",
@@ -241,6 +246,29 @@ export const toolCategories: ToolCategory[] = [
   },
   {
     title: "Inteligencia Artificial y automatización",
-    items: ["ChatGPT", "Claude", "n8n", "Chatbots", "AI Operations"],
+    items: [
+      "ChatGPT",
+      "ChatGPT Plus",
+      "Claude",
+      "Codex",
+      "Gemini",
+      "Kimi IA",
+      "Antigravity",
+      "n8n",
+      "Chatbots",
+      "AI Operations",
+    ],
+  },
+  {
+    title: "Diseño, prototipado y creación visual",
+    items: ["Canva", "Figma"],
+  },
+  {
+    title: "Apps, backend e infraestructura",
+    items: ["Lovable", "Emergent", "Supabase", "Cloudflare"],
+  },
+  {
+    title: "Otras herramientas",
+    items: ["Other"],
   },
 ];

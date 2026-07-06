@@ -67,7 +67,7 @@ export default function ExperienciaPage() {
                     />
                   </div>
 
-                  <h3>{item.company}</h3>
+                  <h3 className="sr-only">{item.company}</h3>
                   <p>{item.role}</p>
                 </div>
 
