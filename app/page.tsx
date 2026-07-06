@@ -131,17 +131,26 @@ export default function Home() {
           {projects.map((project) => (
             <Reveal key={project.title}>
               <article className="project-card">
+                <div className="project-image-wrap">
+                  <img src={project.image} alt={`Captura del proyecto ${project.title}`} className="project-image" />
+                </div>
                 <div className="project-topline">
                   <span>{project.metric}</span>
-                  <p>{project.stack.join(" · ")}</p>
+                  <a href={`https://${project.website}`} target="_blank" rel="noreferrer">{project.website}</a>
                 </div>
                 <h3>{project.title}</h3>
+                <p className="project-role">{project.role}</p>
+                <p className="project-ownership">{project.ownership}</p>
                 <p className="project-description">{project.description}</p>
+                <div className="project-tags" aria-label={`Stack de ${project.title}`}>
+                  {project.stack.map((tech) => <span key={tech}>{tech}</span>)}
+                </div>
                 <dl className="case-list">
                   <div><dt>Problema</dt><dd>{project.problem}</dd></div>
                   <div><dt>Acción</dt><dd>{project.action}</dd></div>
                   <div><dt>Resultado</dt><dd>{project.result}</dd></div>
                 </dl>
+                <a className="case-link" href={`https://${project.website}`} target="_blank" rel="noreferrer">Ver caso</a>
               </article>
             </Reveal>
           ))}

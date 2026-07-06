@@ -7,6 +7,10 @@ export type Experience = {
 
 export type Project = {
   title: string;
+  website: string;
+  image: string;
+  role: string;
+  ownership: string;
   description: string;
   stack: string[];
   problem: string;
@@ -69,40 +73,56 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
-    title: "Dashboard Ejecutivo Inverfin",
-    description: "Vista de indicadores comerciales para seguimiento de ventas, operación y prioridades.",
-    stack: ["Excel", "Analytics", "BI"],
-    problem: "La información clave estaba distribuida y costaba convertirla en una lectura clara para dirección.",
-    action: "Ordené los indicadores por ventas, conversión, margen y operación para facilitar reuniones y seguimiento.",
-    result: "El equipo puede revisar el estado del canal con mayor claridad y decidir próximos pasos con menos fricción.",
-    metric: "Lectura ejecutiva",
+    title: "Inverfin Ecommerce",
+    website: "inverfin.com.py",
+    image: "/projects/inverfin.jpg",
+    role: "Ecommerce Strategy & Operations",
+    ownership: "Sitio creado por otros desarrolladores. Optimización, operación y crecimiento ecommerce a mi cargo.",
+    description: "Operación y optimización ecommerce sobre Shopify, con foco en catálogo, SEO, automatización, IA, chatbots, n8n, analítica y mejora comercial.",
+    stack: ["Shopify", "SEO", "IA", "Chatbots", "n8n", "Analytics", "Ecommerce Operations"],
+    problem: "El canal necesitaba mayor orden operativo, mejor visibilidad, automatización y una gestión más estratégica sobre Shopify.",
+    action: "Implementé mejoras de catálogo, SEO, configuración de apps, automatización, uso de IA, chatbots, flujos operativos y análisis de rendimiento.",
+    result: "El ecommerce cuenta con una operación más ordenada, mejor capacidad de atención digital y una base más sólida para crecer.",
+    metric: "Optimización ecommerce",
   },
   {
-    title: "Automatización IA WhatsApp",
-    description: "Flujo de trabajo para clasificar imágenes y consultas frecuentes de forma asistida.",
-    stack: ["AI", "AWS S3", "Automatización"],
-    problem: "Las consultas repetitivas consumían tiempo y hacían más lenta la respuesta del equipo comercial.",
-    action: "Definí una arquitectura para recibir imágenes, organizar archivos y preparar respuestas o derivaciones.",
-    result: "La operación queda mejor preparada para atender más consultas sin depender únicamente de tareas manuales.",
-    metric: "Menos carga manual",
+    title: "Fortis Ecommerce Mayorista",
+    website: "fortis.com.py",
+    image: "/projects/fortis.jpg",
+    role: "Ecommerce Manager",
+    ownership: "Desarrollo realizado por otros desarrolladores. Participación desde etapa inicial hasta publicación final.",
+    description: "Participación integral en el lanzamiento del primer ecommerce mayorista en Paraguay, desde la visión operativa y comercial.",
+    stack: ["Desarrollo Web", "Ecommerce B2B", "Catálogo", "Analytics", "Growth"],
+    problem: "El negocio necesitaba llevar su operación mayorista a un canal digital ordenado, funcional y preparado para clientes B2B.",
+    action: "Acompañé la creación desde el inicio, coordinando estructura de catálogo, pruebas funcionales, revisión de experiencia, carga de productos y preparación comercial.",
+    result: "Se publicó un canal ecommerce mayorista con una base operativa clara para ventas digitales B2B.",
+    metric: "Primer ecommerce mayorista",
   },
   {
-    title: "Cooperativa Vida y Luz",
-    description: "Diseño de una base digital para ordenar la gestión de socios y procesos internos.",
-    stack: ["Next.js", "PostgreSQL", "Prisma"],
-    problem: "La administración necesitaba una estructura más ordenada para datos, procesos y trazabilidad.",
-    action: "Planteé una arquitectura simple para centralizar información, roles y flujos administrativos.",
-    result: "El proyecto cuenta con una base más clara para crecer sin perder control operativo.",
-    metric: "Gestión ordenada",
+    title: "Marmolería Pietra",
+    website: "marmoleriapietra.com",
+    image: "/projects/marmoleria-pietra.jpg",
+    role: "Creación web y estrategia digital",
+    ownership: "Proyecto creado/desarrollado por mí/eQuantum.",
+    description: "Creación de sitio web institucional para fortalecer presencia digital, presentar servicios y generar consultas comerciales.",
+    stack: ["Web Design", "Desarrollo Web", "UX", "SEO", "Captación"],
+    problem: "La marca necesitaba una presencia digital profesional para mostrar trabajos, servicios y generar confianza.",
+    action: "Diseñé y desarrollé una web clara, visual y orientada a servicios, con estructura comercial y llamadas a la acción.",
+    result: "La empresa cuenta con una presencia digital más profesional y un canal más claro para recibir consultas.",
+    metric: "Sitio creado desde cero",
   },
   {
-    title: "Fortis Ecommerce",
-    description: "Gestión diaria del canal ecommerce con foco en catálogo, campañas y análisis de mejora.",
-    stack: ["Desarrollo web", "Analytics", "Growth"],
-    problem: "El canal a medida requería consistencia entre catálogo, comunicación comercial, medición y atención al cliente.",
-    action: "Organicé rutinas de actualización, revisión de métricas y coordinación con áreas comerciales.",
-    result: "El ecommerce ganó mayor orden operativo y una lectura más clara de oportunidades de crecimiento.",
-    metric: "Canal más consistente",
+    title: "Corpicia",
+    website: "corpicia.com.py",
+    image: "/projects/corpicia.jpg",
+    role: "Creación web, analítica y captación digital",
+    ownership: "Proyecto creado/desarrollado por mí/eQuantum.",
+    description: "Creación de sitio web institucional con foco en presentación de servicios, captación de prospectos y medición comercial.",
+    stack: ["Web Design", "Desarrollo Web", "Analytics", "SEO", "Captación"],
+    problem: "La empresa necesitaba ordenar su presencia digital y mejorar la forma de presentar sus servicios.",
+    action: "Desarrollé la estructura web, contenidos, experiencia de navegación y base de medición para acompañar acciones comerciales.",
+    result: "Corpicia cuenta con una web más clara, profesional y preparada para captar y medir oportunidades comerciales.",
+    metric: "Presencia digital creada",
   },
 ];
 
