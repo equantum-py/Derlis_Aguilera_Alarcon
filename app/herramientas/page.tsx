@@ -1,5 +1,6 @@
 import { Reveal } from "../../components/reveal";
-import { contact, toolCategories } from "../../lib/portfolio-data";
+import { contact } from "../../lib/portfolio-data";
+import { expandedToolCategories } from "../../lib/professional-profile";
 
 export default function HerramientasPage() {
   return (
@@ -12,11 +13,8 @@ export default function HerramientasPage() {
         WhatsApp
       </a>
 
-      <nav className="nav">
-        <a className="brand" href="/">
-          Derlis Aguilera
-        </a>
-
+      <nav className="nav" aria-label="Navegación principal">
+        <a className="brand" href="/">Derlis Aguilera</a>
         <div>
           <a href="/">Inicio</a>
           <a href="/experiencia">Experiencia</a>
@@ -25,32 +23,24 @@ export default function HerramientasPage() {
       </nav>
 
       <section className="section page-hero">
-        <a className="back-link" href="/">
-          ← Volver al inicio
-        </a>
-
+        <a className="back-link" href="/">← Volver al inicio</a>
         <Reveal>
-          <p className="eyebrow">Herramientas</p>
-
-          <h1>Paid media, analítica, IA y operación ecommerce.</h1>
-
+          <p className="eyebrow">Conocimientos y herramientas</p>
+          <h1>Ecommerce, datos, marketing, operación y gestión ágil.</h1>
           <p className="hero-copy">
-            Herramientas que utilizo para medir campañas, ordenar tracking,
-            automatizar procesos, operar ecommerce y mejorar canales digitales.
+            Conocimientos aplicados para analizar productos, coordinar procesos,
+            medir resultados y mejorar continuamente el canal digital.
           </p>
         </Reveal>
       </section>
 
-      <section className="section tools-grid">
-        {toolCategories.map((category) => (
+      <section className="section tools-grid" aria-label="Competencias profesionales">
+        {expandedToolCategories.map((category) => (
           <Reveal key={category.title}>
             <article className="tool-card">
               <h3>{category.title}</h3>
-
               <div className="tool-list">
-                {category.items.map((item) => (
-                  <span key={item}>{item}</span>
-                ))}
+                {category.items.map((item) => <span key={item}>{item}</span>)}
               </div>
             </article>
           </Reveal>
@@ -60,28 +50,17 @@ export default function HerramientasPage() {
       <section className="section contact" id="contact">
         <Reveal>
           <p className="eyebrow">Contacto</p>
-
-          <h2>¿Necesitás ordenar medición, campañas o automatizaciones?</h2>
-
+          <h2>¿Necesitás fortalecer tu operación ecommerce?</h2>
           <p>
-            Conversemos sobre ecommerce, analytics, paid media, automatización,
-            Shopify o procesos digitales AI-native.
+            Conversemos sobre estrategia, productos, campañas, analítica,
+            Shopify, logística o mejora de procesos.
           </p>
-
           <div className="contact-links">
             <a href={`mailto:${contact.email}`}>Email</a>
-
-            <a href={contact.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-
-            <a href={contact.cv} download>
-              Descargar CV
-            </a>
-
+            <a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href={contact.cv} download>Descargar CV</a>
             <a href={`https://wa.me/${contact.whatsapp}`}>WhatsApp</a>
           </div>
-
           <p className="contact-detail">
             {contact.whatsappLabel} · {contact.email}
           </p>
