@@ -43,7 +43,7 @@ export default function Home() {
           <p className="eyebrow">{positioning.eyebrow}</p>
           <h1>Derlis Aguilera</h1>
           <p className="hero-copy">{positioning.headline}</p>
-          <p>{positioning.summary}</p>
+          <p className="hero-summary">{positioning.summary}</p>
 
           <div className="hero-role-list" aria-label="Áreas profesionales">
             {focusAreas.map((area) => <span key={area}>{area}</span>)}
@@ -53,7 +53,7 @@ export default function Home() {
             <a className="button primary" href={`https://wa.me/${contact.whatsapp}`}>
               Contactar por WhatsApp
             </a>
-            <a className="button" href="/experiencia">Ver experiencia</a>
+            <a className="button mobile-hide" href="/experiencia">Ver experiencia</a>
             <a className="button" href={contact.cv} download>Descargar CV</a>
           </div>
         </Reveal>
@@ -145,7 +145,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section two-col">
+      <section className="section two-col current-role">
         <Reveal>
           <div>
             <p className="eyebrow">Actualmente</p>
@@ -213,7 +213,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section philosophy">
+      <section className="section philosophy mobile-optional">
         <Reveal>
           <p className="eyebrow">Impacto que analizo</p>
           <h2>Decisiones comerciales respaldadas por indicadores.</h2>
