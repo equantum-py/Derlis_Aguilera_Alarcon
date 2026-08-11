@@ -163,9 +163,8 @@ export default function Home() {
           <div className="prose">
             <h3>Ecommerce Strategy & Operations</h3>
             <p>
-              Gestiono y optimizo la operación ecommerce sobre Shopify,
-              conectando catálogo, productos, precios, stock, experiencia,
-              marketing, analítica, automatización y coordinación operativa.
+              Gestiono la operación ecommerce en Shopify integrando catálogo,
+              productos, precios, stock, marketing y analítica.
             </p>
             <p>
               Analizo oportunidades comerciales, priorizo mejoras y acompaño a
