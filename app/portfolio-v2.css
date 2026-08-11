@@ -440,3 +440,69 @@
     font-size: 12px;
   }
 }
+
+
+/* Mobile clipping correction: show complete content and one complete card */
+@media (max-width: 640px) {
+  .current-role .prose p {
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+  }
+
+  .current-role .tool-list {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .current-role .tool-list span:nth-child(n + 5) {
+    display: none;
+  }
+
+  .capability-grid > *,
+  .workflow-grid > * {
+    flex-basis: calc(100vw - 24px);
+    min-width: calc(100vw - 24px);
+  }
+
+  #experience-short .compact-timeline > * {
+    flex-basis: calc(100vw - 24px);
+    min-width: calc(100vw - 24px);
+  }
+
+  #experience-short .timeline-item {
+    min-height: 150px;
+    height: auto;
+    overflow: visible;
+  }
+
+  #experience-short .timeline-meta {
+    min-width: 0;
+  }
+
+  #experience-short .experience-logo-wrap {
+    min-height: 64px;
+    margin-bottom: 12px;
+    overflow: visible;
+  }
+
+  #experience-short .experience-logo {
+    display: block;
+    max-width: min(190px, 72vw);
+    max-height: 62px;
+    object-fit: contain;
+    object-position: left center;
+    transform: none;
+  }
+
+  #experience-short .experience-logo[src*="logo-casa-parana"] {
+    max-width: 180px;
+    max-height: 62px;
+    transform: none;
+  }
+
+  #experience-short .timeline-meta p {
+    overflow-wrap: anywhere;
+    line-height: 1.4;
+  }
+}
