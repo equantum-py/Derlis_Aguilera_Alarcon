@@ -1,11 +1,22 @@
 import { Reveal } from "../components/reveal";
 import { contact, experiences, kpis } from "../lib/portfolio-data";
+import {
+  capabilities,
+  outcomeTypes,
+  positioning,
+  workflow,
+} from "../lib/professional-profile";
 
-const focusAreas = ["Ecommerce", "Shopify", "Analytics", "AI Operations"];
+const focusAreas = [
+  "Ecommerce",
+  "Marketing",
+  "Productos",
+  "Operaciones",
+  "Logística",
+  "SQL y datos",
+];
 
 export default function Home() {
-  const featuredExperience = experiences;
-
   return (
     <main>
       <a
@@ -16,13 +27,11 @@ export default function Home() {
         WhatsApp
       </a>
 
-      <nav className="nav">
-        <a className="brand" href="/">
-          Derlis Aguilera
-        </a>
-
+      <nav className="nav" aria-label="Navegación principal">
+        <a className="brand" href="/">Derlis Aguilera</a>
         <div>
           <a href="/">Inicio</a>
+          <a href="#especialidades">Especialidades</a>
           <a href="/experiencia">Experiencia</a>
           <a href="/herramientas">Herramientas</a>
           <a href="#contact">Contacto</a>
@@ -31,33 +40,21 @@ export default function Home() {
 
       <section className="hero section" id="top">
         <Reveal>
-          <p className="eyebrow">
-            Ecommerce Strategy & AI Operations Specialist
-          </p>
-
+          <p className="eyebrow">{positioning.eyebrow}</p>
           <h1>Derlis Aguilera</h1>
+          <p className="hero-copy">{positioning.headline}</p>
+          <p>{positioning.summary}</p>
 
-          <p className="hero-copy">
-            Ayudo a empresas a ordenar, medir y hacer crecer canales ecommerce
-            mediante estrategia, operación, analítica, automatización e
-            inteligencia artificial.
-          </p>
+          <div className="hero-role-list" aria-label="Áreas profesionales">
+            {focusAreas.map((area) => <span key={area}>{area}</span>)}
+          </div>
 
           <div className="actions">
-            <a
-              className="button primary"
-              href={`https://wa.me/${contact.whatsapp}`}
-            >
-              WhatsApp
+            <a className="button primary" href={`https://wa.me/${contact.whatsapp}`}>
+              Contactar por WhatsApp
             </a>
-
-            <a className="button" href="/experiencia">
-              Ver experiencia
-            </a>
-
-            <a className="button" href={contact.cv} download>
-              Descargar CV
-            </a>
+            <a className="button" href="/experiencia">Ver experiencia</a>
+            <a className="button" href={contact.cv} download>Descargar CV</a>
           </div>
         </Reveal>
 
@@ -70,25 +67,21 @@ export default function Home() {
                 className="profile-photo"
               />
             </div>
-
             <div className="profile-summary">
-              <h2>Ecommerce, operación e IA</h2>
-
-              <p>
-                +6 años entre ecommerce, ventas, analítica y operación digital.
-              </p>
-
+              <h2>Ecommerce de punta a punta</h2>
+              <p>+6 años conectando negocio, clientes, productos, datos y operación digital.</p>
               <ul>
-                {focusAreas.map((area) => (
-                  <li key={area}>{area}</li>
-                ))}
+                <li>Visión comercial</li>
+                <li>Decisiones con datos</li>
+                <li>Mejora continua</li>
+                <li>Coordinación de equipos</li>
               </ul>
             </div>
           </aside>
         </Reveal>
       </section>
 
-      <section className="section kpi-grid" aria-label="KPI Impact">
+      <section className="section kpi-grid" aria-label="Resumen profesional">
         {kpis.map((kpi) => (
           <Reveal key={kpi.label}>
             <article className="kpi-card">
@@ -100,45 +93,68 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="section two-col">
+      <section className="section" id="especialidades">
         <Reveal>
-          <div>
-            <p className="eyebrow">Sobre mí</p>
-            <h2>Perfil orientado a negocio, ecommerce y mejora continua.</h2>
-          </div>
-        </Reveal>
-
-        <Reveal>
-          <div className="prose">
+          <div className="section-heading">
+            <p className="eyebrow">Áreas de especialización</p>
+            <h2>Una visión integral del negocio ecommerce.</h2>
             <p>
-              Soy especialista en ecommerce, estrategia digital y operaciones
-              con IA. Trabajo conectando negocio, tecnología, analítica y
-              procesos comerciales para mejorar la operación digital y la toma
-              de decisiones.
-            </p>
-
-            <p>
-              Mi enfoque combina Shopify, gestión de catálogo, SEO ecommerce,
-              automatización, reporting, chatbots, n8n y coordinación con
-              equipos comerciales y técnicos.
+              Trabajo sobre todo el recorrido digital: captación, productos,
+              experiencia de compra, análisis, operación y seguimiento.
             </p>
           </div>
         </Reveal>
+
+        <div className="capability-grid">
+          {capabilities.map((capability) => (
+            <Reveal key={capability.title}>
+              <article className="capability-card">
+                <h3>{capability.title}</h3>
+                <p>{capability.description}</p>
+                <div className="tool-list">
+                  {capability.skills.map((skill) => <span key={skill}>{skill}</span>)}
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="metodo">
+        <Reveal>
+          <div className="section-heading">
+            <p className="eyebrow">Cómo gestiono un ecommerce</p>
+            <h2>Del dato a la mejora operativa.</h2>
+            <p>
+              Un método simple para convertir información y necesidades del
+              negocio en acciones coordinadas y medibles.
+            </p>
+          </div>
+        </Reveal>
+
+        <div className="workflow-grid">
+          {workflow.map((step) => (
+            <Reveal key={step.number}>
+              <article className="workflow-item">
+                <span>{step.number}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
       </section>
 
       <section className="section two-col">
         <Reveal>
           <div>
             <p className="eyebrow">Actualmente</p>
-
             <div className="company-heading">
               <img
                 src="/logo/logo-inverfin.png"
                 alt="Logo de Inverfin S.A.E.C.A."
                 className="company-logo company-logo-large"
               />
-
-              <span className="sr-only">Inverfin S.A.E.C.A.</span>
             </div>
           </div>
         </Reveal>
@@ -146,23 +162,24 @@ export default function Home() {
         <Reveal>
           <div className="prose">
             <h3>Ecommerce Strategy & Operations</h3>
-
             <p>
-              Actualmente trabajo en Inverfin S.A.E.C.A. gestionando y
-              optimizando la operación ecommerce sobre Shopify. Mi trabajo
-              incluye catálogo, productos, SEO, apps, automatización, IA,
-              chatbots, análisis comercial, mejora de procesos y coordinación
-              con equipos para impulsar el crecimiento digital.
+              Gestiono y optimizo la operación ecommerce sobre Shopify,
+              conectando catálogo, productos, precios, stock, experiencia,
+              marketing, analítica, automatización y coordinación operativa.
             </p>
-
+            <p>
+              Analizo oportunidades comerciales, priorizo mejoras y acompaño a
+              equipos internos y proveedores para impulsar un canal digital más
+              ordenado, medible y preparado para crecer.
+            </p>
             <div className="tool-list">
-              <span>Shopify Operations</span>
-              <span>Gestión de catálogo</span>
-              <span>SEO ecommerce</span>
-              <span>Automatización e IA</span>
-              <span>Chatbots y n8n</span>
+              <span>Shopify Plus</span>
+              <span>Análisis de productos</span>
+              <span>Operación ecommerce</span>
+              <span>Marketing y conversión</span>
+              <span>Scrum y backlog</span>
               <span>Analytics y reporting</span>
-              <span>Mejora de procesos</span>
+              <span>Automatización</span>
             </div>
           </div>
         </Reveal>
@@ -170,25 +187,19 @@ export default function Home() {
 
       <section className="section" id="experience-short">
         <Reveal>
-          <p className="eyebrow">Experiencia laboral</p>
-          <h2>Resumen de experiencia.</h2>
+          <p className="eyebrow">Trayectoria</p>
+          <h2>Experiencia en distintas etapas del ecommerce.</h2>
         </Reveal>
 
         <div className="timeline compact-timeline">
-          {featuredExperience.map((item) => (
+          {experiences.map((item) => (
             <Reveal key={item.company}>
               <article className="timeline-item">
                 <div className="timeline-meta">
                   <time>{item.period}</time>
-
                   <div className="experience-logo-wrap">
-                    <img
-                      src={item.logo}
-                      alt={item.logoAlt}
-                      className="experience-logo"
-                    />
+                    <img src={item.logo} alt={item.logoAlt} className="experience-logo" />
                   </div>
-
                   <h3 className="sr-only">{item.company}</h3>
                   <p>{item.role}</p>
                 </div>
@@ -198,31 +209,25 @@ export default function Home() {
         </div>
 
         <div className="section-actions">
-          <a className="button" href="/experiencia">
-            Ver experiencia detallada
-          </a>
+          <a className="button" href="/experiencia">Ver experiencia y casos</a>
         </div>
       </section>
 
       <section className="section philosophy">
         <Reveal>
-          <p className="eyebrow">CV</p>
-
-          <h2>Disponible para oportunidades y proyectos ecommerce.</h2>
-
+          <p className="eyebrow">Impacto que analizo</p>
+          <h2>Decisiones comerciales respaldadas por indicadores.</h2>
           <p>
-            Perfil en ecommerce management, operaciones digitales, analítica,
-            automatización e implementación práctica de IA.
+            Cada iniciativa debe responder a un objetivo y contar con una forma
+            clara de evaluar su resultado, sin presentar cifras que no hayan
+            sido verificadas.
           </p>
-
+          <div className="outcome-list">
+            {outcomeTypes.map((outcome) => <span key={outcome}>{outcome}</span>)}
+          </div>
           <div className="actions">
-            <a className="button primary" href={contact.cv} download>
-              Descargar CV
-            </a>
-
-            <a className="button" href="/herramientas">
-              Ver herramientas
-            </a>
+            <a className="button primary" href={contact.cv} download>Descargar CV</a>
+            <a className="button" href="/herramientas">Ver conocimientos</a>
           </div>
         </Reveal>
       </section>
@@ -230,38 +235,20 @@ export default function Home() {
       <section className="section contact" id="contact">
         <Reveal>
           <p className="eyebrow">Contacto</p>
-
-          <h2>¿Tu ecommerce necesita más orden, medición o automatización?</h2>
-
+          <h2>¿Buscás mejorar el rendimiento de tu ecommerce?</h2>
           <p>
-            Conversemos sobre estrategia ecommerce, analítica, Shopify y
-            operaciones con IA.
+            Conversemos sobre productos, marketing, analítica, operación,
+            logística, Shopify o mejora de procesos.
           </p>
-
           <div className="contact-links">
             <a href={`https://wa.me/${contact.whatsapp}`}>WhatsApp</a>
-
             <a href={`mailto:${contact.email}`}>Email</a>
-
-            <a href={contact.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-
-            <a href={contact.cv} download>
-              Descargar CV
-            </a>
+            <a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href={contact.cv} download>Descargar CV</a>
           </div>
-
           <p className="contact-detail">
             {contact.whatsappLabel} · {contact.email}
           </p>
-
-          <a
-            className="button primary desktop-only"
-            href={`https://wa.me/${contact.whatsapp}`}
-          >
-            Escribirme por WhatsApp
-          </a>
         </Reveal>
       </section>
     </main>
