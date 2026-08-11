@@ -4,6 +4,7 @@ import { Analytics } from "../components/analytics";
 import "./globals.css";
 import "./visual-overrides.css";
 import "./portfolio-v2.css";
+import "./portfolio-premium.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://derlis-aguilera-alarcon.vercel.app"),
