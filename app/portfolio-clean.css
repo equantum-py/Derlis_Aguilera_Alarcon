@@ -1267,3 +1267,115 @@ h2 {
     display: none !important;
   }
 }
+
+
+/* eQuantum venture */
+.venture {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 64px;
+  align-items: start;
+  border-top: 1px solid var(--border);
+}
+
+.venture-intro {
+  max-width: 560px;
+}
+
+.venture-intro h2 {
+  margin-bottom: 16px;
+}
+
+.venture-intro > p:not(.eyebrow) {
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.venture-intro .button {
+  margin-top: 0;
+}
+
+.venture-details {
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.venture-details h3 {
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.venture-details > p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.venture-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0;
+}
+
+.venture-services span {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.venture-projects {
+  margin-bottom: 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 860px) {
+  .venture {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .venture {
+    gap: 20px;
+  }
+
+  .venture-intro h2 {
+    font-size: 31px;
+  }
+
+  .venture-intro > p:not(.eyebrow) {
+    margin-bottom: 18px;
+    font-size: 14px;
+  }
+
+  .venture-intro .button {
+    width: 100%;
+  }
+
+  .venture-details {
+    padding: 20px 18px;
+  }
+
+  .venture-details h3 {
+    font-size: 20px;
+    line-height: 1.15;
+  }
+
+  .venture-services {
+    margin: 18px 0;
+  }
+
+  .venture-services span {
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+}
