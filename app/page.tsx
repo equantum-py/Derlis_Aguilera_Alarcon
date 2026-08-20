@@ -161,9 +161,9 @@ export default function Home() {
 
         <Reveal>
           <div className="prose">
-            <h3>Ecommerce Strategy & Operations</h3>
+            <h3>Jefe de Ecommerce | Strategy &amp; Operations</h3>
             <p>
-              Gestiono la operación ecommerce en Shopify integrando catálogo,
+              Lidero la operación ecommerce en Shopify Plus integrando catálogo,
               productos, precios, stock, marketing y analítica.
             </p>
             <p>
@@ -234,10 +234,10 @@ export default function Home() {
       <section className="section contact" id="contact">
         <Reveal>
           <p className="eyebrow">Contacto</p>
-          <h2>¿Buscás mejorar el rendimiento de tu ecommerce?</h2>
+          <h2>¿Buscás fortalecer tu negocio digital?</h2>
           <p>
-            Conversemos sobre productos, marketing, analítica, operación,
-            logística, Shopify o mejora de procesos.
+            Conversemos sobre estrategia comercial, ecommerce, datos, operaciones,
+            automatización o mejora de procesos.
           </p>
           <div className="contact-links">
             <a href={`https://wa.me/${contact.whatsapp}`}>WhatsApp</a>
