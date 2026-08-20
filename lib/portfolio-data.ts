@@ -29,7 +29,7 @@ export type ToolCategory = {
 export const experiences: Experience[] = [
   {
     company: "Inverfin S.A.E.C.A.",
-    role: "Jefe de Ecommerce | Strategy & Operations",
+    role: "Ecommerce Strategy & Operations",
     period: "abril 2025 – Actualidad",
     logo: "/logo/logo-inverfin.png",
     logoAlt: "Logo de Inverfin S.A.E.C.A.",
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     title: "Inverfin Ecommerce",
     website: "inverfin.com.py",
     image: "/projects/inverfin.jpg",
-    role: "Jefe de Ecommerce | Strategy & Operations",
+    role: "Ecommerce Strategy & Operations",
     ownership:
       "Sitio creado por otros desarrolladores. Optimización, operación y crecimiento ecommerce a mi cargo.",
     description:

@@ -139,7 +139,7 @@ export default function Home() {
 
         <Reveal>
           <div className="prose">
-            <h3>Jefe de Ecommerce | Strategy &amp; Operations</h3>
+            <h3>Ecommerce Strategy &amp; Operations</h3>
             <p>
               Lidero la operación ecommerce en Shopify Plus integrando catálogo,
               productos, precios, stock, marketing y analítica.
