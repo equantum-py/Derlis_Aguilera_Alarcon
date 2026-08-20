@@ -1,5 +1,5 @@
 import { Reveal } from "../components/reveal";
-import { contact, experiences, kpis } from "../lib/portfolio-data";
+import { contact, experiences } from "../lib/portfolio-data";
 import {
   capabilities,
   outcomeTypes,
@@ -67,30 +67,8 @@ export default function Home() {
                 className="profile-photo"
               />
             </div>
-            <div className="profile-summary">
-              <h2>Ecommerce de punta a punta</h2>
-              <p>+6 años conectando negocio, clientes, productos, datos y operación digital.</p>
-              <ul>
-                <li>Visión comercial</li>
-                <li>Decisiones con datos</li>
-                <li>Mejora continua</li>
-                <li>Coordinación de equipos</li>
-              </ul>
-            </div>
           </aside>
         </Reveal>
-      </section>
-
-      <section className="section kpi-grid" aria-label="Resumen profesional">
-        {kpis.map((kpi) => (
-          <Reveal key={kpi.label}>
-            <article className="kpi-card">
-              <span>{kpi.label}</span>
-              <strong>{kpi.value}</strong>
-              <p>{kpi.suffix}</p>
-            </article>
-          </Reveal>
-        ))}
       </section>
 
       <section className="section" id="especialidades">
