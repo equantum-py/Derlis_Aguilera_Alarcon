@@ -190,6 +190,50 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section venture" id="equantum">
+        <Reveal>
+          <div className="venture-intro">
+            <p className="eyebrow">Emprendimiento</p>
+            <h2>eQuantum Consulting Group</h2>
+            <p>
+              Emprendimiento que fundé para ayudar a empresas y pymes de Paraguay
+              a fortalecer sus negocios digitales mediante ecommerce, desarrollo
+              web, automatización, analítica e inteligencia artificial aplicada.
+            </p>
+            <a
+              className="button primary"
+              href="https://www.equantum.com.py/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Conocer eQuantum
+            </a>
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.08}>
+          <div className="venture-details">
+            <h3>Fundador y consultor de negocios digitales</h3>
+            <p>
+              Relevo necesidades comerciales y operativas, propongo soluciones,
+              coordino la implementación y acompaño su mejora después de la
+              publicación.
+            </p>
+            <div className="venture-services" aria-label="Servicios de eQuantum">
+              <span>Ecommerce y Shopify</span>
+              <span>Desarrollo web</span>
+              <span>Automatización con IA</span>
+              <span>Analítica y medición</span>
+              <span>Integraciones</span>
+              <span>Google Ads</span>
+            </div>
+            <p className="venture-projects">
+              Proyectos vinculados a Portal Verde, Corpicia y Marmolería Pietra.
+            </p>
+          </div>
+        </Reveal>
+      </section>
+
       <section className="section philosophy mobile-optional">
         <Reveal>
           <p className="eyebrow">Impacto que analizo</p>
