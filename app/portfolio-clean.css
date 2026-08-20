@@ -1,0 +1,741 @@
+/* Clean grid system — one visual language across the portfolio */
+:root {
+  --background: #f5f5f2;
+  --surface: #ffffff;
+  --surface-soft: #fafaf8;
+  --text: #16202b;
+  --muted: #68717b;
+  --border: #dfe2e3;
+  --accent: #274c77;
+  --accent-soft: #eef3f7;
+  --max-width: 1120px;
+  --radius: 18px;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+body::before,
+body::after {
+  display: none;
+}
+
+.section {
+  width: min(var(--max-width), calc(100% - 40px));
+  padding: 76px 0;
+}
+
+.nav {
+  top: 0;
+  width: min(var(--max-width), calc(100% - 40px));
+  margin: 0 auto;
+  padding: 19px 0;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  background: rgba(245, 245, 242, 0.94);
+  box-shadow: none;
+}
+
+.nav div {
+  gap: 28px;
+  font-size: 13px;
+}
+
+.hero {
+  min-height: 620px;
+  margin-top: 0;
+  padding: 64px 0 72px;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.72fr);
+  gap: 72px;
+  border: 0;
+}
+
+.hero .reveal:first-child {
+  align-self: center;
+}
+
+.eyebrow,
+.hero .eyebrow {
+  margin-bottom: 14px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: .1em;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-size: clamp(52px, 6vw, 74px);
+  line-height: .98;
+}
+
+h2 {
+  font-size: clamp(34px, 4.2vw, 48px);
+  line-height: 1.04;
+}
+
+.hero-copy {
+  max-width: 650px;
+  margin-bottom: 12px;
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.hero-summary {
+  max-width: 670px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.hero-role-list {
+  margin-top: 20px;
+  gap: 7px;
+}
+
+.hero-role-list span,
+.tool-list span,
+.outcome-list span {
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.actions {
+  margin-top: 24px;
+}
+
+.button {
+  min-height: 42px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  box-shadow: none;
+  font-size: 13px;
+}
+
+.profile-photo-card {
+  max-width: 340px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 34px rgba(22, 32, 43, .06);
+}
+
+.profile-photo-wrap {
+  aspect-ratio: 4 / 4.25;
+}
+
+.profile-summary {
+  padding: 22px;
+}
+
+.profile-summary h2 {
+  font-size: 22px;
+}
+
+.profile-summary p {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.profile-summary ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-summary li {
+  padding: 7px 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  font-size: 11px;
+}
+
+.kpi-grid {
+  padding: 0;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.kpi-grid > .reveal + .reveal {
+  border-left: 1px solid var(--border);
+}
+
+.kpi-card {
+  min-height: 142px;
+  padding: 24px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.kpi-card::before {
+  display: none;
+}
+
+.kpi-card span {
+  margin-bottom: 14px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.kpi-card strong {
+  font-size: 34px;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 34px;
+}
+
+.section-heading h2 {
+  margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+  max-width: 620px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+#especialidades,
+#metodo,
+#experience-short {
+  border-top: 1px solid var(--border);
+}
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  overflow: hidden;
+  margin-top: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.capability-grid > .reveal {
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.capability-grid > .reveal:nth-child(3n) {
+  border-right: 0;
+}
+
+.capability-grid > .reveal:nth-last-child(-n + 3) {
+  border-bottom: 0;
+}
+
+.capability-card {
+  height: 100%;
+  min-height: 205px;
+  padding: 25px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.capability-card h3 {
+  font-size: 18px;
+}
+
+.capability-card p {
+  min-height: 68px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.capability-card:hover {
+  background: var(--surface-soft);
+  box-shadow: none;
+}
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  overflow: hidden;
+  margin-top: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.workflow-grid > .reveal + .reveal {
+  border-left: 1px solid var(--border);
+}
+
+.workflow-item {
+  height: 100%;
+  min-height: 190px;
+  padding: 24px 20px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.workflow-item span {
+  margin-bottom: 28px;
+  font-size: 11px;
+}
+
+.workflow-item h3 {
+  font-size: 17px;
+}
+
+.workflow-item p {
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.current-role {
+  width: min(var(--max-width), calc(100% - 40px));
+  margin: 0 auto 76px;
+  padding: 36px;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 54px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: none;
+}
+
+.current-role .prose h3 {
+  font-size: 25px;
+}
+
+.current-role .prose p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.company-logo-large {
+  max-width: 230px;
+  max-height: 90px;
+}
+
+#experience-short {
+  padding-top: 76px;
+}
+
+.compact-timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  overflow: hidden;
+  margin-top: 34px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.compact-timeline > .reveal {
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.compact-timeline > .reveal:nth-child(2n) {
+  border-right: 0;
+}
+
+.compact-timeline > .reveal:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+#experience-short .timeline-item {
+  min-height: 190px;
+  margin: 0;
+  padding: 26px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+#experience-short .experience-logo-wrap {
+  height: 66px;
+  margin-bottom: 16px;
+}
+
+#experience-short .experience-logo,
+#experience-short .experience-logo[src*="logo-casa-parana"] {
+  max-width: 190px;
+  max-height: 62px;
+  transform: none;
+}
+
+.section-actions {
+  margin-top: 22px;
+}
+
+.philosophy {
+  padding: 42px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: none;
+}
+
+.philosophy::before {
+  display: none;
+}
+
+.philosophy h2 {
+  max-width: 700px;
+  font-size: 40px;
+}
+
+.contact {
+  margin-bottom: 40px;
+  padding: 56px 40px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--text);
+  color: #fff;
+  box-shadow: none;
+}
+
+.contact h2,
+.contact p,
+.contact-detail {
+  color: #fff;
+}
+
+.contact .eyebrow {
+  color: #a9c1d8;
+}
+
+.contact-links a {
+  border-color: rgba(255,255,255,.22);
+  background: transparent;
+  color: #fff;
+}
+
+.contact-links a:hover {
+  background: rgba(255,255,255,.08);
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr .72fr;
+    gap: 34px;
+  }
+
+  .capability-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .capability-grid > .reveal,
+  .capability-grid > .reveal:nth-child(3n) {
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .capability-grid > .reveal:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .capability-grid > .reveal:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-grid > .reveal + .reveal {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .workflow-item {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 50px 130px 1fr;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 22px;
+  }
+
+  .workflow-item span,
+  .workflow-item h3,
+  .workflow-item p {
+    margin: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    padding-bottom: 64px;
+  }
+
+  .section,
+  .nav,
+  .current-role,
+  .contact {
+    width: min(100% - 24px, var(--max-width));
+  }
+
+  .nav {
+    padding: 14px 0;
+    border-radius: 0;
+  }
+
+  .nav div {
+    gap: 14px;
+  }
+
+  .nav div a:nth-child(2),
+  .nav div a:nth-child(5) {
+    display: none;
+  }
+
+  .section {
+    padding: 42px 0;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    min-height: auto;
+    padding: 42px 0;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .hero-summary {
+    display: block;
+    overflow: visible;
+    font-size: 13.5px;
+    -webkit-line-clamp: unset;
+  }
+
+  .hero-role-list {
+    max-height: none;
+  }
+
+  .hero .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profile-photo-card {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    max-width: none;
+    min-height: 154px;
+  }
+
+  .profile-photo-wrap {
+    width: 112px;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .profile-summary {
+    padding: 16px;
+  }
+
+  .profile-summary h2 {
+    font-size: 17px;
+  }
+
+  .profile-summary p {
+    display: none;
+  }
+
+  .profile-summary ul {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    margin-top: 8px;
+  }
+
+  .profile-summary li {
+    padding: 4px 6px;
+    font-size: 9.5px;
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kpi-grid > .reveal + .reveal {
+    border-left: 0;
+  }
+
+  .kpi-grid > .reveal {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .kpi-grid > .reveal:nth-child(odd) {
+    border-right: 1px solid var(--border);
+  }
+
+  .kpi-grid > .reveal:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .kpi-card {
+    min-height: 112px;
+    padding: 16px;
+  }
+
+  .kpi-card strong {
+    font-size: 28px;
+  }
+
+  .section-heading {
+    margin-bottom: 22px;
+  }
+
+  .section-heading > p:last-child {
+    display: block;
+    font-size: 13px;
+  }
+
+  .capability-grid,
+  .workflow-grid,
+  #experience-short .compact-timeline {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    scroll-snap-type: none;
+  }
+
+  .capability-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .capability-grid > *,
+  .workflow-grid > *,
+  #experience-short .compact-timeline > * {
+    min-width: 0;
+  }
+
+  .capability-card {
+    min-height: 158px;
+    padding: 16px;
+  }
+
+  .capability-card h3 {
+    font-size: 15px;
+  }
+
+  .capability-card p {
+    min-height: auto;
+    display: none;
+  }
+
+  .capability-card .tool-list {
+    max-height: 72px;
+    margin-top: 12px;
+    overflow: hidden;
+  }
+
+  .capability-card .tool-list span {
+    padding: 5px 7px;
+    font-size: 9px;
+  }
+
+  .workflow-item {
+    grid-template-columns: 34px 94px 1fr;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .workflow-item h3 {
+    font-size: 14px;
+  }
+
+  .workflow-item p {
+    display: block;
+    font-size: 11.5px;
+    -webkit-line-clamp: unset;
+  }
+
+  .current-role {
+    margin-bottom: 42px;
+    padding: 22px 18px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .current-role .prose p:nth-of-type(2) {
+    display: none;
+  }
+
+  .current-role .tool-list span:nth-child(n + 5) {
+    display: none;
+  }
+
+  .compact-timeline {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #experience-short .timeline-item {
+    min-height: 150px;
+    padding: 17px;
+  }
+
+  #experience-short .experience-logo-wrap {
+    height: 54px;
+  }
+
+  #experience-short .experience-logo,
+  #experience-short .experience-logo[src*="logo-casa-parana"] {
+    max-width: 130px;
+    max-height: 48px;
+  }
+
+  #experience-short .timeline-meta time,
+  #experience-short .timeline-meta p {
+    font-size: 10.5px;
+  }
+
+  .philosophy {
+    padding: 24px 20px;
+  }
+
+  .philosophy h2 {
+    font-size: 28px;
+  }
+
+  .contact {
+    padding: 34px 20px;
+  }
+
+  .contact h2 {
+    font-size: 30px;
+  }
+}

@@ -1,13 +1,15 @@
 # Portafolio profesional de Derlis Aguilera
 
-Portafolio enfocado en ecommerce, marketing digital, análisis de productos, operaciones, logística, datos y gestión ágil.
+Portafolio enfocado en liderazgo de negocios digitales, ecommerce, operaciones comerciales, datos y automatización con inteligencia artificial.
 
 ## Posicionamiento
 
-**Ecommerce Strategy, Product & Operations Analyst**
+**Líder de Negocios Digitales | Ecommerce, Operaciones Comerciales, Datos y Automatización con IA**
 
 El sitio presenta experiencia en:
 
+- Estrategia comercial, retail, clientes y KPIs
+- Liderazgo de equipos y coordinación transversal
 - Gestión ecommerce y Shopify
 - Marketing digital y medición
 - Productos, catálogo, precios y stock

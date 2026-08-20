@@ -29,7 +29,7 @@ export type ToolCategory = {
 export const experiences: Experience[] = [
   {
     company: "Inverfin S.A.E.C.A.",
-    role: "Ecommerce Strategy & Operations",
+    role: "Jefe de Ecommerce | Strategy & Operations",
     period: "abril 2025 – Actualidad",
     logo: "/logo/logo-inverfin.png",
     logoAlt: "Logo de Inverfin S.A.E.C.A.",
@@ -40,7 +40,9 @@ export const experiences: Experience[] = [
       "Implementación y configuración de plugins de Shopify para mejorar funcionalidad, experiencia de usuario y conversión.",
       "Ejecución de acciones de posicionamiento SEO dentro de la plataforma para mejorar la visibilidad de productos en buscadores.",
       "Implementación de automatizaciones, IA, chatbots y flujos operativos para mejorar la atención digital y reducir tareas repetitivas.",
-      "Dirección de la estrategia de ecommerce y análisis de mercado para acompañar la expansión digital de la marca.",
+      "Liderazgo de un equipo de 3 personas: 2 auxiliares de ecommerce y 1 analista de ecommerce.",
+      "Gestión de aproximadamente 30 categorías comerciales y seguimiento de indicadores de ventas, conversión, tráfico y productos.",
+      "Contribución a un incremento aproximado del 30% en ventas digitales durante seis meses, de acuerdo con reportes internos.",
       "Supervisión de operaciones de venta online y coordinación de equipos para el cumplimiento de KPIs comerciales.",
     ],
   },
@@ -57,6 +59,7 @@ export const experiences: Experience[] = [
       "Desarrollo e implementación de estrategias de marketing digital, incluyendo SEO, SEM, email marketing y redes sociales.",
       "Supervisión del catálogo de productos, incluyendo descripciones, imágenes y precios.",
       "Uso de herramientas analíticas para monitorear tráfico, comportamiento del usuario y oportunidades de mejora.",
+      "Liderazgo directo de un equipo de 13 colaboradores y gestión de un catálogo superior a 100 referencias.",
     ],
   },
   {
@@ -66,7 +69,7 @@ export const experiences: Experience[] = [
     logo: "/logo/logo-teo-sa.jpg",
     logoAlt: "Logo de Teo S.A.",
     impact: [
-      "Gestión comercial y mantenimiento de relaciones estratégicas con clientes.",
+      "Gestión de una cartera de 10 clientes y proyectos, manteniendo relaciones comerciales y acompañando entregables.",
       "Control de facturación, cobros y seguimiento de reportes mensuales.",
       "Supervisión y coordinación de equipos multidisciplinarios, incluyendo diseñadores, programadores y especialistas multimedia.",
       "Acompañamiento operativo en proyectos digitales vinculados a ecommerce y desarrollo web.",
@@ -85,6 +88,7 @@ export const experiences: Experience[] = [
       "Supervisión de la relación entre el canal digital y el equipo de ventas físicas para maximizar cierre y fidelización.",
       "Mantenimiento de la base de datos de productos, precios y promociones vigentes.",
       "Generación de informes periódicos de ventas y rendimiento de leads para apoyar la toma de decisiones comerciales.",
+      "Supervisión de un equipo de 6 personas y gestión de un catálogo superior a 100 referencias.",
     ],
   },
 ];
@@ -94,7 +98,7 @@ export const projects: Project[] = [
     title: "Inverfin Ecommerce",
     website: "inverfin.com.py",
     image: "/projects/inverfin.jpg",
-    role: "Ecommerce Strategy & Operations",
+    role: "Jefe de Ecommerce | Strategy & Operations",
     ownership:
       "Sitio creado por otros desarrolladores. Optimización, operación y crecimiento ecommerce a mi cargo.",
     description:
@@ -194,9 +198,9 @@ export const stack = [
 
 export const kpis = [
   { label: "Experiencia", value: "+6", suffix: "años" },
-  { label: "Empresas", value: "4", suffix: "organizaciones" },
-  { label: "Especialidad", value: "360°", suffix: "ecommerce" },
-  { label: "Enfoque", value: "AI", suffix: "operations" },
+  { label: "Liderazgo", value: "13", suffix: "máx. equipo directo" },
+  { label: "Resultado", value: "≈30%", suffix: "ventas digitales" },
+  { label: "Clientes", value: "10", suffix: "proyectos gestionados" },
 ];
 
 export const contact = {

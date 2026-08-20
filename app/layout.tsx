@@ -5,19 +5,21 @@ import "./globals.css";
 import "./visual-overrides.css";
 import "./portfolio-v2.css";
 import "./portfolio-premium.css";
+import "./portfolio-clean.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://derlis-aguilera-alarcon.vercel.app"),
   title: {
-    default: "Derlis Aguilera | Ecommerce, Product & Operations Analyst",
+    default: "Derlis Aguilera | Líder de Negocios Digitales",
     template: "%s | Derlis Aguilera",
   },
   description:
-    "Portafolio profesional de Derlis Aguilera: ecommerce, marketing digital, análisis de productos, operaciones, logística, SQL, Scrum, Shopify y analítica.",
+    "Portafolio de Derlis Aguilera: liderazgo de negocios digitales, ecommerce, operaciones comerciales, datos, automatización e inteligencia artificial.",
   keywords: [
     "Derlis Aguilera",
     "Ecommerce Paraguay",
-    "Ecommerce Analyst",
+    "Gerencia Ecommerce",
+    "Líder de Negocios Digitales",
     "Product Analyst",
     "Ecommerce Operations",
     "Shopify",
@@ -27,14 +29,16 @@ export const metadata: Metadata = {
     "Logística ecommerce",
     "Google Analytics",
     "Business Intelligence",
+    "Automatización con IA",
+    "Operaciones comerciales",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Derlis Aguilera | Ecommerce, Product & Operations Analyst",
+    title: "Derlis Aguilera | Líder de Negocios Digitales",
     description:
-      "Ecommerce, productos, marketing, datos, operaciones y logística para impulsar resultados digitales.",
+      "Ecommerce, estrategia comercial, datos, operaciones y automatización con IA para impulsar resultados.",
     type: "website",
     locale: "es_PY",
     url: "/",
@@ -44,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Derlis Aguilera | Ecommerce, Product & Operations Analyst",
     description:
-      "Ecommerce, productos, marketing, analítica, operaciones y logística.",
+      "Ecommerce, operaciones comerciales, datos y automatización con inteligencia artificial.",
   },
   robots: {
     index: true,
