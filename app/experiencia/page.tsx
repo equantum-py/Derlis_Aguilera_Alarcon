@@ -107,7 +107,7 @@ export default function ExperienciaPage() {
                   <img
                     src={project.image}
                     alt={`Captura del proyecto ${project.title}`}
-                    className="project-image"
+                    className={`project-image ${project.imageFit === "contain" ? "project-image-contain" : ""}`}
                   />
                 </div>
                 <div className="project-topline">

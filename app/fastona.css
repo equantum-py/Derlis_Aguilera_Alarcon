@@ -2,6 +2,19 @@
 @media(max-width:900px){.fp-section{width:calc(100% - 30px);padding:70px 0}.fp-hero{min-height:auto;border-bottom-right-radius:70px}.fp-rail{display:none}.fp-nav{width:calc(100% - 30px);height:66px}.fp-nav>div{display:none}.fp-nav-button{height:38px;padding:0 13px}.fp-hero-inner{width:calc(100% - 30px);min-height:auto;padding:55px 0 75px;grid-template-columns:1fr;gap:45px}.fp-script{font-size:20px}.fp-hero-copy h1{font-size:42px}.fp-hero-copy>p:last-of-type{font-size:14px}.fp-actions{flex-direction:column}.fp-primary,.fp-secondary{width:100%}.fp-portrait{width:100%;height:auto;aspect-ratio:1}.fp-portrait img{width:72%;height:72%}.fp-ring{width:82%;height:82%}.fp-circle{width:76px;height:76px;right:2%;top:4%}.fp-about-grid{grid-template-columns:1fr;gap:22px}.fp-about-photo img{height:330px}.fp-profile-card{padding:26px;border-radius:12px 45px 12px 45px}.fp-profile-card dl{grid-template-columns:1fr}.fp-heading{margin-bottom:38px}.fp-heading h2{font-size:33px}.fp-service-grid,.fp-skill-grid,.fp-work-grid{grid-template-columns:1fr}.fp-service{min-height:250px}.fp-experience-list article{grid-template-columns:42px 1fr 70px;padding-left:20px}.fp-experience-list article>p{grid-column:2/4}.fp-experience-list img{max-width:68px}.fp-numbers .fp-section{grid-template-columns:repeat(2,1fr);gap:24px 0}.fp-numbers .fp-section>div:nth-child(2){border-right:0}.fp-numbers strong{font-size:30px}.fp-equantum{grid-template-columns:1fr}.fp-equantum h2{font-size:42px}.fp-equantum-art{height:230px}.fp-contact>div>div>div{flex-wrap:wrap}.fp-contact h2{font-size:38px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}.reveal{opacity:1!important;transform:none!important}}
 
+/* Featured product case: software depth without breaking the portfolio grid. */
+.fp-work-grid .fp-project-featured{grid-column:1/-1;grid-template-columns:minmax(0,1.15fr) minmax(330px,.85fr);border-color:#cfd7ff;background:linear-gradient(120deg,#fff,#f2f5ff)}
+.fp-work-grid .fp-project-featured>a{background:radial-gradient(circle at 30% 25%,#fff 0 16%,transparent 17%),linear-gradient(135deg,#edf3ff,#fff)}
+.fp-work-grid img.fp-project-contain{object-fit:contain;padding:34px;background:transparent}
+.fp-project-tech{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.fp-project-tech b{padding:6px 8px;border:1px solid #d9def4;border-radius:999px;color:#39415f;font-size:9px;font-weight:700}
+.project-image-contain{object-fit:contain!important;padding:28px;background:linear-gradient(135deg,#eef4ff,#fff)}
+
+@media(max-width:900px){
+  .fp-work-grid .fp-project-featured{grid-column:auto;grid-template-columns:1fr}
+  .fp-work-grid img.fp-project-contain{min-height:250px;padding:24px}
+}
+
 /* Match the approved visual mockup: compact, readable and proportionally exact. */
 @media(min-width:901px){
   .fp-section{width:min(1180px,calc(100% - 80px));padding:62px 0}

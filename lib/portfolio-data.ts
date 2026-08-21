@@ -19,6 +19,8 @@ export type Project = {
   action: string;
   result: string;
   metric: string;
+  imageFit?: "cover" | "contain";
+  featured?: boolean;
 };
 
 export type ToolCategory = {
@@ -94,6 +96,33 @@ export const experiences: Experience[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    title: "Portal Cooperativo",
+    website: "quantum-life-manager.vercel.app",
+    image: "/projects/portal-cooperativo.webp",
+    imageFit: "contain",
+    featured: true,
+    role: "Product Design & Full-Stack Development",
+    ownership: "Producto diseñado y desarrollado por mí/eQuantum.",
+    description:
+      "App web financiera mobile-first con Portal del Socio y Panel Administrativo para digitalizar aportes, préstamos, pagos, ahorros, notificaciones y gestión interna.",
+    stack: [
+      "React",
+      "Vite",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "RLS",
+      "Vercel",
+    ],
+    problem:
+      "La cooperativa necesitaba centralizar la información financiera de sus socios y ordenar procesos administrativos que dependían de consultas y controles dispersos.",
+    action:
+      "Separé los accesos por rol, diseñé una experiencia mobile tipo app financiera y preparé la arquitectura de datos, relaciones, políticas RLS, datos demo y módulos de gestión.",
+    result:
+      "Plataforma funcional en modo demo, preparada para operar con Supabase y evolucionar hacia una implementación productiva con datos reales.",
+    metric: "App financiera full-stack",
+  },
   {
     title: "Inverfin Ecommerce",
     website: "inverfin.com.py",
