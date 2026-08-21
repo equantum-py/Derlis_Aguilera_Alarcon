@@ -99,3 +99,48 @@
   .fp-equantum-wrap{background:linear-gradient(115deg,#3157ed,#2148d4);color:#fff}.fp-equantum{padding:55px 0}.fp-equantum h2 span{color:#fff}.fp-equantum>div>p:nth-of-type(2){color:#e2e7ff}.fp-dashboard-art{height:210px;position:relative}.fp-board{position:absolute;inset:10px;padding:22px;background:#fff;color:var(--fp-ink);border-radius:10px}.fp-board i{display:inline-block;width:54px;height:70px;margin-right:9px;background:#dce5ff;border-radius:8px}.fp-dashboard-art>b{display:none}
   .fp-contact .fp-section{padding:42px 0}
 }
+
+/* Clear separation between the eQuantum venture and the contact footer. */
+.fp-equantum-wrap{position:relative;background:linear-gradient(120deg,#3157ed 0%,#2149d7 68%,#1839ad 100%);color:#fff;border-top-right-radius:88px;overflow:hidden}
+.fp-equantum-wrap:before{content:"";position:absolute;width:360px;height:360px;right:-120px;top:-170px;border:1px solid rgba(255,255,255,.16);border-radius:50%}
+.fp-equantum{position:relative;z-index:1;display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center;padding:58px 0}
+.fp-equantum-copy .fp-script{font-size:20px}
+.fp-equantum-copy h2{margin:5px 0 16px;font-size:46px;line-height:1.02}
+.fp-equantum-copy h2 span{display:block;color:#fff;font-weight:400}
+.fp-equantum-copy>p:nth-of-type(2){max-width:520px;margin:0;color:#e7ebff;font-size:15px;line-height:1.65}
+.fp-equantum-services{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}
+.fp-equantum-services span{padding:7px 10px;border:1px solid rgba(255,255,255,.45);border-radius:999px;font-size:10px;font-weight:700}
+.fp-equantum-copy>a{display:inline-flex;margin:0;padding:12px 17px;background:#fff;color:#1839ad;border:0;border-radius:5px;font-size:12px;font-weight:800}
+.fp-dashboard-art{position:relative;height:280px}
+.fp-board{position:absolute;inset:10px 0 10px 40px;width:auto;height:auto;padding:26px;background:#fff;color:var(--fp-ink);border-radius:14px;box-shadow:0 24px 55px rgba(7,9,29,.25)}
+.fp-board header{display:flex;align-items:flex-start;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid var(--fp-line)}
+.fp-board header span{font-size:17px;font-weight:800}
+.fp-board header small{color:var(--fp-muted);font-size:10px}
+.fp-dashboard-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.fp-dashboard-kpis>div{padding:13px;background:#f1f4ff;border-radius:8px}
+.fp-dashboard-kpis small{display:block;color:var(--fp-muted);font-size:9px}
+.fp-dashboard-kpis strong{display:block;margin-top:4px;color:var(--fp-blue);font-size:23px}
+.fp-dashboard-bars{height:76px;margin-top:16px;display:flex;align-items:flex-end;gap:9px}
+.fp-dashboard-bars i{flex:1;border-radius:4px 4px 0 0;background:#dce4ff}.fp-dashboard-bars i:nth-child(1){height:34%}.fp-dashboard-bars i:nth-child(2){height:58%}.fp-dashboard-bars i:nth-child(3){height:45%}.fp-dashboard-bars i:nth-child(4){height:82%;background:var(--fp-blue)}.fp-dashboard-bars i:nth-child(5){height:68%;background:#879eff}
+.fp-dashboard-art>b{display:none!important}
+.fp-contact{background:linear-gradient(135deg,#080a20,#111638 75%,#1b0e2d);border-top:1px solid rgba(255,255,255,.12)}
+.fp-contact .fp-section{padding:48px 0}
+.fp-contact h2{margin:4px 0 12px;font-size:40px}
+.fp-contact p:not(.fp-script){margin-bottom:24px;color:#c6cadb}
+.fp-contact a{min-width:112px}
+.fp-contact small{margin-top:20px;color:#9096ad}
+
+@media(max-width:900px){
+  .fp-equantum-wrap{border-top-right-radius:50px}
+  .fp-equantum{grid-template-columns:1fr;gap:30px;padding:52px 0}
+  .fp-equantum-copy h2{font-size:38px}
+  .fp-equantum-copy>p:nth-of-type(2){font-size:14px}
+  .fp-dashboard-art{height:280px}
+  .fp-board{inset:0;width:auto;height:auto;padding:20px}
+  .fp-dashboard-kpis{grid-template-columns:1fr;gap:7px}
+  .fp-dashboard-kpis>div{display:flex;align-items:center;justify-content:space-between;padding:10px 12px}
+  .fp-dashboard-kpis strong{font-size:19px}
+  .fp-dashboard-bars{display:none}
+  .fp-contact .fp-section{padding:42px 0}
+  .fp-contact h2{font-size:35px}
+}
