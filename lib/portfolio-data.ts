@@ -97,6 +97,36 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+    title: "Quantum Life Manager",
+    website: "quantum-life-manager.vercel.app/dashboard",
+    image: "/projects/quantum-life-manager.webp",
+    imageFit: "contain",
+    featured: true,
+    role: "Product & Full-Stack Development",
+    ownership: "Producto diseñado y desarrollado por mí/eQuantum.",
+    description:
+      "Plataforma PWA para centralizar tareas, reuniones, notas y recordatorios, con asistente de Telegram, notificaciones push y organización por áreas de la vida.",
+    stack: [
+      "React",
+      "Vite",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Telegram Bot API",
+      "Web Push",
+      "PWA",
+      "Google Calendar OAuth",
+      "Vercel",
+    ],
+    problem:
+      "La información personal y profesional estaba distribuida entre mensajes, notas, calendarios y recordatorios, generando duplicaciones y pérdida de seguimiento.",
+    action:
+      "Diseñé la arquitectura, UX/UI y desarrollo Full Stack. Integré Supabase, permisos RLS, Telegram para interpretar mensajes en lenguaje natural y Web Push para recordatorios automáticos. También preparé la base OAuth para Google Calendar.",
+    result:
+      "Una solución mobile-first que transforma mensajes cotidianos en tareas, reuniones y recordatorios estructurados, centralizando la organización personal en una sola plataforma.",
+    metric: "PWA, APIs y automatización",
+  },
+  {
     title: "Portal Cooperativo",
     website: "asoapp.vercel.app",
     image: "/projects/portal-cooperativo.webp",
