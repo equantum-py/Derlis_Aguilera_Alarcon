@@ -1,15 +1,15 @@
 import { Reveal } from "../components/reveal";
 import { contact, experiences, kpis, projects } from "../lib/portfolio-data";
-import { capabilities, expandedToolCategories, positioning } from "../lib/professional-profile";
+import { capabilities, expandedToolCategories, positioning, technicalPractice } from "../lib/professional-profile";
 
 export default function Home() {
   return <main className="fp-home">
     <section className="fp-hero" id="inicio">
       <div className="fp-shape fp-shape-a"/><div className="fp-shape fp-shape-b"/><div className="fp-dot fp-dot-a"/><div className="fp-dot fp-dot-b"/>
       <aside className="fp-rail"><a href="#inicio">DA</a><span/><a href={contact.linkedin}>in</a><a href={`https://wa.me/${contact.whatsapp}`}>w</a><a href={`mailto:${contact.email}`}>@</a></aside>
-      <nav className="fp-nav"><a className="fp-logo" href="#inicio"><i/> DERLIS</a><div><a href="#perfil">Perfil</a><a href="#servicios">Especialidades</a><a href="#experiencia">Experiencia</a><a href="#proyectos">Proyectos</a><a href="#contacto">Contacto</a></div><a className="fp-nav-button" href={contact.cv} download>Descargar CV</a></nav>
+      <nav className="fp-nav"><a className="fp-logo" href="#inicio"><i/> DERLIS</a><div><a href="#perfil">Perfil</a><a href="#servicios">Ecommerce</a><a href="#desarrollo">Desarrollo</a><a href="#experiencia">Experiencia</a><a href="#proyectos">Proyectos</a></div><a className="fp-nav-button" href={contact.cv} download>Descargar CV</a></nav>
       <div className="fp-hero-inner">
-        <Reveal><div className="fp-hero-copy"><p className="fp-script">Hola, soy</p><h1>DERLIS <span>AGUILERA</span></h1><strong>Ecommerce Strategy &amp; Operations</strong><p>{positioning.headline} Profesional con más de 6 años de experiencia conectando áreas comerciales, operativas y tecnológicas.</p><div className="fp-actions"><a className="fp-primary" href={`https://wa.me/${contact.whatsapp}`}>Contactarme</a><a className="fp-secondary" href={contact.cv} download>Descargar CV</a></div></div></Reveal>
+        <Reveal><div className="fp-hero-copy"><p className="fp-script">Hola, soy</p><h1>DERLIS <span>AGUILERA</span></h1><strong>Ecommerce &amp; Applied Software Development</strong><p>Conecto estrategia comercial, ecommerce y desarrollo de software para construir, mantener y mejorar productos digitales orientados a resultados.</p><div className="fp-actions"><a className="fp-primary" href={`https://wa.me/${contact.whatsapp}`}>Contactarme</a><a className="fp-secondary" href={contact.cv} download>Descargar CV</a></div></div></Reveal>
         <Reveal delay={.08}><div className="fp-portrait"><div className="fp-ring"/><div className="fp-circle"/><img src="/profile/derlis.jpg" alt="Derlis Aguilera"/><span>Disponible</span></div></Reveal>
       </div>
     </section>
@@ -23,6 +23,12 @@ export default function Home() {
       <Reveal><header className="fp-heading"><p>Lo que hago</p><h2>Áreas de <em>especialización</em></h2><span>Capacidades aplicadas a todo el recorrido del negocio digital.</span></header></Reveal>
       <div className="fp-service-grid">{capabilities.map((item,index)=><Reveal key={item.title}><article className={`fp-service fp-service-${index+1}`}><span className="fp-service-icon">0{index+1}</span><h3>{item.title}</h3><p>{item.description}</p></article></Reveal>)}</div>
     </section>
+
+    <section className="fp-development" id="desarrollo"><div className="fp-section">
+      <Reveal><header className="fp-heading light"><p>Perfil técnico</p><h2>Desarrollo de software <em>aplicado al negocio</em></h2><span>Experiencia práctica construyendo y evolucionando soluciones digitales reales.</span></header></Reveal>
+      <div className="fp-development-grid">{technicalPractice.map((area,index)=><Reveal key={area.title}><article><span>0{index+1}</span><h3>{area.title}</h3><p>{area.description}</p><div>{area.skills.map(skill=><small key={skill}>{skill}</small>)}</div></article></Reveal>)}</div>
+      <Reveal><div className="fp-dev-work"><div><p className="fp-script">Cómo aporto</p><h3>Mantenimiento, mejora y entrega de aplicaciones.</h3></div><ul><li>Corrección de errores y ajustes de funcionalidades.</li><li>Pequeñas funcionalidades orientadas a usuarios reales.</li><li>Consultas SQL, bases de datos e integración de APIs.</li><li>Pruebas, seguimiento, Git y despliegues en Vercel.</li></ul></div></Reveal>
+    </div></section>
 
     <section className="fp-experience" id="experiencia">
       <div className="fp-section"><Reveal><header className="fp-heading light"><p>Trayectoria</p><h2>Mi experiencia <em>profesional</em></h2><span>De la operación y las ventas digitales a la estrategia ecommerce.</span></header></Reveal>
