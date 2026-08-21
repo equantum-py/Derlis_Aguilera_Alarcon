@@ -98,7 +98,7 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     title: "Portal Cooperativo",
-    website: "quantum-life-manager.vercel.app",
+    website: "asoapp.vercel.app",
     image: "/projects/portal-cooperativo.webp",
     imageFit: "contain",
     featured: true,
@@ -122,6 +122,33 @@ export const projects: Project[] = [
     result:
       "Plataforma funcional en modo demo, preparada para operar con Supabase y evolucionar hacia una implementación productiva con datos reales.",
     metric: "App financiera full-stack",
+  },
+  {
+    title: "Cooperativa Vida & Luz",
+    website: "cooperativavidaluzcompy.vercel.app",
+    image: "/projects/cooperativa-vida-luz.png",
+    imageFit: "contain",
+    featured: true,
+    role: "Product, UX/UI & Full-Stack Development",
+    ownership: "Plataforma conceptualizada, diseñada y desarrollada por mí/eQuantum.",
+    description:
+      "Plataforma de gestión cooperativa con Back Office para socios, asociación, créditos, aportes, morosidad, reportes, auditoría, usuarios, roles y permisos.",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "JWT",
+      "PostgreSQL",
+      "Vercel",
+    ],
+    problem:
+      "La cooperativa necesitaba centralizar su operación administrativa y preparar una base tecnológica para conectar posteriormente una App del Socio.",
+    action:
+      "Trabajé de punta a punta en concepto, UX/UI, arquitectura, desarrollo, seguridad, QA, deploy y auditoría. Implementé login, sesiones JWT, rutas y APIs protegidas, permisos por rol y registro de acciones.",
+    result:
+      "V1 funcional en desarrollo con los módulos administrativos principales disponibles. La siguiente etapa es migrar la persistencia temporal desde JSON hacia Prisma y PostgreSQL antes de operar con información financiera real.",
+    metric: "Back Office y seguridad",
   },
   {
     title: "Inverfin Ecommerce",
