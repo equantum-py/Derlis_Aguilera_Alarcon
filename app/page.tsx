@@ -1,22 +1,17 @@
 import { Reveal } from "../components/reveal";
 import { contact, experiences, kpis, projects } from "../lib/portfolio-data";
-import { capabilities, expandedToolCategories, positioning, technicalPractice } from "../lib/professional-profile";
+import { capabilities, expandedToolCategories, technicalPractice } from "../lib/professional-profile";
 
 export default function Home() {
   return <main className="fp-home">
     <section className="fp-hero" id="inicio">
       <div className="fp-shape fp-shape-a"/><div className="fp-shape fp-shape-b"/><div className="fp-dot fp-dot-a"/><div className="fp-dot fp-dot-b"/>
       <aside className="fp-rail"><a href="#inicio">DA</a><span/><a href={contact.linkedin}>in</a><a href={`https://wa.me/${contact.whatsapp}`}>w</a><a href={`mailto:${contact.email}`}>@</a></aside>
-      <nav className="fp-nav"><a className="fp-logo" href="#inicio"><i/> DERLIS</a><div><a href="#perfil">Perfil</a><a href="#servicios">Ecommerce</a><a href="#desarrollo">Desarrollo</a><a href="#experiencia">Experiencia</a><a href="#proyectos">Proyectos</a></div><a className="fp-nav-button" href={contact.cv} download>Descargar CV</a></nav>
+      <nav className="fp-nav"><a className="fp-logo" href="#inicio"><i/> DERLIS</a><div><a href="#servicios">Ecommerce</a><a href="#desarrollo">Desarrollo</a><a href="#experiencia">Experiencia</a><a href="#proyectos">Proyectos</a></div><a className="fp-nav-button" href={contact.cv} download>Descargar CV</a></nav>
       <div className="fp-hero-inner">
         <Reveal><div className="fp-hero-copy"><p className="fp-script">Hola, soy</p><h1>DERLIS <span>AGUILERA</span></h1><strong>Ecommerce &amp; Applied Software Development</strong><p>Conecto estrategia comercial, ecommerce y desarrollo de software para construir, mantener y mejorar productos digitales orientados a resultados.</p><div className="fp-actions"><a className="fp-primary" href={`https://wa.me/${contact.whatsapp}`}>Contactarme</a><a className="fp-secondary" href={contact.cv} download>Descargar CV</a></div></div></Reveal>
         <Reveal delay={.08}><div className="fp-portrait"><div className="fp-ring"/><div className="fp-circle"/><img src="/profile/derlis.jpg" alt="Derlis Aguilera"/><span>Disponible</span></div></Reveal>
       </div>
-    </section>
-
-    <section className="fp-about fp-section" id="perfil">
-      <Reveal><header className="fp-heading"><p>Sobre mí</p><h2>Negocio, datos y <em>tecnología</em></h2><span>Una visión integral para mejorar el rendimiento ecommerce.</span></header></Reveal>
-      <div className="fp-about-grid"><Reveal><div className="fp-about-photo"><img src="/profile/derlis.jpg" alt="Derlis Aguilera trabajando en ecommerce"/><i/></div></Reveal><Reveal delay={.08}><article className="fp-profile-card fp-value-list"><div><b>◎</b><span><strong>Enfoque estratégico</strong><p>Diseño e implemento estrategias de ecommerce y operaciones alineadas a objetivos de negocio.</p></span></div><div><b>⌁</b><span><strong>Datos que impulsan decisiones</strong><p>Uso indicadores y análisis para optimizar la experiencia del cliente y maximizar resultados.</p></span></div><div><b>◇</b><span><strong>Ejecución con impacto</strong><p>Lidero equipos y proyectos para convertir estrategias en resultados medibles y sostenibles.</p></span></div></article></Reveal></div>
     </section>
 
     <section className="fp-services fp-section" id="servicios">
