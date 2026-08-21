@@ -160,17 +160,43 @@ export const expandedToolCategories = [
   {
     title: "Tecnología y desarrollo",
     items: [
+      "Git",
       "GitHub",
       "Vercel",
+      "React",
       "Next.js",
       "TypeScript",
       "JavaScript",
       "HTML",
       "CSS",
       "Node.js",
+      "Prisma",
+      "Neon",
+      "APIs",
       "Figma",
       "Canva",
     ],
+  },
+];
+
+export const technicalPractice = [
+  {
+    title: "Frontend",
+    description:
+      "Desarrollo y evolución de interfaces web responsive, componentes reutilizables y funcionalidades orientadas a usuarios reales.",
+    skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"],
+  },
+  {
+    title: "Datos y backend aplicado",
+    description:
+      "Modelado y consulta de datos, integraciones con servicios y construcción de funciones para aplicaciones y paneles administrativos.",
+    skills: ["SQL", "PostgreSQL", "Supabase", "Prisma", "Neon", "APIs"],
+  },
+  {
+    title: "Mantenimiento y entrega",
+    description:
+      "Corrección de errores, ajustes de funcionalidades, pruebas, seguimiento de soluciones y despliegues controlados.",
+    skills: ["Git", "GitHub", "Debugging", "Pruebas funcionales", "Vercel", "CI/CD"],
   },
 ];
 

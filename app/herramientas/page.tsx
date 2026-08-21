@@ -26,10 +26,10 @@ export default function HerramientasPage() {
         <a className="back-link" href="/">← Volver al inicio</a>
         <Reveal>
           <p className="eyebrow">Conocimientos y herramientas</p>
-          <h1>Ecommerce, datos, marketing, operación y gestión ágil.</h1>
+          <h1>Ecommerce, desarrollo, datos, automatización y operaciones.</h1>
           <p className="hero-copy">
-            Conocimientos aplicados para analizar productos, coordinar procesos,
-            medir resultados y mejorar continuamente el canal digital.
+            Conocimientos aplicados para desarrollar y evolucionar aplicaciones, trabajar
+            con datos, integrar servicios, corregir errores y mejorar productos digitales.
           </p>
         </Reveal>
       </section>

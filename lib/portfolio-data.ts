@@ -190,10 +190,18 @@ export const stack = [
   "ChatGPT",
   "n8n",
   "Chatbots",
+  "Git",
   "GitHub",
+  "React",
+  "Next.js",
+  "TypeScript",
   "JavaScript",
   "HTML",
   "CSS",
+  "SQL",
+  "PostgreSQL",
+  "Supabase",
+  "Vercel",
 ];
 
 export const kpis = [
@@ -249,8 +257,10 @@ export const toolCategories: ToolCategory[] = [
   {
     title: "Desarrollo, código y despliegue",
     items: [
+      "Git",
       "GitHub",
       "Vercel",
+      "React",
       "Node.js",
       "HTML",
       "CSS",
@@ -259,6 +269,8 @@ export const toolCategories: ToolCategory[] = [
       "TypeScript",
       "PHP",
       "Next.js",
+      "Prisma",
+      "APIs",
       "OpenCode",
       "GitHub Copilot",
     ],
@@ -269,7 +281,7 @@ export const toolCategories: ToolCategory[] = [
   },
   {
     title: "Apps, backend e infraestructura",
-    items: ["Lovable", "Emergent", "Supabase", "Cloudflare"],
+    items: ["Supabase", "PostgreSQL", "Prisma", "Neon", "Node.js", "Cloudflare"],
   },
   {
     title: "Otras herramientas",
