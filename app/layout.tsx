@@ -31,6 +31,13 @@ export const metadata: Metadata = {
     "Business Intelligence",
     "Automatización con IA",
     "Operaciones comerciales",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "PostgreSQL",
+    "Supabase",
+    "Git",
   ],
   alternates: {
     canonical: "/",
