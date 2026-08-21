@@ -100,6 +100,36 @@
   .fp-contact .fp-section{padding:42px 0}
 }
 
+/* Balanced technical positioning for ecommerce and software roles. */
+.fp-development{background:linear-gradient(135deg,#0c1232,#111a45);color:#fff}
+.fp-development .fp-section{padding-top:62px;padding-bottom:62px}
+.fp-development .fp-heading.light h2 em{color:#8ca5ff}
+.fp-development-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.fp-development-grid article{height:100%;min-height:265px;padding:26px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:15px}
+.fp-development-grid article>span{display:grid;place-items:center;width:42px;height:42px;border-radius:10px;background:#3157ed;color:#fff;font-size:11px;font-weight:800}
+.fp-development-grid h3{margin:26px 0 11px;font-size:21px}
+.fp-development-grid p{margin:0;color:#bdc5df;font-size:13px;line-height:1.6}
+.fp-development-grid article>div{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
+.fp-development-grid small{padding:6px 8px;border:1px solid rgba(255,255,255,.22);border-radius:999px;color:#fff;font-size:9px}
+.fp-dev-work{margin-top:18px;padding:28px 32px;display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;background:#3157ed;border-radius:15px;align-items:center}
+.fp-dev-work .fp-script{font-size:17px;margin:0 0 5px}
+.fp-dev-work h3{margin:0;font-size:25px;line-height:1.15}
+.fp-dev-work ul{margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px 25px;list-style:none}
+.fp-dev-work li{position:relative;padding-left:18px;font-size:12px;line-height:1.5;color:#eef1ff}
+.fp-dev-work li:before{content:"✓";position:absolute;left:0;font-weight:800}
+
+@media(max-width:900px){
+  .fp-development .fp-section{padding-top:52px;padding-bottom:52px}
+  .fp-development-grid{grid-template-columns:1fr}
+  .fp-development-grid article{min-height:auto;padding:24px}
+  .fp-development-grid h3{margin-top:20px}
+  .fp-development-grid p{font-size:14px}
+  .fp-dev-work{padding:24px;grid-template-columns:1fr;gap:24px}
+  .fp-dev-work h3{font-size:23px}
+  .fp-dev-work ul{grid-template-columns:1fr}
+  .fp-dev-work li{font-size:13px}
+}
+
 /* Clear separation between the eQuantum venture and the contact footer. */
 .fp-equantum-wrap{position:relative;background:linear-gradient(120deg,#3157ed 0%,#2149d7 68%,#1839ad 100%);color:#fff;border-top-right-radius:88px;overflow:hidden}
 .fp-equantum-wrap:before{content:"";position:absolute;width:360px;height:360px;right:-120px;top:-170px;border:1px solid rgba(255,255,255,.16);border-radius:50%}
