@@ -66,3 +66,336 @@ body::before, body::after { display:none; }
 }
 
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important;animation:none!important;transition:none!important; }.reveal { opacity:1;transform:none; }.ambient-glow { display:none; } }
+
+/* Visual hierarchy correction: one grid, one rhythm, readable typography. */
+@media (min-width: 901px) {
+  .section {
+    width: min(1180px, calc(100% - 80px));
+    padding: 104px 0;
+  }
+
+  .nav {
+    width: min(1180px, calc(100% - 48px));
+  }
+
+  .hero {
+    min-height: 900px;
+    padding-top: 150px;
+    padding-bottom: 80px;
+    grid-template-columns: minmax(0, 1.2fr) 390px;
+    grid-template-rows: auto auto;
+    column-gap: 90px;
+    row-gap: 46px;
+  }
+
+  .hero h1 {
+    font-size: clamp(92px, 8vw, 132px);
+  }
+
+  .hero-intro {
+    max-width: 720px;
+    padding-left: 0;
+  }
+
+  .hero-copy {
+    max-width: 680px;
+    font-size: 30px;
+  }
+
+  .hero-summary {
+    max-width: 650px;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .hero-focus {
+    justify-content: flex-start;
+    align-self: center;
+  }
+
+  .manifesto h2,
+  .editorial-heading h2 {
+    max-width: 900px;
+    font-size: clamp(56px, 5.3vw, 76px);
+    line-height: 1;
+  }
+
+  .manifesto-layout {
+    margin-top: 64px;
+    grid-template-columns: 390px minmax(0, 1fr);
+    gap: 80px;
+    align-items: start;
+  }
+
+  .manifesto-copy {
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  .metric-row {
+    gap: 0;
+  }
+
+  .metric {
+    min-height: 138px;
+    padding: 22px 18px;
+    border-left: 1px solid var(--line);
+  }
+
+  .metric strong {
+    font-size: 52px;
+  }
+
+  .metric > span,
+  .metric small {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .editorial-heading,
+  .editorial-heading.compact {
+    display: block;
+    margin-bottom: 58px;
+  }
+
+  .editorial-heading .section-number {
+    margin-bottom: 24px;
+  }
+
+  .editorial-heading.compact > p:last-child {
+    max-width: 650px;
+    margin: 22px 0 0;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .expertise-row {
+    grid-template-columns: 54px 260px minmax(300px, 1fr) 280px;
+    gap: 26px;
+    min-height: 150px;
+  }
+
+  .expertise-row h3 {
+    font-size: 27px;
+  }
+
+  .expertise-row p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .inline-skills span {
+    padding: 8px 11px;
+    font-size: 11px;
+  }
+
+  .process {
+    width: min(1180px, calc(100% - 80px));
+    margin: 20px auto;
+    padding: 76px 58px;
+    border-radius: 28px;
+  }
+
+  .process-track {
+    margin-top: 54px;
+  }
+
+  .process-step {
+    min-height: 250px;
+    padding: 26px 20px;
+  }
+
+  .process-step:first-child {
+    padding-left: 0;
+  }
+
+  .process-step h3 {
+    margin-top: 68px;
+    font-size: 23px;
+  }
+
+  .process-step p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .current-feature {
+    grid-template-columns: 360px minmax(0, 1fr);
+    gap: 70px;
+    padding: 54px;
+  }
+
+  .feature-meta {
+    min-height: 300px;
+  }
+
+  .feature-copy h3 {
+    font-size: 52px;
+  }
+
+  .feature-copy p {
+    font-size: 17px;
+  }
+
+  .career-row {
+    grid-template-columns: 190px 130px minmax(0, 1fr) 40px;
+  }
+
+  .career-row time,
+  .career-row p {
+    font-size: 14px;
+  }
+
+  .career-row h3 {
+    font-size: 27px;
+  }
+
+  .projects {
+    padding-top: 104px;
+  }
+
+  .project-showcase {
+    gap: 90px;
+  }
+
+  .showcase-item,
+  .showcase-item:nth-child(even) {
+    grid-template-columns: minmax(0, 1.3fr) minmax(330px, .7fr);
+    gap: 64px;
+    align-items: center;
+  }
+
+  .showcase-item:nth-child(even) .showcase-image {
+    order: initial;
+  }
+
+  .showcase-copy h3 {
+    font-size: 48px;
+  }
+
+  .showcase-copy p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .venture {
+    width: min(1180px, calc(100% - 80px));
+    margin: 20px auto;
+    padding: 76px 58px;
+    border-radius: 28px;
+  }
+
+  .venture-title h2 {
+    font-size: clamp(72px, 7vw, 108px);
+  }
+
+  .impact-strip {
+    padding: 34px 0;
+  }
+
+  .impact-strip span {
+    font-size: 11px;
+  }
+
+  .contact {
+    padding-top: 110px;
+  }
+
+  .contact h2 {
+    max-width: 980px;
+    font-size: clamp(72px, 7vw, 108px);
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .hero {
+    padding-top: 104px;
+    gap: 28px;
+  }
+
+  .hero h1 {
+    font-size: clamp(60px, 20vw, 82px);
+  }
+
+  .hero-copy {
+    font-size: 25px;
+    line-height: 1.25;
+  }
+
+  .hero-summary,
+  .manifesto-copy,
+  .editorial-heading.compact > p:last-child,
+  .feature-copy p,
+  .showcase-copy p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .manifesto h2,
+  .editorial-heading h2 {
+    font-size: 42px;
+    line-height: 1.04;
+  }
+
+  .metric > span,
+  .metric small {
+    font-size: 11px;
+  }
+
+  .expertise-row > p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .process {
+    margin: 0;
+    padding: 72px 18px;
+    border-radius: 0;
+  }
+
+  .process-step {
+    grid-template-columns: 34px 110px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .process-step h3 {
+    font-size: 19px;
+  }
+
+  .process-step p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .current-feature {
+    padding: 26px;
+  }
+
+  .feature-copy h3 {
+    font-size: 34px;
+    line-height: 1.05;
+  }
+
+  .career-row p,
+  .career-row time {
+    font-size: 13px;
+  }
+
+  .project-showcase {
+    gap: 70px;
+  }
+
+  .venture {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .contact h2 {
+    font-size: 50px;
+    line-height: .98;
+  }
+}
