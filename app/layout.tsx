@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Analytics } from "../components/analytics";
 import "./globals.css";
-import "./visual-overrides.css";
-import "./portfolio-v2.css";
-import "./portfolio-premium.css";
-import "./portfolio-clean.css";
+import "./immersive.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://derlis-aguilera-alarcon.vercel.app"),
