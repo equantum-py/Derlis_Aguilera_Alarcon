@@ -4,6 +4,7 @@ import {
   capabilities,
   outcomeTypes,
   positioning,
+  technicalPractice,
   workflow,
 } from "../lib/professional-profile";
 
@@ -187,6 +188,43 @@ export default function Home() {
 
         <div className="section-actions">
           <a className="button" href="/experiencia">Ver experiencia y casos</a>
+        </div>
+      </section>
+
+      <section className="section technical-practice" id="desarrollo">
+        <Reveal>
+          <div className="section-heading">
+            <p className="eyebrow">Desarrollo aplicado</p>
+            <h2>Tecnología para construir y evolucionar productos digitales.</h2>
+            <p>
+              Experiencia práctica desarrollando, manteniendo y mejorando
+              aplicaciones que ya están en funcionamiento, con foco en
+              necesidades reales del negocio y del usuario.
+            </p>
+          </div>
+        </Reveal>
+
+        <div className="technical-grid">
+          {technicalPractice.map((area) => (
+            <Reveal key={area.title}>
+              <article className="technical-card">
+                <h3>{area.title}</h3>
+                <p>{area.description}</p>
+                <div className="tool-list">
+                  {area.skills.map((skill) => <span key={skill}>{skill}</span>)}
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+
+        <div className="technical-note">
+          <strong>Experiencia comprobable en proyectos reales</strong>
+          <span>
+            Desarrollo web, paneles administrativos, bases de datos,
+            integraciones, corrección de errores, pruebas y despliegues.
+          </span>
+          <a className="button" href="/herramientas">Ver herramientas técnicas</a>
         </div>
       </section>
 
