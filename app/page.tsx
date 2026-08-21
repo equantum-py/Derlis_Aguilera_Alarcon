@@ -44,7 +44,7 @@ export default function Home() {
 
     <section className="fp-work fp-section" id="proyectos">
       <Reveal><header className="fp-heading"><p>Portafolio</p><h2>Proyectos <em>seleccionados</em></h2><span>Casos donde conecté necesidades comerciales, operación y tecnología.</span></header></Reveal>
-      <div className="fp-work-grid">{projects.map((project,index)=><Reveal key={project.title}><article><a href={`https://${project.website}`} target="_blank" rel="noreferrer"><img src={project.image} alt={project.title}/><span>Ver proyecto ↗</span></a><div><small>0{index+1} · {project.metric}</small><h3>{project.title}</h3><p>{project.description}</p></div></article></Reveal>)}</div>
+      <div className="fp-work-grid">{projects.map((project,index)=><Reveal key={project.title}><article className={project.featured?"fp-project-featured":""}><a href={`https://${project.website}`} target="_blank" rel="noreferrer"><img className={project.imageFit==="contain"?"fp-project-contain":""} src={project.image} alt={project.title}/><span>Ver proyecto ↗</span></a><div><small>0{index+1} · {project.metric}</small><h3>{project.title}</h3><p>{project.description}</p>{project.featured&&<div className="fp-project-tech">{project.stack.slice(0,6).map(item=><b key={item}>{item}</b>)}</div>}</div></article></Reveal>)}</div>
     </section>
 
     <section className="fp-numbers"><div className="fp-section">{kpis.map(x=><div key={x.label}><strong>{x.value}</strong><span>{x.label}<small>{x.suffix}</small></span></div>)}</div></section>
