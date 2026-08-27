@@ -5,48 +5,48 @@ export type Capability = {
 };
 
 export const positioning = {
-  eyebrow: "Líder de Negocios Digitales | Ecommerce, Operaciones, Datos e IA",
-  headline: "Conecto estrategia comercial, ecommerce, datos y tecnología para impulsar resultados.",
+  eyebrow: "Marketing Digital & Performance | Ecommerce, Datos y Automatización",
+  headline: "Transformo datos digitales en hallazgos, oportunidades y mejoras medibles.",
   summary:
-    "Profesional con más de 6 años de experiencia en ecommerce, retail, operaciones comerciales y negocios digitales. Coordino equipos, gestiono productos, clientes y ventas, y aplico datos, automatización e inteligencia artificial para mejorar procesos y resultados.",
+    "Profesional con más de 6 años de experiencia en ecommerce, marketing digital, operaciones y productos digitales. Analizo indicadores, elaboro reportes, configuro dashboards y aplico automatización para mejorar procesos, precisión y resultados.",
 };
 
 export const capabilities: Capability[] = [
   {
-    title: "Ecommerce",
+    title: "Performance y reporting",
     description:
-      "Gestión integral del canal digital, desde la experiencia de compra hasta la optimización comercial.",
-    skills: ["Shopify", "Conversión", "UX ecommerce", "Promociones", "SEO ecommerce"],
+      "Seguimiento de KPIs, control de calidad y elaboración de reportes claros para apoyar decisiones.",
+    skills: ["KPIs", "SLAs", "Reporting", "QA de datos", "Documentación"],
   },
   {
-    title: "Marketing digital",
+    title: "Dashboards y visualización",
     description:
-      "Planificación, medición y mejora de acciones orientadas a atraer demanda y generar ventas.",
-    skills: ["Google Ads", "Meta Ads", "Merchant Center", "SEO", "Email marketing"],
+      "Configuración de tableros para convertir múltiples indicadores en una lectura simple y accionable.",
+    skills: ["Looker Studio", "Power BI", "Excel", "SQL", "Data storytelling"],
   },
   {
-    title: "Productos y catálogo",
+    title: "Analítica web y ecommerce",
     description:
-      "Análisis del surtido y administración de información comercial para mejorar visibilidad y rendimiento.",
-    skills: ["Catálogo", "Precios", "Stock", "Categorías", "Análisis de productos"],
+      "Análisis de tráfico, comportamiento, conversión, productos y oportunidades del recorrido digital.",
+    skills: ["GA4", "Tag Manager", "Conversión", "Tráfico", "Shopify"],
   },
   {
-    title: "Operaciones y logística",
+    title: "Campañas y benchmarking",
     description:
-      "Seguimiento del flujo de pedidos, disponibilidad e incidencias entre el canal digital y la operación.",
-    skills: ["Pedidos", "Inventario", "Disponibilidad", "Entregas", "Mejora de procesos"],
+      "Medición de campañas, comparación de resultados y detección de oportunidades frente al mercado.",
+    skills: ["Google Ads", "Meta Ads", "Benchmarks", "Competencia", "SEO/SEM"],
   },
   {
-    title: "Datos y analítica",
+    title: "Automatización de procesos",
     description:
-      "Lectura de indicadores, construcción de reportes y análisis para apoyar decisiones comerciales.",
-    skills: ["SQL", "Excel", "Power BI", "GA4", "Looker Studio"],
+      "Diseño de flujos para reducir tareas manuales, integrar información y mejorar la precisión.",
+    skills: ["n8n", "APIs", "IA", "SQL", "Mejora continua"],
   },
   {
-    title: "Gestión ágil",
+    title: "Stakeholders y soporte",
     description:
-      "Priorización y coordinación de iniciativas con equipos comerciales, técnicos, creativos y operativos.",
-    skills: ["Scrum", "Kanban", "Backlog", "KPIs", "Mejora continua"],
+      "Presentación de hallazgos y soporte a equipos comerciales, técnicos, creativos y operativos.",
+    skills: ["Presentaciones", "Soporte", "Coordinación", "Backlog", "Comunicación"],
   },
 ];
 
@@ -181,22 +181,22 @@ export const expandedToolCategories = [
 
 export const technicalPractice = [
   {
-    title: "Frontend",
+    title: "Datos y dashboards",
     description:
-      "Desarrollo y evolución de interfaces web responsive, componentes reutilizables y funcionalidades orientadas a usuarios reales.",
-    skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"],
+      "Preparación, consulta y visualización de información para construir reportes confiables y fáciles de interpretar.",
+    skills: ["SQL", "PostgreSQL", "Excel", "Power BI", "Looker Studio", "GA4"],
   },
   {
-    title: "Datos y backend aplicado",
+    title: "Integraciones y automatización",
     description:
-      "Modelado y consulta de datos, integraciones con servicios y construcción de funciones para aplicaciones y paneles administrativos.",
-    skills: ["SQL", "PostgreSQL", "Supabase", "Prisma", "Neon", "APIs"],
+      "Conexión de servicios, fuentes de datos y flujos que reducen carga operativa y evitan duplicaciones.",
+    skills: ["n8n", "APIs", "Supabase", "Webhooks", "IA", "Automatización"],
   },
   {
-    title: "Mantenimiento y entrega",
+    title: "Desarrollo y soporte",
     description:
-      "Corrección de errores, ajustes de funcionalidades, pruebas, seguimiento de soluciones y despliegues controlados.",
-    skills: ["Git", "GitHub", "Debugging", "Pruebas funcionales", "Vercel", "CI/CD"],
+      "Construcción y mantenimiento de herramientas digitales, pruebas funcionales y soporte técnico a usuarios y equipos.",
+    skills: ["React", "Next.js", "TypeScript", "GitHub", "Debugging", "Vercel"],
   },
 ];
 
