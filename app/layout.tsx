@@ -7,15 +7,17 @@ import "./fastona.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://derlis-aguilera-alarcon.vercel.app"),
   title: {
-    default: "Derlis Aguilera | Líder de Negocios Digitales",
+    default: "Derlis Aguilera | Digital Marketing & Performance Analyst",
     template: "%s | Derlis Aguilera",
   },
   description:
-    "Portafolio de Derlis Aguilera: liderazgo de negocios digitales, ecommerce, operaciones comerciales, datos, automatización e inteligencia artificial.",
+    "Portafolio de Derlis Aguilera: marketing digital, performance, ecommerce, dashboards, analítica web y automatización.",
   keywords: [
     "Derlis Aguilera",
     "Ecommerce Paraguay",
-    "Gerencia Ecommerce",
+    "Marketing Digital y Performance",
+    "Analista de Performance",
+    "Dashboards y reporting",
     "Líder de Negocios Digitales",
     "Product Analyst",
     "Ecommerce Operations",
@@ -40,9 +42,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Derlis Aguilera | Líder de Negocios Digitales",
+    title: "Derlis Aguilera | Digital Marketing & Performance Analyst",
     description:
-      "Ecommerce, estrategia comercial, datos, operaciones y automatización con IA para impulsar resultados.",
+      "Marketing digital, performance, ecommerce, dashboards, analítica y automatización para impulsar resultados.",
     type: "website",
     locale: "es_PY",
     url: "/",
@@ -50,9 +52,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Derlis Aguilera | Ecommerce, Product & Operations Analyst",
+    title: "Derlis Aguilera | Digital Marketing & Performance Analyst",
     description:
-      "Ecommerce, operaciones comerciales, datos y automatización con inteligencia artificial.",
+      "Marketing digital, performance, ecommerce, analítica web, dashboards y automatización.",
   },
   robots: {
     index: true,
