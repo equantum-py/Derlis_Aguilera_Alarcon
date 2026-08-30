@@ -7,44 +7,31 @@ import "./fastona.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://derlis-aguilera-alarcon.vercel.app"),
   title: {
-    default: "Derlis Aguilera | Digital Marketing & Performance Analyst",
+    default: "Derlis Aguilera | Ecommerce · Digital Performance · Data",
     template: "%s | Derlis Aguilera",
   },
   description:
-    "Portafolio de Derlis Aguilera: marketing digital, performance, ecommerce, dashboards, analítica web y automatización.",
+    "Portafolio profesional de Derlis Aguilera. Ecommerce, digital performance, analítica, Shopify, Google Ads, GA4, dashboards, datos y automatización.",
   keywords: [
     "Derlis Aguilera",
     "Ecommerce Paraguay",
-    "Marketing Digital y Performance",
-    "Analista de Performance",
-    "Dashboards y reporting",
-    "Líder de Negocios Digitales",
-    "Product Analyst",
-    "Ecommerce Operations",
-    "Shopify",
+    "Ecommerce Strategy",
+    "Digital Performance",
     "Marketing Digital",
+    "Shopify",
+    "Google Ads",
+    "Google Analytics 4",
+    "Google Tag Manager",
+    "Power BI",
     "SQL",
-    "Scrum",
-    "Logística ecommerce",
-    "Google Analytics",
     "Business Intelligence",
-    "Automatización con IA",
-    "Operaciones comerciales",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "JavaScript",
-    "PostgreSQL",
-    "Supabase",
-    "Git",
+    "Automatización",
+    "Ecommerce Operations",
   ],
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Derlis Aguilera | Digital Marketing & Performance Analyst",
-    description:
-      "Marketing digital, performance, ecommerce, dashboards, analítica y automatización para impulsar resultados.",
+    title: "Derlis Aguilera | Ecommerce · Digital Performance · Data",
+    description: "Ecommerce, performance y datos aplicados al crecimiento de negocios digitales.",
     type: "website",
     locale: "es_PY",
     url: "/",
@@ -52,25 +39,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Derlis Aguilera | Digital Marketing & Performance Analyst",
-    description:
-      "Marketing digital, performance, ecommerce, analítica web, dashboards y automatización.",
+    title: "Derlis Aguilera | Ecommerce · Digital Performance · Data",
+    description: "Ecommerce, performance, analítica y automatización para impulsar resultados digitales.",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: ReactNode }>) {
-  return (
-    <html lang="es-PY">
-      <body>
-        <Analytics />
-        {children}
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+  return <html lang="es-PY"><body><Analytics />{children}</body></html>;
 }
