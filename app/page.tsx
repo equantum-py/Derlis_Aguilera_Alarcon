@@ -11,11 +11,13 @@ export default function Home() {
       <header className="rr-nav">
         <a className="rr-brand" href="#inicio" aria-label="Ir al inicio">DA<span>.</span></a>
         <nav aria-label="Navegación principal">
+          <a href="#inicio">Inicio</a>
           <a href="#experiencia">Experiencia</a>
           <a href="#proyectos">Proyectos</a>
-          <a href="#perfil">Perfil</a>
+          <a href="#perfil">Sobre mí</a>
+          <a href="#contacto">Contacto</a>
         </nav>
-        <a className="rr-cv rr-cv-top" href={contact.cv} download>Descargar CV</a>
+        <a className="rr-cv rr-cv-top" href={contact.cv} download>Descargar CV ↓</a>
       </header>
 
       <section className="rr-hero" id="inicio">
@@ -28,10 +30,12 @@ export default function Home() {
               <p className="rr-lead">Conecto ecommerce, marketing y datos para transformar operaciones digitales en resultados medibles.</p>
               <div className="rr-actions">
                 <a className="rr-primary" href={contact.cv} download>Descargar CV <span>↓</span></a>
-                <a className="rr-secondary" href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+                <a className="rr-secondary" href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noreferrer">Contactarme →</a>
               </div>
-              <div className="rr-hero-proof">
-                <span>Shopify</span><span>GA4</span><span>Google Ads</span><span>SQL</span><span>Power BI</span>
+              <div className="rr-contact-inline">
+                <a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+                <a href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noreferrer">WhatsApp · {contact.whatsappLabel}</a>
+                <a href={`mailto:${contact.email}`}>Email · {contact.email}</a>
               </div>
             </div>
           </Reveal>
@@ -40,7 +44,7 @@ export default function Home() {
               <div className="rr-photo-card">
                 <Image src="/profile/derlis.jpg" alt="Derlis Aguilera" width={520} height={620} priority />
               </div>
-              <div className="rr-photo-note"><strong>+6 años</strong><span>impulsando negocios digitales</span></div>
+              <div className="rr-photo-note"><strong>+6 años</strong><span>de experiencia profesional</span></div>
             </div>
           </Reveal>
         </div>
@@ -54,18 +58,18 @@ export default function Home() {
 
       <section className="rr-section rr-profile" id="perfil">
         <div className="rr-container">
-          <Reveal><div className="rr-section-head"><p>Perfil profesional</p><h2>Negocio digital con mirada <span>comercial y analítica.</span></h2></div></Reveal>
+          <Reveal><div className="rr-section-head"><p>Lo que hago</p><h2>Estrategia, datos y tecnología <span>al servicio del negocio.</span></h2></div></Reveal>
           <div className="rr-profile-grid">
-            <Reveal><article><span>01</span><h3>Ecommerce</h3><p>Operación, catálogo, conversión, UX, Shopify y coordinación comercial para hacer crecer el canal digital.</p><div>Shopify · Catálogo · CRO · UX</div></article></Reveal>
-            <Reveal><article><span>02</span><h3>Performance</h3><p>Seguimiento de campañas y comportamiento digital para detectar oportunidades y tomar mejores decisiones.</p><div>Google Ads · GA4 · GTM · SEO</div></article></Reveal>
-            <Reveal><article><span>03</span><h3>Data & Automation</h3><p>Dashboards, SQL y automatizaciones para convertir información dispersa en procesos más claros y ágiles.</p><div>SQL · Power BI · Looker · n8n</div></article></Reveal>
+            <Reveal><article><span>01</span><h3>Ecommerce</h3><p>Gestión integral de tiendas online, catálogo, UX, conversión y operaciones.</p><div>Shopify · Catálogo · CRO · UX</div></article></Reveal>
+            <Reveal><article><span>02</span><h3>Performance</h3><p>Estrategias de adquisición, analítica, optimización y crecimiento rentable.</p><div>Google Ads · GA4 · GTM · SEO</div></article></Reveal>
+            <Reveal><article><span>03</span><h3>Data & Automation</h3><p>Dashboards, SQL, automatización de procesos e integraciones inteligentes.</p><div>SQL · Power BI · Looker · n8n</div></article></Reveal>
           </div>
         </div>
       </section>
 
       <section className="rr-section rr-experience" id="experiencia">
         <div className="rr-container">
-          <Reveal><div className="rr-section-head rr-head-light"><p>Trayectoria</p><h2>Experiencia que combina <span>operación, liderazgo y crecimiento.</span></h2></div></Reveal>
+          <Reveal><div className="rr-section-head rr-head-light"><p>Experiencia destacada</p><h2>Experiencia que combina <span>operación, liderazgo y crecimiento.</span></h2></div></Reveal>
           <div className="rr-exp-list">
             {experiences.map((item, index) => (
               <Reveal key={item.company}>
@@ -83,16 +87,16 @@ export default function Home() {
 
       <section className="rr-section rr-projects" id="proyectos">
         <div className="rr-container">
-          <Reveal><div className="rr-section-head"><p>Casos seleccionados</p><h2>Proyectos donde conecto <span>negocio y tecnología.</span></h2></div></Reveal>
+          <Reveal><div className="rr-section-head rr-project-head"><p>Casos seleccionados</p><h2>Proyectos donde conecto <span>negocio y tecnología.</span></h2></div></Reveal>
           <div className="rr-project-grid">
             {featuredProjects.map((project, index) => (
               <Reveal key={project.title}>
                 <article>
                   <a className="rr-project-image" href={`https://${project.website}`} target="_blank" rel="noreferrer">
-                    <Image src={project.image} alt={project.title} width={760} height={430} />
-                    <span>Ver proyecto ↗</span>
+                    <Image src={project.image} alt={project.title} width={420} height={250} />
+                    <span>Ver ↗</span>
                   </a>
-                  <div className="rr-project-body"><small>0{index + 1} / {project.metric}</small><h3>{project.title}</h3><p>{project.description}</p><div className="rr-tags">{project.stack.slice(0, 4).map(tag => <span key={tag}>{tag}</span>)}</div></div>
+                  <div className="rr-project-body"><small>0{index + 1} / {project.metric}</small><h3>{project.title}</h3><p>{project.description}</p><div className="rr-tags">{project.stack.slice(0, 3).map(tag => <span key={tag}>{tag}</span>)}</div></div>
                 </article>
               </Reveal>
             ))}
@@ -102,7 +106,7 @@ export default function Home() {
 
       <section className="rr-stack">
         <div className="rr-container">
-          <div className="rr-stack-title"><span>Stack profesional</span><p>Herramientas que utilizo para medir, operar y construir.</p></div>
+          <div className="rr-stack-title"><span>Tecnologías y herramientas</span><p>Herramientas que utilizo para medir, operar y construir.</p></div>
           <div className="rr-stack-items">{expandedToolCategories.slice(0, 5).flatMap(cat => cat.items.slice(0, 3)).slice(0, 12).map(item => <span key={item}>{item}</span>)}</div>
         </div>
       </section>
@@ -116,9 +120,16 @@ export default function Home() {
 
       <footer className="rr-footer" id="contacto">
         <div className="rr-container">
-          <p>¿Hablamos?</p><h2>Estoy preparado para el<br/><span>próximo desafío.</span></h2>
-          <div className="rr-footer-actions"><a href={`https://wa.me/${contact.whatsapp}`}>WhatsApp ↗</a><a href={`mailto:${contact.email}`}>Email ↗</a><a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
-          <div className="rr-footer-bottom"><span>Derlis Aguilera · Paraguay</span><a href={contact.cv} download>Descargar CV ↓</a></div>
+          <div className="rr-footer-top">
+            <div className="rr-footer-copy"><p>¿Hablamos?</p><h2>Estoy preparado para tu <span>próximo desafío.</span></h2></div>
+            <div className="rr-contact-cards">
+              <a href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noreferrer"><span>WhatsApp</span><strong>{contact.whatsappLabel}</strong><small>Escribirme ahora ↗</small></a>
+              <a href={`mailto:${contact.email}`}><span>Email</span><strong>{contact.email}</strong><small>Enviar correo ↗</small></a>
+              <div><span>Ubicación</span><strong>Paraguay</strong><small>Disponible para oportunidades</small></div>
+            </div>
+          </div>
+          <div className="rr-footer-links"><a href="#inicio">Inicio</a><a href="#experiencia">Experiencia</a><a href="#proyectos">Proyectos</a><a href="#perfil">Sobre mí</a><a href="#contacto">Contacto</a></div>
+          <div className="rr-footer-bottom"><span>© 2026 Derlis Aguilera. Todos los derechos reservados.</span><span>Desarrollado por <a href="https://www.equantum.com.py/" target="_blank" rel="noreferrer">eQuantum</a></span></div>
         </div>
       </footer>
     </main>
