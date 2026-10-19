@@ -25,9 +25,9 @@ export default function Home() {
           <Reveal>
             <div className="rr-hero-copy">
               <div className="rr-status"><i /> Disponible para nuevos desafíos</div>
-              <p className="rr-kicker">Ecommerce · Digital Performance · Data</p>
+              <p className="rr-kicker">Gestión comercial · Experiencia del cliente · Desarrollo de negocios</p>
               <h1>Derlis<br/><span>Aguilera.</span></h1>
-              <p className="rr-lead">Conecto ecommerce, marketing y datos para transformar operaciones digitales en resultados medibles.</p>
+              <p className="rr-lead">Impulso el crecimiento comercial combinando experiencia en retail, liderazgo de equipos, operaciones digitales y mejora de la experiencia del cliente.</p>
               <div className="rr-actions">
                 <a className="rr-primary" href={contact.cv} download>Descargar CV <span>↓</span></a>
                 <a className="rr-secondary" href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noreferrer">Contactarme →</a>
@@ -58,11 +58,11 @@ export default function Home() {
 
       <section className="rr-section rr-profile" id="perfil">
         <div className="rr-container">
-          <Reveal><div className="rr-section-head"><p>Lo que hago</p><h2>Estrategia, datos y tecnología <span>al servicio del negocio.</span></h2></div></Reveal>
+          <Reveal><div className="rr-section-head"><p>Lo que hago</p><h2>Experiencia comercial y liderazgo <span>orientados a resultados.</span></h2></div></Reveal>
           <div className="rr-profile-grid">
-            <Reveal><article><span>01</span><h3>Ecommerce</h3><p>Gestión integral de tiendas online, catálogo, UX, conversión y operaciones.</p><div>Shopify · Catálogo · CRO · UX</div></article></Reveal>
-            <Reveal><article><span>02</span><h3>Performance</h3><p>Estrategias de adquisición, analítica, optimización y crecimiento rentable.</p><div>Google Ads · GA4 · GTM · SEO</div></article></Reveal>
-            <Reveal><article><span>03</span><h3>Data & Automation</h3><p>Dashboards, SQL, automatización de procesos e integraciones inteligentes.</p><div>SQL · Power BI · Looker · n8n</div></article></Reveal>
+            <Reveal><article><span>01</span><h3>Gestión comercial</h3><p>Coordinación de operaciones de venta, seguimiento de indicadores y mejora continua de procesos comerciales.</p><div>Retail · Ecommerce · KPIs · Operaciones</div></article></Reveal>
+            <Reveal><article><span>02</span><h3>Experiencia del cliente</h3><p>Optimización del recorrido de compra y coordinación de iniciativas para mejorar la atención y la conversión.</p><div>Cliente · Conversión · Marketing · Analítica</div></article></Reveal>
+            <Reveal><article><span>03</span><h3>Liderazgo y desarrollo</h3><p>Experiencia liderando equipos de hasta 13 personas, coordinando proyectos y tomando decisiones basadas en resultados.</p><div>Equipos · Proyectos · Indicadores · Mejora continua</div></article></Reveal>
           </div>
         </div>
       </section>
@@ -87,7 +87,7 @@ export default function Home() {
 
       <section className="rr-section rr-projects" id="proyectos">
         <div className="rr-container">
-          <Reveal><div className="rr-section-head rr-project-head"><p>Casos seleccionados</p><h2>Proyectos donde conecto <span>negocio y tecnología.</span></h2></div></Reveal>
+          <Reveal><div className="rr-section-head rr-project-head"><p>Casos seleccionados</p><h2>Proyectos que respaldan <span>mi experiencia en gestión y transformación digital.</span></h2></div></Reveal>
           <div className="rr-project-grid">
             {featuredProjects.map((project, index) => (
               <Reveal key={project.title}>
@@ -106,7 +106,7 @@ export default function Home() {
 
       <section className="rr-stack">
         <div className="rr-container">
-          <div className="rr-stack-title"><span>Tecnologías y herramientas</span><p>Herramientas que utilizo para medir, operar y construir.</p></div>
+          <div className="rr-stack-title"><span>Competencias y herramientas</span><p>Recursos para gestionar operaciones, medir resultados y desarrollar negocios.</p></div>
           <div className="rr-stack-items">{expandedToolCategories.slice(0, 5).flatMap(cat => cat.items.slice(0, 3)).slice(0, 12).map(item => <span key={item}>{item}</span>)}</div>
         </div>
       </section>
