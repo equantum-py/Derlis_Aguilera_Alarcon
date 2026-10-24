@@ -3,7 +3,7 @@ import { Reveal } from "../components/reveal";
 import { contact, experiences, kpis, projects } from "../lib/portfolio-data";
 import { expandedToolCategories } from "../lib/professional-profile";
 
-const featuredProjects = projects;
+const featuredProjects = projects.slice(0, 6);
 
 export default function Home() {
   return (
@@ -26,7 +26,7 @@ export default function Home() {
             <div className="rr-hero-copy">
               <div className="rr-status"><i /> Disponible para nuevos proyectos</div>
               <p className="rr-kicker">Desarrollo web · Apps · Ecommerce · Marketing digital</p>
-              <h1>Derlis<br/><span>Aguilera.</span></h1>
+              <h1>Webs, apps y<br/><span>experiencias digitales.</span></h1>
               <p className="rr-lead">Diseño y desarrollo páginas web, tiendas Shopify, aplicaciones y estrategias de marketing digital para ayudar a las empresas a vender y crecer.</p>
               <div className="rr-actions">
                 <a className="rr-primary" href="#proyectos">Ver proyectos <span>↗</span></a>
@@ -40,11 +40,13 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={0.08}>
-            <div className="rr-photo-wrap">
-              <div className="rr-photo-card">
-                <Image src="/profile/derlis.jpg" alt="Derlis Aguilera" width={520} height={620} priority />
-              </div>
-              <div className="rr-photo-note"><strong>+6 años</strong><span>de experiencia profesional</span></div>
+            <div className="rr-work-showcase" aria-label="Vista previa de proyectos realizados">
+              {projects.slice(0,3).map((project, index) => (
+                <a key={project.title} href={`https://${project.website}`} target="_blank" rel="noreferrer" className={`rr-showcase-card rr-showcase-${index + 1}`}>
+                  <Image src={project.image} alt={`Captura del proyecto ${project.title}`} width={620} height={390} priority={index === 0} />
+                  <span>{project.title} ↗</span>
+                </a>
+              ))}
             </div>
           </Reveal>
         </div>
@@ -83,7 +85,7 @@ export default function Home() {
 
       <section className="rr-stack">
         <div className="rr-container">
-          <div className="rr-stack-title"><span>Competencias y herramientas</span><p>Recursos para gestionar operaciones, medir resultados y desarrollar negocios.</p></div>
+          <div className="rr-stack-title"><span>Competencias y herramientas</span><p>Herramientas para crear productos digitales y hacer crecer negocios.</p></div>
           <div className="rr-stack-items">{expandedToolCategories.slice(0, 5).flatMap(cat => cat.items.slice(0, 3)).slice(0, 12).map(item => <span key={item}>{item}</span>)}</div>
         </div>
       </section>
@@ -91,7 +93,7 @@ export default function Home() {
       <section className="rr-equantum">
         <div className="rr-container rr-equantum-grid">
           <div><p>Emprendimiento</p><h2>eQuantum<span>.</span></h2><p className="rr-equantum-copy">Consultoría digital para empresas que necesitan ordenar, desarrollar y hacer crecer su negocio.</p><a href="https://www.equantum.com.py/" target="_blank" rel="noreferrer">Conocer eQuantum ↗</a></div>
-          <div className="rr-eq-numbers"><div><strong>10</strong><span>proyectos gestionados</span></div><div><strong>Digital</strong><span>estrategia + ejecución</span></div></div>
+          <div className="rr-eq-numbers"><div><strong>18</strong><span>trabajos y demos en el portafolio</span></div><div><strong>Digital</strong><span>estrategia + ejecución</span></div></div>
         </div>
       </section>
 
