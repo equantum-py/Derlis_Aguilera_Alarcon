@@ -16,4 +16,5 @@ export const newProjects = [
  {title:"Ruavera",url:"https://ruavera.vercel.app/",category:"Web comercial",description:"Experiencia web comercial.",stack:["Diseño web"],status:"Proyecto"},
  {title:"Jolie Jewelry",url:"https://joliejewelry.vercel.app/",category:"Ecommerce",description:"Joyería y catálogo digital.",stack:["Ecommerce","Diseño web"],status:"Proyecto"},
  {title:"Haunted PSI",url:"https://haunted-psi.vercel.app/",category:"Experiencia web",description:"Experiencia digital interactiva.",stack:["Diseño web"],status:"Proyecto"},
+ {title:"Portal Verde",url:"https://portalverdepy.vercel.app/",category:"Web comercial",description:"Portal digital comercial.",stack:["Diseño web"],status:"Proyecto"},
 ] as const;
