@@ -1,4 +1,4 @@
-name: Guardar capturas del portafolio
+name: Capturas reales del portafolio
 on:
   workflow_dispatch:
   push:
@@ -9,67 +9,25 @@ permissions:
 jobs:
   screenshots:
     runs-on: ubuntu-latest
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          persist-credentials: true
-      - name: Capturar sitios públicos
-        shell: bash
+          node-version: "22"
+      - name: Instalar navegador para capturas reales
         run: |
-          set -uo pipefail
-          mkdir -p public/screenshots
-          while IFS='|' read -r slug url; do
-            [ -n "$slug" ] || continue
-            echo "Capturando $slug"
-            output="public/screenshots/${slug}.png"
-            temp="${output}.tmp"
-            if curl -fLsS --max-time 75 --retry 2 --retry-delay 4 -A "Mozilla/5.0" "https://image.thum.io/get/png/width/1200/crop/750/noanimate/${url}" -o "$temp"; then
-              type=$(file -b --mime-type "$temp")
-              if [ "$type" = "image/png" ]; then
-                mv "$temp" "$output"
-              else
-                echo "Respuesta no PNG para $slug: $type"
-                rm -f "$temp"
-              fi
-            else
-              echo "No se pudo capturar $slug"
-              rm -f "$temp"
-            fi
-          done <<'SITES'
-          che-bagels|https://chebagels.vercel.app/
-          santa-maria|https://santamaria-indol.vercel.app/
-          limpiarte|https://limpiarteparaguay.vercel.app/
-          apf|https://app-apf.vercel.app/
-          relato-estrategico|https://relatoestrategico.vercel.app/
-          equantum|https://www.equantum.com.py/
-          campamento-cbg|https://campamentocbg.vercel.app/
-          inyou|https://chocolate-squirrel-724944.hostingersite.com/
-          inverfin|https://inverfin.com.py/
-          fortis|https://fortis.com.py/
-          corpicia|https://corpicia.com.py/
-          cooperativa-vida-luz|https://cooperativavidaluzcompy.vercel.app/
-          portal-cooperativo|https://asoapp.vercel.app/
-          quantum-life-manager|https://quantum-life-manager.vercel.app/dashboard
-          marmoleria-pietra|https://marmoleriapietra.com/
-          vitalis|https://vitaliserviciomedico.vercel.app/
-          nathaly-chamorro|https://nathalychamorro.vercel.app/
-          arquitecta-diana|https://arquitectadiana.vercel.app/
-          ecotritura-paraguay|https://ecotrituraparaguay.vercel.app/
-          ruavera|https://ruavera.vercel.app/
-          jolie-jewelry|https://joliejewelry.vercel.app/
-          haunted-psi|https://haunted-psi.vercel.app/
-          portal-verde|https://portalverdepy.vercel.app/
-          todo-servicios|https://todoserviciospy.vercel.app/
-          SITES
-      - name: Guardar capturas en main
-        shell: bash
+          npm install --no-save --package-lock=false playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Capturar las páginas con Chromium
+        run: node scripts/capture-portfolio.cjs
+      - name: Publicar PNG en main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/screenshots/*.png 2>/dev/null || true
+          git add public/screenshots/*.png
           if ! git diff --cached --quiet; then
-            git commit -m "assets: capturas permanentes de proyectos públicos"
+            git commit -m "assets: capturas reales del portafolio"
+            git pull --rebase origin main
             git push origin HEAD:main
-          else
-            echo "No hubo nuevas capturas para guardar"
           fi
