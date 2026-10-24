@@ -2,9 +2,9 @@ import Image from "next/image";
 import { ProjectScreenshot } from "../components/project-screenshot";
 import { Reveal } from "../components/reveal";
 import { contact, experiences, kpis, projects } from "../lib/portfolio-data";
-import { expandedToolCategories } from "../lib/professional-profile";
+import { newProjects } from "../lib/new-projects";
 
-const featuredProjects = projects.slice(0, 6);
+const featuredProjects = projects;
 
 export default function Home() {
   return (
@@ -67,34 +67,49 @@ export default function Home() {
       <section className="rr-section rr-projects" id="proyectos">
         <div className="rr-container">
           <Reveal><div className="rr-section-head rr-project-head"><p>Portafolio de proyectos</p><h2>Webs, ecommerce y aplicaciones <span>que podés explorar.</span></h2></div></Reveal>
-          <div className="rr-project-grid">
-            {featuredProjects.map((project, index) => (
+          <div className="rr-featured-intro"><strong>Desarrollos recientes</strong><span>Webs, tiendas y aplicaciones creadas con enfoque comercial.</span></div>
+          <div className="rr-project-grid rr-new-project-grid">
+            {newProjects.map((project, index) => (
               <Reveal key={project.title}>
-                <article>
-                  <a className="rr-project-image" href={`https://${project.website}`} target="_blank" rel="noreferrer">
-                    <ProjectScreenshot url={`https://${project.website}`} fallback={project.image} alt={`Vista del sitio ${project.title}`} />
-                    <span>Ver ↗</span>
-                  </a>
-                  <div className="rr-project-body"><small>0{index + 1} / {project.metric}</small><h3>{project.title}</h3><p>{project.description}</p><div className="rr-tags">{project.stack.slice(0, 3).map(tag => <span key={tag}>{tag}</span>)}</div></div>
+                <article className={index < 2 ? "rr-premium-project" : ""}>
+                  {project.url ? <a className="rr-project-image" href={project.url} target="_blank" rel="noreferrer">
+                    <ProjectScreenshot url={project.url} fallback="" alt={`Vista del proyecto ${project.title}`} />
+                    <span>Visitar ↗</span>
+                  </a> : <div className="rr-project-private"><span>{project.category}</span><strong>{project.title}</strong><small>{project.status}</small></div>}
+                  <div className="rr-project-body"><small>{project.category} · {project.status}</small><h3>{project.title}</h3><p>{project.description}</p><div className="rr-tags">{project.stack.map(tag => <span key={tag}>{tag}</span>)}</div></div>
                 </article>
               </Reveal>
             ))}
           </div>
-          <a className="rr-detail-link" href="/proyectos">Explorar todos los proyectos →</a>
+          <div className="rr-featured-intro rr-previous-intro"><strong>Más proyectos y experiencia</strong><span>Productos propios, desarrollo web y gestión de ecommerce.</span></div>
+          <div className="rr-project-grid">
+            {featuredProjects.map((project) => (
+              <Reveal key={project.title}>
+                <article>
+                  <a className="rr-project-image" href={`https://${project.website}`} target="_blank" rel="noreferrer">
+                    <img src={project.image} alt={`Imagen del proyecto ${project.title}`} loading="lazy" />
+                    <span>Visitar ↗</span>
+                  </a>
+                  <div className="rr-project-body"><small>{project.metric}</small><h3>{project.title}</h3><p>{project.description}</p><div className="rr-tags">{project.stack.slice(0, 4).map(tag => <span key={tag}>{tag}</span>)}</div></div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+          <a className="rr-detail-link" href="/proyectos">Ver el catálogo completo →</a>
         </div>
       </section>
 
       <section className="rr-stack">
         <div className="rr-container">
           <div className="rr-stack-title"><span>Tecnologías y plataformas</span><p>Trabajo con herramientas profesionales para desarrollar, vender y medir.</p></div>
-          <div className="rr-stack-items">{expandedToolCategories.slice(0, 5).flatMap(cat => cat.items.slice(0, 3)).slice(0, 12).map(item => <span key={item}>{item}</span>)}</div>
+          <div className="rr-stack-items">{["JavaScript","TypeScript","Python","PHP","HTML5","CSS3","SQL","React","Next.js","Node.js","FastAPI","Tailwind CSS","PostgreSQL","Supabase","Neon","Prisma","Shopify Liquid","Git","GitHub","Vercel","APIs REST","PWA","Figma","GA4","Google Ads","Meta Ads"].map(item => <span key={item}>{item}</span>)}</div>
         </div>
       </section>
 
       <section className="rr-equantum">
         <div className="rr-container rr-equantum-grid">
           <div><p>Emprendimiento</p><h2>eQuantum<span>.</span></h2><p className="rr-equantum-copy">Consultoría digital para empresas que necesitan ordenar, desarrollar y hacer crecer su negocio.</p><a href="https://www.equantum.com.py/" target="_blank" rel="noreferrer">Conocer eQuantum ↗</a></div>
-          <div className="rr-eq-numbers"><div><strong>18</strong><span>trabajos y demos en el portafolio</span></div><div><strong>Digital</strong><span>estrategia + ejecución</span></div></div>
+          <div className="rr-eq-numbers"><div><strong>18</strong><span>proyectos y demos presentados</span></div><div><strong>Digital</strong><span>estrategia + ejecución</span></div></div>
         </div>
       </section>
 
