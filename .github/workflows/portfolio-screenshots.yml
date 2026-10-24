@@ -1,0 +1,66 @@
+name: Guardar capturas del portafolio
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/portfolio-screenshots.yml"
+permissions:
+  contents: write
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Capturar sitios públicos
+        shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p public/screenshots
+          while IFS='|' read -r slug url; do
+            [ -n "$slug" ] || continue
+            echo "Capturando $slug"
+            output="public/screenshots/${slug}.png"
+            temp="${output}.tmp"
+            if curl -fLsS --max-time 75 --retry 2 --retry-delay 4 -A "Mozilla/5.0" "https://image.thum.io/get/png/width/1200/crop/750/noanimate/${url}" -o "$temp"; then
+              type=$(file -b --mime-type "$temp")
+              if [ "$type" = "image/png" ]; then
+                mv "$temp" "$output"
+              else
+                echo "Respuesta no PNG para $slug: $type"
+                rm -f "$temp"
+              fi
+            else
+              echo "No se pudo capturar $slug"
+              rm -f "$temp"
+            fi
+          done <<'SITES'
+          che-bagels|https://chebagels.vercel.app/
+          santa-maria|https://santamaria-indol.vercel.app/
+          limpiarte|https://limpiarteparaguay.vercel.app/
+          apf|https://app-apf.vercel.app/
+          relato-estrategico|https://relatoestrategico.vercel.app/
+          equantum|https://www.equantum.com.py/
+          campamento-cbg|https://campamentocbg.vercel.app/
+          inyou|https://chocolate-squirrel-724944.hostingersite.com/
+          inverfin|https://inverfin.com.py/
+          fortis|https://fortis.com.py/
+          corpicia|https://corpicia.com.py/
+          cooperativa-vida-luz|https://cooperativavidaluzcompy.vercel.app/
+          portal-cooperativo|https://asoapp.vercel.app/
+          quantum-life-manager|https://quantum-life-manager.vercel.app/dashboard
+          marmoleria-pietra|https://marmoleriapietra.com/
+          SITES
+      - name: Guardar capturas en main
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/screenshots/*.png 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: capturas permanentes de proyectos públicos"
+            git push origin HEAD:main
+          else
+            echo "No hubo nuevas capturas para guardar"
+          fi
