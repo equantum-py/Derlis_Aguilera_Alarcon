@@ -1,3 +1,4 @@
+import "./catalog.css";
 import { contact, projects } from "../../lib/portfolio-data";
 
 const demos = [
