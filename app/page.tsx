@@ -26,7 +26,7 @@ export default function Home() {
             <div className="rr-hero-copy">
               <div className="rr-status"><i /> Disponible para nuevos proyectos</div>
               <p className="rr-kicker">Desarrollo web · Apps · Ecommerce · Marketing digital</p>
-              <h1>Webs, apps y<br/><span>experiencias digitales.</span></h1>
+              <h1>Desarrollo digital<br/><span>que impulsa negocios.</span></h1>
               <p className="rr-lead">Diseño y desarrollo páginas web, tiendas Shopify, aplicaciones y estrategias de marketing digital para ayudar a las empresas a vender y crecer.</p>
               <div className="rr-actions">
                 <a className="rr-primary" href="#proyectos">Ver proyectos <span>↗</span></a>
@@ -85,7 +85,7 @@ export default function Home() {
 
       <section className="rr-stack">
         <div className="rr-container">
-          <div className="rr-stack-title"><span>Competencias y herramientas</span><p>Herramientas para crear productos digitales y hacer crecer negocios.</p></div>
+          <div className="rr-stack-title"><span>Tecnologías y plataformas</span><p>Trabajo con herramientas profesionales para desarrollar, vender y medir.</p></div>
           <div className="rr-stack-items">{expandedToolCategories.slice(0, 5).flatMap(cat => cat.items.slice(0, 3)).slice(0, 12).map(item => <span key={item}>{item}</span>)}</div>
         </div>
       </section>
@@ -100,14 +100,14 @@ export default function Home() {
       <footer className="rr-footer" id="contacto">
         <div className="rr-container">
           <div className="rr-footer-top">
-            <div className="rr-footer-copy"><p>¿Hablamos?</p><h2>Hablemos de tu <span>próximo proyecto.</span></h2></div>
+            <div className="rr-footer-copy"><p>¿Hablamos?</p><h2>Tu próximo proyecto <span>empieza acá.</span></h2></div>
             <div className="rr-contact-cards">
               <a href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noreferrer"><span>WhatsApp</span><strong>{contact.whatsappLabel}</strong><small>Escribirme ahora ↗</small></a>
               <a href={`mailto:${contact.email}`}><span>Email</span><strong>{contact.email}</strong><small>Enviar correo ↗</small></a>
               <div><span>Ubicación</span><strong>Paraguay</strong><small>Disponible para oportunidades</small></div>
             </div>
           </div>
-          <div className="rr-footer-links"><a href="#inicio">Inicio</a><a href="/experiencia">Experiencia</a><a href="#proyectos">Proyectos</a><a href="/experiencia">Sobre mí</a><a href="#contacto">Contacto</a></div>
+          <div className="rr-footer-links"><a href="#inicio">Inicio</a><a href="/experiencia">Experiencia</a><a href="/proyectos">Proyectos</a><a href="/experiencia">Sobre mí</a><a href="#contacto">Contacto</a></div>
           <div className="rr-footer-bottom"><span>© 2026 Derlis Aguilera. Todos los derechos reservados.</span><span>Desarrollado por <a href="https://www.equantum.com.py/" target="_blank" rel="noreferrer">eQuantum</a></span></div>
         </div>
       </footer>
