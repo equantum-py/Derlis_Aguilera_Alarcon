@@ -3,7 +3,7 @@ import { Reveal } from "../components/reveal";
 import { contact, experiences, kpis, projects } from "../lib/portfolio-data";
 import { expandedToolCategories } from "../lib/professional-profile";
 
-const featuredProjects = projects.slice(0, 4);
+const featuredProjects = projects;
 
 export default function Home() {
   return (
@@ -12,9 +12,9 @@ export default function Home() {
         <a className="rr-brand" href="#inicio" aria-label="Ir al inicio">DA<span>.</span></a>
         <nav aria-label="Navegación principal">
           <a href="#inicio">Inicio</a>
-          <a href="#experiencia">Experiencia</a>
+          <a href="#servicios">Servicios</a>
           <a href="#proyectos">Proyectos</a>
-          <a href="#perfil">Sobre mí</a>
+          <a href="/experiencia">Sobre mí</a>
           <a href="#contacto">Contacto</a>
         </nav>
         <a className="rr-cv rr-cv-top" href={contact.cv} download>Descargar CV ↓</a>
@@ -24,13 +24,13 @@ export default function Home() {
         <div className="rr-container rr-hero-grid">
           <Reveal>
             <div className="rr-hero-copy">
-              <div className="rr-status"><i /> Disponible para nuevos desafíos</div>
-              <p className="rr-kicker">Gestión comercial · Experiencia del cliente · Desarrollo de negocios</p>
+              <div className="rr-status"><i /> Disponible para nuevos proyectos</div>
+              <p className="rr-kicker">Desarrollo web · Apps · Ecommerce · Marketing digital</p>
               <h1>Derlis<br/><span>Aguilera.</span></h1>
-              <p className="rr-lead">Impulso el crecimiento comercial combinando experiencia en retail, liderazgo de equipos, operaciones digitales y mejora de la experiencia del cliente.</p>
+              <p className="rr-lead">Diseño y desarrollo páginas web, tiendas Shopify, aplicaciones y estrategias de marketing digital para ayudar a las empresas a vender y crecer.</p>
               <div className="rr-actions">
-                <a className="rr-primary" href={contact.cv} download>Descargar CV <span>↓</span></a>
-                <a className="rr-secondary" href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noreferrer">Contactarme →</a>
+                <a className="rr-primary" href="#proyectos">Ver proyectos <span>↗</span></a>
+                <a className="rr-secondary" href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noreferrer">Solicitar presupuesto →</a>
               </div>
               <div className="rr-contact-inline">
                 <a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
@@ -50,44 +50,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="rr-metrics" aria-label="Resultados destacados">
-        <div className="rr-container rr-metric-grid">
-          {kpis.map((item) => <div key={item.label}><strong>{item.value}</strong><p>{item.label}</p><span>{item.suffix}</span></div>)}
-        </div>
-      </section>
-
-      <section className="rr-section rr-profile" id="perfil">
+      <section className="rr-section rr-profile" id="servicios">
         <div className="rr-container">
-          <Reveal><div className="rr-section-head"><p>Lo que hago</p><h2>Experiencia comercial y liderazgo <span>orientados a resultados.</span></h2></div></Reveal>
+          <Reveal><div className="rr-section-head"><p>Servicios digitales</p><h2>Soluciones para crear, vender <span>y hacer crecer tu negocio.</span></h2></div></Reveal>
           <div className="rr-profile-grid">
-            <Reveal><article><span>01</span><h3>Gestión comercial</h3><p>Coordinación de operaciones de venta, seguimiento de indicadores y mejora continua de procesos comerciales.</p><div>Retail · Ecommerce · KPIs · Operaciones</div></article></Reveal>
-            <Reveal><article><span>02</span><h3>Experiencia del cliente</h3><p>Optimización del recorrido de compra y coordinación de iniciativas para mejorar la atención y la conversión.</p><div>Cliente · Conversión · Marketing · Analítica</div></article></Reveal>
-            <Reveal><article><span>03</span><h3>Liderazgo y desarrollo</h3><p>Experiencia liderando equipos de hasta 13 personas, coordinando proyectos y tomando decisiones basadas en resultados.</p><div>Equipos · Proyectos · Indicadores · Mejora continua</div></article></Reveal>
+            <Reveal><article><span>01</span><h3>Web, apps y sistemas</h3><p>Diseño web, landing pages, aplicaciones, paneles administrativos y soluciones a medida.</p><div>Next.js · React · UX/UI · Vercel</div></article></Reveal>
+            <Reveal><article><span>02</span><h3>Ecommerce y Shopify</h3><p>Creación y optimización de tiendas, catálogos, promociones, conversiones y Google Merchant Center.</p><div>Shopify · Ecommerce · Merchant Center</div></article></Reveal>
+            <Reveal><article><span>03</span><h3>Publicidad y analítica</h3><p>Campañas en Google Ads y Meta Ads, medición con GA4, dashboards, identidad visual y packaging.</p><div>Google Ads · Meta Ads · GA4 · Diseño</div></article></Reveal>
           </div>
-        </div>
-      </section>
-
-      <section className="rr-section rr-experience" id="experiencia">
-        <div className="rr-container">
-          <Reveal><div className="rr-section-head rr-head-light"><p>Experiencia destacada</p><h2>Experiencia que combina <span>operación, liderazgo y crecimiento.</span></h2></div></Reveal>
-          <div className="rr-exp-list">
-            {experiences.map((item, index) => (
-              <Reveal key={item.company}>
-                <article>
-                  <div className="rr-exp-index">0{index + 1}</div>
-                  <div className="rr-exp-main"><p>{item.period}</p><h3>{item.company}</h3><strong>{item.role}</strong></div>
-                  <p className="rr-exp-impact">{item.impact[item.impact.length - 1]}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-          <a className="rr-detail-link" href="/experiencia">Ver experiencia detallada →</a>
         </div>
       </section>
 
       <section className="rr-section rr-projects" id="proyectos">
         <div className="rr-container">
-          <Reveal><div className="rr-section-head rr-project-head"><p>Casos seleccionados</p><h2>Proyectos que respaldan <span>mi experiencia en gestión y transformación digital.</span></h2></div></Reveal>
+          <Reveal><div className="rr-section-head rr-project-head"><p>Portafolio de proyectos</p><h2>Webs, ecommerce y aplicaciones <span>que podés explorar.</span></h2></div></Reveal>
           <div className="rr-project-grid">
             {featuredProjects.map((project, index) => (
               <Reveal key={project.title}>
@@ -101,6 +77,7 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+          <a className="rr-detail-link" href="/proyectos">Explorar todos los proyectos →</a>
         </div>
       </section>
 
@@ -121,7 +98,7 @@ export default function Home() {
       <footer className="rr-footer" id="contacto">
         <div className="rr-container">
           <div className="rr-footer-top">
-            <div className="rr-footer-copy"><p>¿Hablamos?</p><h2>Estoy preparado para tu <span>próximo desafío.</span></h2></div>
+            <div className="rr-footer-copy"><p>¿Hablamos?</p><h2>Hablemos de tu <span>próximo proyecto.</span></h2></div>
             <div className="rr-contact-cards">
               <a href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noreferrer"><span>WhatsApp</span><strong>{contact.whatsappLabel}</strong><small>Escribirme ahora ↗</small></a>
               <a href={`mailto:${contact.email}`}><span>Email</span><strong>{contact.email}</strong><small>Enviar correo ↗</small></a>
