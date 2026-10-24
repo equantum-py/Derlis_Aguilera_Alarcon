@@ -19,6 +19,16 @@ const screenshotByHost: Record<string, string> = {
   "asoapp.vercel.app":"portal-cooperativo",
   "quantum-life-manager.vercel.app":"quantum-life-manager",
   "marmoleriapietra.com":"marmoleria-pietra",
+  "www.corpicia.com":"corpicia",
+  "vitaliserviciomedico.vercel.app":"vitalis",
+  "nathalychamorro.vercel.app":"nathaly-chamorro",
+  "arquitectadiana.vercel.app":"arquitecta-diana",
+  "ecotrituraparaguay.vercel.app":"ecotritura-paraguay",
+  "ruavera.vercel.app":"ruavera",
+  "joliejewelry.vercel.app":"jolie-jewelry",
+  "haunted-psi.vercel.app":"haunted-psi",
+  "portalverdepy.vercel.app":"portal-verde",
+  "todoserviciospy.vercel.app":"todo-servicios",
 };
 export function ProjectScreenshot({ url, fallback, alt }: Props) {
   const [stage, setStage] = useState(0);
@@ -27,7 +37,7 @@ export function ProjectScreenshot({ url, fallback, alt }: Props) {
   const slug = screenshotByHost[host];
   const images = [slug ? `/screenshots/${slug}.png` : "", fallback].filter(Boolean);
   if (stage >= images.length) return <div className="rr-preview-unavailable" role="img" aria-label={alt}>
-    <span>PROYECTO DIGITAL</span><strong>{host || alt}</strong><small>Visitá el proyecto para conocerlo</small>
+    <span>PROYECTO DIGITAL</span><strong>{alt.replace(/^Vista (del proyecto|del sitio|de la aplicación)\s*/i, "")}</strong><small>Hacé clic para visitar el proyecto</small>
   </div>;
   return <img src={images[stage]} alt={alt} loading="lazy" decoding="async"
     onError={() => setStage((previous) => previous + 1)}
