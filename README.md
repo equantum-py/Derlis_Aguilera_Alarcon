@@ -1,5 +1,5 @@
 # Portafolio profesional de Derlis Aguilera
-
+NUEVA VISTA COMERCIAL
 Portafolio enfocado en liderazgo de negocios digitales, ecommerce, operaciones comerciales, datos y automatización con inteligencia artificial.
 
 ## Posicionamiento
