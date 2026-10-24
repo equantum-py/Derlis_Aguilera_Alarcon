@@ -41,13 +41,30 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={0.08}>
-            <div className="rr-work-showcase" aria-label="Vista previa de proyectos realizados">
-              {projects.slice(0,3).map((project, index) => (
-                <a key={project.title} href={`https://${project.website}`} target="_blank" rel="noreferrer" className={`rr-showcase-card rr-showcase-${index + 1}`}>
-                  <ProjectScreenshot url={`https://${project.website}`} fallback={project.image} alt={`Vista del sitio ${project.title}`} />
-                  <span>{project.title} ↗</span>
-                </a>
-              ))}
+            <div className="rr-device-showcase" aria-label="Desarrollos recientes en distintos dispositivos">
+              <a className="rr-device rr-device-laptop" href="https://chebagels.vercel.app/" target="_blank" rel="noreferrer" aria-label="Ver ecommerce CHE Bagels">
+                <div className="rr-laptop-screen">
+                  <div className="rr-screen-top"><span/><span/><span/><small>CHE Bagels · Ecommerce</small></div>
+                  <ProjectScreenshot url="https://chebagels.vercel.app/" fallback="" alt="Vista de CHE Bagels en laptop" />
+                </div>
+                <div className="rr-laptop-base"/>
+                <span className="rr-device-label">CHE Bagels <b>Ecommerce ↗</b></span>
+              </a>
+              <a className="rr-device rr-device-phone" href="https://app-apf.vercel.app/" target="_blank" rel="noreferrer" aria-label="Ver aplicación APF">
+                <div className="rr-phone-shell">
+                  <div className="rr-phone-island"/>
+                  <div className="rr-phone-content"><ProjectScreenshot url="https://app-apf.vercel.app/" fallback="" alt="Vista de la aplicación APF en celular" /></div>
+                  <div className="rr-phone-bar"/>
+                </div>
+                <span className="rr-device-label">App APF <b>Aplicación ↗</b></span>
+              </a>
+              <a className="rr-device rr-device-mini" href="https://limpiarteparaguay.vercel.app/" target="_blank" rel="noreferrer" aria-label="Ver ecommerce Limpiarte">
+                <div className="rr-mini-screen">
+                  <div className="rr-screen-top"><span/><span/><span/><small>Limpiarte</small></div>
+                  <ProjectScreenshot url="https://limpiarteparaguay.vercel.app/" fallback="" alt="Vista de Limpiarte en laptop" />
+                </div>
+                <span className="rr-device-label">Limpiarte <b>Ecommerce ↗</b></span>
+              </a>
             </div>
           </Reveal>
         </div>
