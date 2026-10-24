@@ -83,7 +83,7 @@ export default function Home() {
       <section className="rr-section rr-projects" id="proyectos">
         <div className="rr-container">
           <Reveal><div className="rr-section-head rr-project-head"><p>Portafolio de proyectos</p><h2>Webs, ecommerce y aplicaciones <span>que podés explorar.</span></h2></div></Reveal>
-          <div className="rr-featured-intro"><strong>Desarrollos recientes</strong><span>Webs, tiendas y aplicaciones creadas con enfoque comercial.</span></div>
+          <div className="rr-featured-intro"><strong>Proyectos en Paraguay y Colombia</strong><span>Proyectos de Paraguay y Colombia. Diseño, ecommerce y soluciones para marcas que buscan crecer.</span></div>
           <div className="rr-project-grid rr-new-project-grid">
             {highlightedProjects.map((project, index) => (
               <Reveal key={project.title}>
@@ -110,7 +110,7 @@ export default function Home() {
       <section className="rr-equantum">
         <div className="rr-container rr-equantum-grid">
           <div><p>Emprendimiento</p><h2>eQuantum<span>.</span></h2><p className="rr-equantum-copy">Consultoría digital para empresas que necesitan ordenar, desarrollar y hacer crecer su negocio.</p><a href="https://www.equantum.com.py/" target="_blank" rel="noreferrer">Conocer eQuantum ↗</a></div>
-          <div className="rr-eq-numbers"><div><strong>15</strong><span>proyectos seleccionados</span></div><div><strong>Digital</strong><span>estrategia + ejecución</span></div></div>
+          <div className="rr-eq-numbers"><div><strong>17</strong><span>proyectos seleccionados</span></div><div><strong>Internacional</strong><span>Paraguay · Colombia</span></div></div>
         </div>
       </section>
 
