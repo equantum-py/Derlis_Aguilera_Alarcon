@@ -1,10 +1,10 @@
-import Image from "next/image";
 import { ProjectScreenshot } from "../components/project-screenshot";
 import { Reveal } from "../components/reveal";
 import { contact, experiences, kpis, projects } from "../lib/portfolio-data";
 import { newProjects } from "../lib/new-projects";
 
-const featuredProjects = projects;
+const featuredProjects = projects.filter((project) => !["Corpicia","Marmolería Pietra"].includes(project.title));
+const highlightedProjects = newProjects.filter((project) => project.url && !["eQuantum Consulting","Campamento CBG","InYou","Plataforma Arbitral APF"].includes(project.title));
 
 export default function Home() {
   return (
@@ -50,13 +50,13 @@ export default function Home() {
                 <div className="rr-laptop-base"/>
                 <span className="rr-device-label">CHE Bagels <b>Ecommerce ↗</b></span>
               </a>
-              <a className="rr-device rr-device-phone" href="https://app-apf.vercel.app/" target="_blank" rel="noreferrer" aria-label="Ver aplicación APF">
+              <a className="rr-device rr-device-phone" href="https://vitaliserviciomedico.vercel.app/" target="_blank" rel="noreferrer" aria-label="Ver aplicación Vitalis">
                 <div className="rr-phone-shell">
                   <div className="rr-phone-island"/>
-                  <div className="rr-phone-content"><ProjectScreenshot url="https://app-apf.vercel.app/" fallback="" alt="Vista de la aplicación APF en celular" /></div>
+                  <div className="rr-phone-content"><ProjectScreenshot url="https://vitaliserviciomedico.vercel.app/" fallback="" alt="Vista de Vitalis en celular" /></div>
                   <div className="rr-phone-bar"/>
                 </div>
-                <span className="rr-device-label">App APF <b>Aplicación ↗</b></span>
+                <span className="rr-device-label">Vitalis <b>Aplicación ↗</b></span>
               </a>
               <a className="rr-device rr-device-mini" href="https://limpiarteparaguay.vercel.app/" target="_blank" rel="noreferrer" aria-label="Ver ecommerce Limpiarte">
                 <div className="rr-mini-screen">
@@ -86,14 +86,14 @@ export default function Home() {
           <Reveal><div className="rr-section-head rr-project-head"><p>Portafolio de proyectos</p><h2>Webs, ecommerce y aplicaciones <span>que podés explorar.</span></h2></div></Reveal>
           <div className="rr-featured-intro"><strong>Desarrollos recientes</strong><span>Webs, tiendas y aplicaciones creadas con enfoque comercial.</span></div>
           <div className="rr-project-grid rr-new-project-grid">
-            {newProjects.map((project, index) => (
+            {highlightedProjects.map((project, index) => (
               <Reveal key={project.title}>
                 <article className={index < 2 ? "rr-premium-project" : ""}>
                   {project.url ? <a className="rr-project-image" href={project.url} target="_blank" rel="noreferrer">
                     <ProjectScreenshot url={project.url} fallback="" alt={`Vista del proyecto ${project.title}`} />
                     <span>Visitar ↗</span>
                   </a> : <div className="rr-project-private"><span>{project.category}</span><strong>{project.title}</strong><small>{project.status}</small></div>}
-                  <div className="rr-project-body"><small>{project.category} · {project.status}</small><h3>{project.title}</h3><p>{project.description}</p><div className="rr-tags">{project.stack.map(tag => <span key={tag}>{tag}</span>)}</div></div>
+                  <div className="rr-project-body"><small>{project.category} · {project.status}</small><h3>{project.url ? <a href={project.url} target="_blank" rel="noreferrer">{project.title}</a> : project.title}</h3><p>{project.description}</p><div className="rr-tags">{project.stack.map(tag => <span key={tag}>{tag}</span>)}</div></div>
                 </article>
               </Reveal>
             ))}
@@ -107,7 +107,7 @@ export default function Home() {
                     <img src={project.image} alt={`Imagen del proyecto ${project.title}`} loading="lazy" />
                     <span>Visitar ↗</span>
                   </a>
-                  <div className="rr-project-body"><small>{project.metric}</small><h3>{project.title}</h3><p>{project.description}</p><div className="rr-tags">{project.stack.slice(0, 4).map(tag => <span key={tag}>{tag}</span>)}</div></div>
+                  <div className="rr-project-body"><small>{project.metric}</small><h3><a href={`https://${project.website}`} target="_blank" rel="noreferrer">{project.title}</a></h3><p>{project.description}</p><div className="rr-tags">{project.stack.slice(0, 4).map(tag => <span key={tag}>{tag}</span>)}</div></div>
                 </article>
               </Reveal>
             ))}
@@ -126,7 +126,7 @@ export default function Home() {
       <section className="rr-equantum">
         <div className="rr-container rr-equantum-grid">
           <div><p>Emprendimiento</p><h2>eQuantum<span>.</span></h2><p className="rr-equantum-copy">Consultoría digital para empresas que necesitan ordenar, desarrollar y hacer crecer su negocio.</p><a href="https://www.equantum.com.py/" target="_blank" rel="noreferrer">Conocer eQuantum ↗</a></div>
-          <div className="rr-eq-numbers"><div><strong>18</strong><span>proyectos y demos presentados</span></div><div><strong>Digital</strong><span>estrategia + ejecución</span></div></div>
+          <div className="rr-eq-numbers"><div><strong>20+</strong><span>proyectos y experiencias digitales</span></div><div><strong>Digital</strong><span>estrategia + ejecución</span></div></div>
         </div>
       </section>
 
