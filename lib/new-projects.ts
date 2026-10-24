@@ -1,6 +1,22 @@
 /** Selección exclusiva aprobada para el portafolio público. */
 export const newProjects = [
   {
+    "title": "Ultramaison",
+    "url": "https://ultramaison.co/",
+    "category": "Shopify · Colombia",
+    "description": "Relojería ecommerce en Shopify. Experiencia de trabajo internacional con una marca de Colombia.",
+    "stack": ["Shopify", "Ecommerce internacional"],
+    "status": "Proyecto internacional"
+  },
+  {
+    "title": "Guara Market",
+    "url": "https://guaramarket.com.py/",
+    "category": "Shopify · Paraguay",
+    "description": "Tienda online desarrollada sobre Shopify para el mercado paraguayo.",
+    "stack": ["Shopify", "Ecommerce"],
+    "status": "Proyecto"
+  },
+  {
     "title": "Limpiarte Paraguay",
     "url": "https://limpiarteparaguay.vercel.app/",
     "category": "Ecommerce",
