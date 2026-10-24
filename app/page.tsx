@@ -105,7 +105,7 @@ export default function Home() {
               <div><span>Ubicación</span><strong>Paraguay</strong><small>Disponible para oportunidades</small></div>
             </div>
           </div>
-          <div className="rr-footer-links"><a href="#inicio">Inicio</a><a href="#experiencia">Experiencia</a><a href="#proyectos">Proyectos</a><a href="#perfil">Sobre mí</a><a href="#contacto">Contacto</a></div>
+          <div className="rr-footer-links"><a href="#inicio">Inicio</a><a href="/experiencia">Experiencia</a><a href="#proyectos">Proyectos</a><a href="/experiencia">Sobre mí</a><a href="#contacto">Contacto</a></div>
           <div className="rr-footer-bottom"><span>© 2026 Derlis Aguilera. Todos los derechos reservados.</span><span>Desarrollado por <a href="https://www.equantum.com.py/" target="_blank" rel="noreferrer">eQuantum</a></span></div>
         </div>
       </footer>
