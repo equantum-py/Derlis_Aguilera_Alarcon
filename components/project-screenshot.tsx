@@ -4,6 +4,10 @@ import Image from "next/image";
 
 type Props = { url: string; fallback: string; alt: string; priority?: boolean };
 const screenshotByHost: Record<string, string> = {
+  "ultramaison.co":"ultramaison",
+  "www.ultramaison.co":"ultramaison",
+  "guaramarket.com.py":"guara-market",
+  "www.guaramarket.com.py":"guara-market",
   "chebagels.vercel.app":"che-bagels",
   "santamaria-indol.vercel.app":"santa-maria",
   "limpiarteparaguay.vercel.app":"limpiarte",
