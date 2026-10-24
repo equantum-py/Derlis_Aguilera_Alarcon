@@ -3,6 +3,8 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const sites = [
+  ["ultramaison", "https://ultramaison.co/"],
+  ["guara-market", "https://guaramarket.com.py/"],
   [
     "limpiarte",
     "https://limpiarteparaguay.vercel.app/"
