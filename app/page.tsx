@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ProjectScreenshot } from "../components/project-screenshot";
 import { Reveal } from "../components/reveal";
 import { contact, experiences, kpis, projects } from "../lib/portfolio-data";
 import { expandedToolCategories } from "../lib/professional-profile";
@@ -43,7 +44,7 @@ export default function Home() {
             <div className="rr-work-showcase" aria-label="Vista previa de proyectos realizados">
               {projects.slice(0,3).map((project, index) => (
                 <a key={project.title} href={`https://${project.website}`} target="_blank" rel="noreferrer" className={`rr-showcase-card rr-showcase-${index + 1}`}>
-                  <Image src={project.image} alt={`Captura del proyecto ${project.title}`} width={620} height={390} priority={index === 0} />
+                  <ProjectScreenshot url={`https://${project.website}`} fallback={project.image} alt={`Vista del sitio ${project.title}`} />
                   <span>{project.title} ↗</span>
                 </a>
               ))}
@@ -71,7 +72,7 @@ export default function Home() {
               <Reveal key={project.title}>
                 <article>
                   <a className="rr-project-image" href={`https://${project.website}`} target="_blank" rel="noreferrer">
-                    <Image src={project.image} alt={project.title} width={420} height={250} />
+                    <ProjectScreenshot url={`https://${project.website}`} fallback={project.image} alt={`Vista del sitio ${project.title}`} />
                     <span>Ver ↗</span>
                   </a>
                   <div className="rr-project-body"><small>0{index + 1} / {project.metric}</small><h3>{project.title}</h3><p>{project.description}</p><div className="rr-tags">{project.stack.slice(0, 3).map(tag => <span key={tag}>{tag}</span>)}</div></div>
