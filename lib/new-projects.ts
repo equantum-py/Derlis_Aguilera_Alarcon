@@ -9,5 +9,5 @@ export const newProjects = [
  {title:"eQuantum Equipo",url:"",category:"Sistema interno",description:"Gestión de usuarios, tareas, documentos y operaciones de equipo.",stack:["Next.js","Supabase","TypeScript"],status:"Privado"},
  {title:"InYou",url:"https://chocolate-squirrel-724944.hostingersite.com/",category:"Web y administración",description:"Sitio y panel administrativo para gestionar productos, colecciones y pedidos.",stack:["PHP","SQL","HTML","CSS"],status:"En desarrollo"},
  {title:"OportuLab",url:"",category:"Aplicación PWA",description:"Experiencia web progresiva, navegación e instalación mobile.",stack:["PWA","JavaScript"],status:"En desarrollo"},
- {title:"Vitalis",url:"",category:"App de salud y eventos",description:"Aplicación de cobertura de eventos, atención de pacientes y panel administrativo.",stack:["App","Panel admin","UX/UI"],status:"Demo privada"}
+ {title:"Vitalis",url:"https://vitaliserviciomedico.vercel.app/",category:"App de salud y eventos",description:"Aplicación de cobertura de eventos, atención de pacientes y panel administrativo.",stack:["App","Panel admin","UX/UI"],status:"Demo privada"}
 ] as const;
