@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/portfolio-screenshots.yml"
+      - "scripts/capture-portfolio.cjs"
 permissions:
   contents: write
 jobs:
