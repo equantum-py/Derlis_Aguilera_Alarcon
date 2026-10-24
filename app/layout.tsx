@@ -7,11 +7,11 @@ import "./fastona.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://derlis-aguilera-alarcon.vercel.app"),
   title: {
-    default: "Derlis Aguilera | Ecommerce · Digital Performance · Data",
+    default: "Derlis Aguilera | Desarrollo web, apps, ecommerce y marketing digital",
     template: "%s | Derlis Aguilera",
   },
   description:
-    "Portafolio profesional de Derlis Aguilera. Ecommerce, digital performance, analítica, Shopify, Google Ads, GA4, dashboards, datos y automatización.",
+    "Proyectos y servicios de desarrollo web, aplicaciones, Shopify, ecommerce, Google Ads, Meta Ads, Google Analytics 4 y diseño digital en Paraguay.",
   keywords: [
     "Derlis Aguilera",
     "Ecommerce Paraguay",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Derlis Aguilera | Ecommerce · Digital Performance · Data",
-    description: "Ecommerce, performance y datos aplicados al crecimiento de negocios digitales.",
+    title: "Derlis Aguilera | Desarrollo web, apps, ecommerce y marketing digital",
+    description: "Desarrollo web, apps, ecommerce y marketing digital para empresas.",
     type: "website",
     locale: "es_PY",
     url: "/",
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Derlis Aguilera | Ecommerce · Digital Performance · Data",
-    description: "Ecommerce, performance, analítica y automatización para impulsar resultados digitales.",
+    title: "Derlis Aguilera | Desarrollo web, apps, ecommerce y marketing digital",
+    description: "Webs, apps, Shopify, Google Ads, Meta Ads y analítica para hacer crecer negocios.",
   },
   robots: { index: true, follow: true },
 };
