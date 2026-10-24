@@ -19,4 +19,5 @@ export const newProjects = [
  {title:"Portal Verde",url:"https://portalverdepy.vercel.app/",category:"Web comercial",description:"Portal digital comercial.",stack:["Diseño web"],status:"Proyecto"},
  {title:"Todo Servicios PY",url:"https://todoserviciospy.vercel.app/",category:"Web de servicios",description:"Catálogo digital de servicios.",stack:["Diseño web"],status:"Proyecto"},
  {title:"Corpicia",url:"https://www.corpicia.com/",category:"Web corporativa",description:"Sitio institucional y comercial.",stack:["Diseño web"],status:"Proyecto"},
+ {title:"Marmolería Pietra",url:"https://marmoleriapietra.com/",category:"Web corporativa",description:"Diseño y desarrollo de sitio para marmolería.",stack:["Diseño web"],status:"Proyecto"},
 ] as const;
