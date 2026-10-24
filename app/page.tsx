@@ -74,7 +74,7 @@ export default function Home() {
         <div className="rr-container">
           <Reveal><div className="rr-section-head"><p>Servicios digitales</p><h2>Soluciones para crear, vender <span>y hacer crecer tu negocio.</span></h2></div></Reveal>
           <div className="rr-profile-grid">
-            <Reveal><article><span>01</span><h3>Web, apps y sistemas</h3><p>Diseño web, landing pages, aplicaciones, paneles administrativos y soluciones a medida.</p><div>Next.js · React · UX/UI · Vercel</div></article></Reveal>
+            <Reveal><article><span>01</span><h3>Web, apps y sistemas</h3><p>Diseño web, landing pages, aplicaciones, paneles administrativos y soluciones a medida.</p><div>Next.js · React · UX/UI · Desarrollo web</div></article></Reveal>
             <Reveal><article><span>02</span><h3>Ecommerce y Shopify</h3><p>Creación y optimización de tiendas, catálogos, promociones, conversiones y Google Merchant Center.</p><div>Shopify · Ecommerce · Merchant Center</div></article></Reveal>
             <Reveal><article><span>03</span><h3>Publicidad y analítica</h3><p>Campañas en Google Ads y Meta Ads, medición con GA4, dashboards, identidad visual y packaging.</p><div>Google Ads · Meta Ads · GA4 · Diseño</div></article></Reveal>
           </div>
@@ -119,7 +119,7 @@ export default function Home() {
       <section className="rr-stack">
         <div className="rr-container">
           <div className="rr-stack-title"><span>Tecnologías y plataformas</span><p>Trabajo con herramientas profesionales para desarrollar, vender y medir.</p></div>
-          <div className="rr-stack-items">{["JavaScript","TypeScript","Python","PHP","HTML5","CSS3","SQL","React","Next.js","Node.js","FastAPI","Tailwind CSS","PostgreSQL","Supabase","Neon","Prisma","Shopify Liquid","Git","GitHub","Vercel","APIs REST","PWA","Figma","GA4","Google Ads","Meta Ads"].map(item => <span key={item}>{item}</span>)}</div>
+          <div className="rr-stack-items">{["JavaScript","TypeScript","Python","PHP","HTML5","CSS3","SQL","React","Next.js","Node.js","FastAPI","Tailwind CSS","PostgreSQL","Supabase","Neon","Prisma","Shopify Liquid","Git","GitHub","Despliegue web","APIs REST","PWA","Figma","GA4","Google Ads","Meta Ads"].map(item => <span key={item}>{item}</span>)}</div>
         </div>
       </section>
 
