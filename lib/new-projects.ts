@@ -14,4 +14,5 @@ export const newProjects = [
  {title:"Arquitecta Diana",url:"https://arquitectadiana.vercel.app/",category:"Arquitectura",description:"Portafolio de arquitectura.",stack:["Diseño web"],status:"Proyecto"},
  {title:"Ecotritura Paraguay",url:"https://ecotrituraparaguay.vercel.app/",category:"Web corporativa",description:"Presentación digital de servicios.",stack:["Diseño web"],status:"Proyecto"},
  {title:"Ruavera",url:"https://ruavera.vercel.app/",category:"Web comercial",description:"Experiencia web comercial.",stack:["Diseño web"],status:"Proyecto"},
+ {title:"Jolie Jewelry",url:"https://joliejewelry.vercel.app/",category:"Ecommerce",description:"Joyería y catálogo digital.",stack:["Ecommerce","Diseño web"],status:"Proyecto"},
 ] as const;
