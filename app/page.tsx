@@ -1,10 +1,9 @@
 import { ProjectScreenshot } from "../components/project-screenshot";
 import { Reveal } from "../components/reveal";
-import { contact, experiences, kpis, projects } from "../lib/portfolio-data";
+import { contact } from "../lib/portfolio-data";
 import { newProjects } from "../lib/new-projects";
 
-const featuredProjects = projects.filter((project) => !["Corpicia","Marmolería Pietra"].includes(project.title));
-const highlightedProjects = newProjects.filter((project) => project.url && !["eQuantum Consulting","Campamento CBG","InYou","Plataforma Arbitral APF"].includes(project.title));
+const highlightedProjects = newProjects;
 
 export default function Home() {
   return (
@@ -98,21 +97,6 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
-          <div className="rr-featured-intro rr-previous-intro"><strong>Más proyectos y experiencia</strong><span>Productos propios, desarrollo web y gestión de ecommerce.</span></div>
-          <div className="rr-project-grid">
-            {featuredProjects.map((project) => (
-              <Reveal key={project.title}>
-                <article>
-                  <a className="rr-project-image" href={`https://${project.website}`} target="_blank" rel="noreferrer">
-                    <img src={project.image} alt={`Imagen del proyecto ${project.title}`} loading="lazy" />
-                    <span>Visitar ↗</span>
-                  </a>
-                  <div className="rr-project-body"><small>{project.metric}</small><h3><a href={`https://${project.website}`} target="_blank" rel="noreferrer">{project.title}</a></h3><p>{project.description}</p><div className="rr-tags">{project.stack.slice(0, 4).map(tag => <span key={tag}>{tag}</span>)}</div></div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-          <a className="rr-detail-link" href="/proyectos">Ver el catálogo completo →</a>
         </div>
       </section>
 
@@ -126,7 +110,7 @@ export default function Home() {
       <section className="rr-equantum">
         <div className="rr-container rr-equantum-grid">
           <div><p>Emprendimiento</p><h2>eQuantum<span>.</span></h2><p className="rr-equantum-copy">Consultoría digital para empresas que necesitan ordenar, desarrollar y hacer crecer su negocio.</p><a href="https://www.equantum.com.py/" target="_blank" rel="noreferrer">Conocer eQuantum ↗</a></div>
-          <div className="rr-eq-numbers"><div><strong>20+</strong><span>proyectos y experiencias digitales</span></div><div><strong>Digital</strong><span>estrategia + ejecución</span></div></div>
+          <div className="rr-eq-numbers"><div><strong>15</strong><span>proyectos seleccionados</span></div><div><strong>Digital</strong><span>estrategia + ejecución</span></div></div>
         </div>
       </section>
 
