@@ -12,4 +12,5 @@ export const newProjects = [
  {title:"Vitalis",url:"https://vitaliserviciomedico.vercel.app/",category:"App de salud y eventos",description:"Aplicación de cobertura de eventos, atención de pacientes y panel administrativo.",stack:["App","Panel admin","UX/UI"],status:"Demo privada"}
  {title:"Nathaly Chamorro",url:"https://nathalychamorro.vercel.app/",category:"Web profesional",description:"Sitio web profesional.",stack:["Diseño web"],status:"Proyecto"},
  {title:"Arquitecta Diana",url:"https://arquitectadiana.vercel.app/",category:"Arquitectura",description:"Portafolio de arquitectura.",stack:["Diseño web"],status:"Proyecto"},
+ {title:"Ecotritura Paraguay",url:"https://ecotrituraparaguay.vercel.app/",category:"Web corporativa",description:"Presentación digital de servicios.",stack:["Diseño web"],status:"Proyecto"},
 ] as const;
