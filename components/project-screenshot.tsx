@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
-type Props = { url: string; fallback: string; alt: string };
+type Props = { url: string; fallback: string; alt: string; priority?: boolean };
 const screenshotByHost: Record<string, string> = {
   "chebagels.vercel.app":"che-bagels",
   "santamaria-indol.vercel.app":"santa-maria",
@@ -30,7 +31,7 @@ const screenshotByHost: Record<string, string> = {
   "portalverdepy.vercel.app":"portal-verde",
   "todoserviciospy.vercel.app":"todo-servicios",
 };
-export function ProjectScreenshot({ url, fallback, alt }: Props) {
+export function ProjectScreenshot({ url, fallback, alt, priority = false }: Props) {
   const [stage, setStage] = useState(0);
   let host = "";
   try { host = new URL(url).hostname; } catch { /* URL opcional */ }
@@ -39,7 +40,15 @@ export function ProjectScreenshot({ url, fallback, alt }: Props) {
   if (stage >= images.length) return <div className="rr-preview-unavailable" role="img" aria-label={alt}>
     <span>PROYECTO DIGITAL</span><strong>{alt.replace(/^Vista (del proyecto|del sitio|de la aplicación)\s*/i, "")}</strong><small>Hacé clic para visitar el proyecto</small>
   </div>;
-  return <img src={images[stage]} alt={alt} loading="lazy" decoding="async"
+  return <Image
+    src={images[stage]}
+    alt={alt}
+    width={priority ? 1000 : 760}
+    height={priority ? 630 : 475}
+    sizes={priority ? "(max-width: 800px) 80vw, 48vw" : "(max-width: 800px) 100vw, 46vw"}
+    quality={65}
+    priority={priority}
+    loading={priority ? "eager" : "lazy"}
     onError={() => setStage((previous) => previous + 1)}
     style={{ display:"block",width:"100%",height:"100%",objectFit:"cover",objectPosition:"top" }}
   />;
