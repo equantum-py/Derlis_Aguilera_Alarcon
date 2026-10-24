@@ -44,7 +44,7 @@ export default function Home() {
               <a className="rr-device rr-device-laptop" href="https://chebagels.vercel.app/" target="_blank" rel="noreferrer" aria-label="Ver ecommerce CHE Bagels">
                 <div className="rr-laptop-screen">
                   <div className="rr-screen-top"><span/><span/><span/><small>CHE Bagels · Ecommerce</small></div>
-                  <ProjectScreenshot url="https://chebagels.vercel.app/" fallback="" alt="Vista de CHE Bagels en laptop" />
+                  <ProjectScreenshot url="https://chebagels.vercel.app/" fallback="" alt="Vista de CHE Bagels en laptop" priority />
                 </div>
                 <div className="rr-laptop-base"/>
                 <span className="rr-device-label">CHE Bagels <b>Ecommerce ↗</b></span>
@@ -52,7 +52,7 @@ export default function Home() {
               <a className="rr-device rr-device-phone" href="https://vitaliserviciomedico.vercel.app/" target="_blank" rel="noreferrer" aria-label="Ver aplicación Vitalis">
                 <div className="rr-phone-shell">
                   <div className="rr-phone-island"/>
-                  <div className="rr-phone-content"><ProjectScreenshot url="https://vitaliserviciomedico.vercel.app/" fallback="" alt="Vista de Vitalis en celular" /></div>
+                  <div className="rr-phone-content"><ProjectScreenshot url="https://vitaliserviciomedico.vercel.app/" fallback="" alt="Vista de Vitalis en celular" priority /></div>
                   <div className="rr-phone-bar"/>
                 </div>
                 <span className="rr-device-label">Vitalis <b>Aplicación ↗</b></span>
@@ -60,7 +60,7 @@ export default function Home() {
               <a className="rr-device rr-device-mini" href="https://limpiarteparaguay.vercel.app/" target="_blank" rel="noreferrer" aria-label="Ver ecommerce Limpiarte">
                 <div className="rr-mini-screen">
                   <div className="rr-screen-top"><span/><span/><span/><small>Limpiarte</small></div>
-                  <ProjectScreenshot url="https://limpiarteparaguay.vercel.app/" fallback="" alt="Vista de Limpiarte en laptop" />
+                  <ProjectScreenshot url="https://limpiarteparaguay.vercel.app/" fallback="" alt="Vista de Limpiarte en laptop" priority />
                 </div>
                 <span className="rr-device-label">Limpiarte <b>Ecommerce ↗</b></span>
               </a>
