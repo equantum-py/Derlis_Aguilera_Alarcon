@@ -18,4 +18,5 @@ export const newProjects = [
  {title:"Haunted PSI",url:"https://haunted-psi.vercel.app/",category:"Experiencia web",description:"Experiencia digital interactiva.",stack:["Diseño web"],status:"Proyecto"},
  {title:"Portal Verde",url:"https://portalverdepy.vercel.app/",category:"Web comercial",description:"Portal digital comercial.",stack:["Diseño web"],status:"Proyecto"},
  {title:"Todo Servicios PY",url:"https://todoserviciospy.vercel.app/",category:"Web de servicios",description:"Catálogo digital de servicios.",stack:["Diseño web"],status:"Proyecto"},
+ {title:"Corpicia",url:"https://www.corpicia.com/",category:"Web corporativa",description:"Sitio institucional y comercial.",stack:["Diseño web"],status:"Proyecto"},
 ] as const;
