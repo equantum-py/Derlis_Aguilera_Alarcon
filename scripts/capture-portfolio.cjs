@@ -3,31 +3,68 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const sites = [
-  ["che-bagels", "https://chebagels.vercel.app/"],
-  ["santa-maria", "https://santamaria-indol.vercel.app/"],
-  ["limpiarte", "https://limpiarteparaguay.vercel.app/"],
-  ["vitalis", "https://vitaliserviciomedico.vercel.app/"],
-  ["relato-estrategico", "https://relatoestrategico.vercel.app/"],
-  ["corpicia", "https://www.corpicia.com/"],
-  ["nathaly-chamorro", "https://nathalychamorro.vercel.app/"],
-  ["arquitecta-diana", "https://arquitectadiana.vercel.app/"],
-  ["ecotritura-paraguay", "https://ecotrituraparaguay.vercel.app/"],
-  ["ruavera", "https://ruavera.vercel.app/"],
-  ["jolie-jewelry", "https://joliejewelry.vercel.app/"],
-  ["haunted-psi", "https://haunted-psi.vercel.app/"],
-  ["portal-verde", "https://portalverdepy.vercel.app/"],
-  ["todo-servicios", "https://todoserviciospy.vercel.app/"],
-  ["marmoleria-pietra", "https://marmoleriapietra.com/"],
-  ["apf", "https://app-apf.vercel.app/"],
-  ["equantum", "https://www.equantum.com.py/"],
-  ["campamento-cbg", "https://campamentocbg.vercel.app/"],
-  ["inyou", "https://chocolate-squirrel-724944.hostingersite.com/"],
-  ["inverfin", "https://inverfin.com.py/"],
-  ["fortis", "https://fortis.com.py/"],
-  ["cooperativa-vida-luz", "https://cooperativavidaluzcompy.vercel.app/"],
-  ["portal-cooperativo", "https://asoapp.vercel.app/"]
+  [
+    "limpiarte",
+    "https://limpiarteparaguay.vercel.app/"
+  ],
+  [
+    "santa-maria",
+    "https://santamaria-indol.vercel.app/"
+  ],
+  [
+    "corpicia",
+    "https://www.corpicia.com/"
+  ],
+  [
+    "relato-estrategico",
+    "https://relatoestrategico.vercel.app/"
+  ],
+  [
+    "che-bagels",
+    "https://chebagels.vercel.app/"
+  ],
+  [
+    "vitalis",
+    "https://vitaliserviciomedico.vercel.app/"
+  ],
+  [
+    "nathaly-chamorro",
+    "https://nathalychamorro.vercel.app/"
+  ],
+  [
+    "arquitecta-diana",
+    "https://arquitectadiana.vercel.app/"
+  ],
+  [
+    "ecotritura-paraguay",
+    "https://ecotrituraparaguay.vercel.app/"
+  ],
+  [
+    "ruavera",
+    "https://ruavera.vercel.app/"
+  ],
+  [
+    "jolie-jewelry",
+    "https://joliejewelry.vercel.app/"
+  ],
+  [
+    "haunted-psi",
+    "https://haunted-psi.vercel.app/"
+  ],
+  [
+    "portal-verde",
+    "https://portalverdepy.vercel.app/"
+  ],
+  [
+    "todo-servicios",
+    "https://todoserviciospy.vercel.app/"
+  ],
+  [
+    "marmoleria-pietra",
+    "https://marmoleriapietra.com/"
+  ]
 ];
-const mobile = new Set(["vitalis", "apf"]);
+const mobile = new Set(["vitalis"]);
 const output = path.join(process.cwd(), "public/screenshots");
 fs.mkdirSync(output, { recursive: true });
 
