@@ -88,11 +88,11 @@ export default function Home() {
             {highlightedProjects.map((project, index) => (
               <Reveal key={project.title}>
                 <article className={index < 2 ? "rr-premium-project" : ""}>
-                  {project.url ? <a className="rr-project-image" href={project.url} target="_blank" rel="noreferrer">
+                  <a className="rr-project-image" href={project.url} target="_blank" rel="noreferrer">
                     <ProjectScreenshot url={project.url} fallback="" alt={`Vista del proyecto ${project.title}`} />
                     <span>Visitar ↗</span>
-                  </a> : <div className="rr-project-private"><span>{project.category}</span><strong>{project.title}</strong><small>{project.status}</small></div>}
-                  <div className="rr-project-body"><small>{project.category} · {project.status}</small><h3>{project.url ? <a href={project.url} target="_blank" rel="noreferrer">{project.title}</a> : project.title}</h3><p>{project.description}</p><div className="rr-tags">{project.stack.map(tag => <span key={tag}>{tag}</span>)}</div></div>
+                  </a>
+                  <div className="rr-project-body"><small>{project.category} · {project.status}</small><h3><a href={project.url} target="_blank" rel="noreferrer">{project.title}</a></h3><p>{project.description}</p><div className="rr-tags">{project.stack.map(tag => <span key={tag}>{tag}</span>)}</div></div>
                 </article>
               </Reveal>
             ))}
