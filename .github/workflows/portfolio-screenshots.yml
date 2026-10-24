@@ -51,6 +51,15 @@ jobs:
           portal-cooperativo|https://asoapp.vercel.app/
           quantum-life-manager|https://quantum-life-manager.vercel.app/dashboard
           marmoleria-pietra|https://marmoleriapietra.com/
+          vitalis|https://vitaliserviciomedico.vercel.app/
+          nathaly-chamorro|https://nathalychamorro.vercel.app/
+          arquitecta-diana|https://arquitectadiana.vercel.app/
+          ecotritura-paraguay|https://ecotrituraparaguay.vercel.app/
+          ruavera|https://ruavera.vercel.app/
+          jolie-jewelry|https://joliejewelry.vercel.app/
+          haunted-psi|https://haunted-psi.vercel.app/
+          portal-verde|https://portalverdepy.vercel.app/
+          todo-servicios|https://todoserviciospy.vercel.app/
           SITES
       - name: Guardar capturas en main
         shell: bash
