@@ -30,18 +30,17 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={0.08}>
-            <aside className="rr-executive-panel" aria-label="Resumen de mi perfil profesional">
-              <div className="rr-executive-top"><span>PERFIL PROFESIONAL</span><span>PARAGUAY · INTERNACIONAL</span></div>
-              <div className="rr-executive-monogram" aria-hidden="true">DA<span>.</span></div>
-              <div className="rr-executive-name">Derlis Aguilera</div>
-              <p className="rr-executive-role">Ecommerce Strategy &amp; Operations</p>
-              <div className="rr-executive-divider" />
-              <div className="rr-executive-skills">
-                <div><span>01</span><strong>Estrategia comercial</strong><small>Negocio · Crecimiento · Ecommerce</small></div>
-                <div><span>02</span><strong>Gestión y liderazgo</strong><small>Equipos · Operaciones · Procesos</small></div>
-                <div><span>03</span><strong>Marketing y analítica</strong><small>Campañas · KPIs · Datos</small></div>
+            <aside aria-label="Resumen profesional" style={{background:"#ffffff",color:"#12232c",borderRadius:16,padding:"clamp(26px,3vw,46px)",boxShadow:"0 24px 70px rgba(0,0,0,.15)"}}>
+              <p style={{fontSize:12,fontWeight:750,letterSpacing:".08em",textTransform:"uppercase",color:"#147e70",margin:"0 0 22px"}}>Perfil profesional</p>
+              <h2 style={{fontSize:"clamp(28px,3vw,39px)",lineHeight:1.12,letterSpacing:"-.045em",margin:"0 0 10px",color:"#12232c"}}>Derlis Aguilera</h2>
+              <p style={{fontSize:16,fontWeight:650,color:"#30505a",margin:"0 0 23px"}}>Ecommerce Strategy &amp; Operations</p>
+              <p style={{fontSize:15,lineHeight:1.75,color:"#52646b",margin:"0 0 25px"}}>Experiencia en la gestión de canales digitales, coordinación de equipos y análisis comercial. Trabajo conectando las necesidades del negocio con marketing, tecnología y operaciones.</p>
+              <div style={{borderTop:"1px solid #e2e9e7",paddingTop:21,display:"grid",gap:12}}>
+                <p style={{margin:0,fontSize:13,color:"#253d44"}}><strong>Especialidades:</strong> Ecommerce, marketing digital y analítica.</p>
+                <p style={{margin:0,fontSize:13,color:"#253d44"}}><strong>Experiencia:</strong> Paraguay y proyectos para Colombia.</p>
+                <p style={{margin:0,fontSize:13,color:"#253d44"}}><strong>Enfoque:</strong> Gestión, crecimiento y mejora continua.</p>
               </div>
-              <a className="rr-executive-link" href="/sobre-mi">Conocer mi trayectoria <span>↗</span></a>
+              <a href="/sobre-mi" style={{display:"inline-flex",marginTop:28,fontSize:14,fontWeight:800,color:"#087f6d",textDecoration:"none"}}>Conocer mi historia ↗</a>
             </aside>
           </Reveal>       </div>
       </section>
