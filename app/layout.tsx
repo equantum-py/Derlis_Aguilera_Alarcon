@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Analytics } from "../components/analytics";
+import { SiteHeader } from "../components/site-header";
 import "./globals.css";
 import "./fastona.css";
+import "./site-header.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://derlis-aguilera-alarcon.vercel.app"),
@@ -46,5 +48,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
-  return <html lang="es-PY"><body><Analytics />{children}</body></html>;
+  return <html lang="es-PY"><body><Analytics /><SiteHeader />{children}</body></html>;
 }
