@@ -16,7 +16,7 @@ const skills = [
 
 export default function SobreMiPage() {
   return <main className="about-page">
-    <header className="about-nav"><a className="about-logo" href="/">DA<span>.</span></a><nav aria-label="Navegación"><a href="/">Inicio</a><a href="/proyectos">Proyectos</a><a href="/experiencia">Experiencia</a><a href="#contacto">Contacto</a></nav><a className="about-cv" href={contact.cv} download>Descargar CV ↓</a></header>
+
     <section className="about-hero">
       <div className="about-container about-hero-grid">
         <div className="about-intro"><p className="about-eyebrow">LA PERSONA DETRÁS DE LOS PROYECTOS</p><h1>Hola, soy <span>Derlis Aguilera.</span></h1><p className="about-lead">Soy un profesional de ecommerce, estrategia digital y marketing con experiencia en operaciones comerciales, liderazgo de equipos, analítica y tecnología.</p><p>Mi camino comenzó en las ventas y las operaciones comerciales. Trabajar de cerca con clientes, equipos y tiendas online me enseñó algo importante: la tecnología tiene valor cuando resuelve problemas reales.</p><div className="about-actions"><a href="/proyectos">Conocer mis proyectos ↗</a><a href="#historia">Mi historia ↓</a></div></div>
