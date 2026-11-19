@@ -30,33 +30,20 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={0.08}>
-            <div className="rr-device-showcase" aria-label="Desarrollos recientes en distintos dispositivos">
-              <a className="rr-device rr-device-laptop" href="https://chebagels.vercel.app/" target="_blank" rel="noreferrer" aria-label="Ver ecommerce CHE Bagels">
-                <div className="rr-laptop-screen">
-                  <div className="rr-screen-top"><span/><span/><span/><small>CHE Bagels · Ecommerce</small></div>
-                  <ProjectScreenshot url="https://chebagels.vercel.app/" fallback="" alt="Vista de CHE Bagels en laptop" priority />
-                </div>
-                <div className="rr-laptop-base"/>
-                <span className="rr-device-label">CHE Bagels <b>Ecommerce ↗</b></span>
-              </a>
-              <a className="rr-device rr-device-phone" href="https://vitaliserviciomedico.vercel.app/" target="_blank" rel="noreferrer" aria-label="Ver aplicación Vitalis">
-                <div className="rr-phone-shell">
-                  <div className="rr-phone-island"/>
-                  <div className="rr-phone-content"><ProjectScreenshot url="https://vitaliserviciomedico.vercel.app/" fallback="" alt="Vista de Vitalis en celular" /></div>
-                  <div className="rr-phone-bar"/>
-                </div>
-                <span className="rr-device-label">Vitalis <b>Aplicación ↗</b></span>
-              </a>
-              <a className="rr-device rr-device-mini" href="https://limpiarteparaguay.vercel.app/" target="_blank" rel="noreferrer" aria-label="Ver ecommerce Limpiarte">
-                <div className="rr-mini-screen">
-                  <div className="rr-screen-top"><span/><span/><span/><small>Limpiarte</small></div>
-                  <ProjectScreenshot url="https://limpiarteparaguay.vercel.app/" fallback="" alt="Vista de Limpiarte en laptop" />
-                </div>
-                <span className="rr-device-label">Limpiarte <b>Ecommerce ↗</b></span>
-              </a>
-            </div>
-          </Reveal>
-        </div>
+            <aside className="rr-executive-panel" aria-label="Resumen de mi perfil profesional">
+              <div className="rr-executive-top"><span>PERFIL PROFESIONAL</span><span>PARAGUAY · INTERNACIONAL</span></div>
+              <div className="rr-executive-monogram" aria-hidden="true">DA<span>.</span></div>
+              <div className="rr-executive-name">Derlis Aguilera</div>
+              <p className="rr-executive-role">Ecommerce Strategy &amp; Operations</p>
+              <div className="rr-executive-divider" />
+              <div className="rr-executive-skills">
+                <div><span>01</span><strong>Estrategia comercial</strong><small>Negocio · Crecimiento · Ecommerce</small></div>
+                <div><span>02</span><strong>Gestión y liderazgo</strong><small>Equipos · Operaciones · Procesos</small></div>
+                <div><span>03</span><strong>Marketing y analítica</strong><small>Campañas · KPIs · Datos</small></div>
+              </div>
+              <a className="rr-executive-link" href="/sobre-mi">Conocer mi trayectoria <span>↗</span></a>
+            </aside>
+          </Reveal>       </div>
       </section>
 
       <section className="rr-section rr-profile" id="perfil">
