@@ -5,7 +5,7 @@ import { newProjects } from "../../lib/new-projects";
 
 export default function ProyectosPage() {
   return <main className="portfolio-catalog">
-    <header className="catalog-nav"><a href="/">DA<span>.</span></a><a href="/">← Volver al inicio</a><a href={contact.cv} download>Descargar CV ↓</a></header>
+
     <section className="catalog-intro"><p>PORTAFOLIO / PROYECTOS SELECCIONADOS</p><h1>Diseños que <em>podés explorar.</em></h1><p>Una selección de diecisiete páginas, tiendas online y aplicaciones de Paraguay y Colombia. Tocá la imagen o el nombre para visitar cada proyecto.</p></section>
     <section className="catalog-section catalog-section-alt"><div className="catalog-heading"><h2>17 proyectos destacados</h2><p>Diseño web, ecommerce, aplicaciones y experiencias digitales.</p></div>
       <div className="catalog-grid">{newProjects.map(p=><article className="catalog-card" key={p.title}>
