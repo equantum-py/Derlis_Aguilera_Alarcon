@@ -16,8 +16,8 @@ export default function Home() {
             <div className="rr-hero-copy">
               <div className="rr-status"><i /> Perfil profesional · Paraguay</div>
               <p className="rr-kicker">Ecommerce · Marketing digital · Estrategia · Analítica</p>
-              <h1>Soy Derlis Aguilera.<br/><span>Conecto estrategia, datos y tecnología.</span></h1>
-              <p className="rr-lead">Profesional con más de seis años de experiencia en ecommerce, operaciones digitales, marketing y gestión de equipos. Combino visión comercial, análisis de resultados y tecnología para impulsar mejoras reales en los negocios.</p>
+              <h1>Derlis Aguilera<span className="rr-hero-dot">.</span></h1><p className="rr-hero-position">Ecommerce · Estrategia digital · Operaciones</p>
+              <p className="rr-lead">Más de seis años de experiencia conectando estrategia comercial, ecommerce, marketing digital y gestión de equipos. Mi enfoque está en mejorar procesos, analizar resultados y hacer crecer negocios.</p>
               <div className="rr-actions">
                 <a className="rr-primary" href="/experiencia">Ver mi experiencia <span>↗</span></a>
                 <a className="rr-secondary" href="/sobre-mi">Conocer mi historia →</a>
@@ -29,18 +29,7 @@ export default function Home() {
               </div>
             </div>
           </Reveal>
-          <Reveal delay={0.08}>
-            <div className="rr-motion-stage" aria-label="Áreas de experiencia profesional">
-              <div className="rr-motion-topline"><span>ESTRATEGIA &amp; OPERACIONES</span><span>PY / CO</span></div>
-              <div className="rr-motion-center">
-                <span className="rr-motion-overline">MI ENFOQUE PROFESIONAL</span>
-                <div className="rr-motion-word rr-motion-word-one">Negocio<span>.</span></div>
-                <div className="rr-motion-word rr-motion-word-two">Personas<span>.</span></div>
-                <div className="rr-motion-word rr-motion-word-three">Resultados<span>.</span></div>
-              </div>
-              <div className="rr-motion-bottom"><span className="rr-motion-pulse" aria-hidden="true" /><p>Gestión ecommerce, liderazgo de equipos y decisiones basadas en datos.</p><a href="/experiencia" aria-label="Ver experiencia profesional">↗</a></div>
-            </div>
-          </Reveal>       </div>
+       </div>
       </section>
 
       <section className="rr-section rr-profile" id="perfil">
