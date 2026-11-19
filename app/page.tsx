@@ -8,19 +8,7 @@ const highlightedProjects = newProjects;
 export default function Home() {
   return (
     <main className="rr-home">
-      <header className="rr-nav">
-        <a className="rr-brand" href="#inicio" aria-label="Ir al inicio">DA<span>.</span></a>
-        <nav aria-label="Navegación principal">
-          <a href="#inicio">Inicio</a>
-          <a href="#perfil">Mi perfil</a>
-          <a href="/experiencia">Experiencia</a>
-          <a href="/marketing-digital">Marketing digital</a>
-          <a href="#proyectos">Proyectos</a>
-          <a href="/sobre-mi">Sobre mí</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
-        <a className="rr-cv rr-cv-top" href={contact.cv} download>Descargar CV ↓</a>
-      </header>
+
 
       <section className="rr-hero" id="inicio">
         <div className="rr-container rr-hero-grid">
