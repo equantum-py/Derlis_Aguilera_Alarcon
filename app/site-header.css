@@ -11,3 +11,20 @@
 .rr-hero-grid{padding-top:65px}
 @media(max-width:1050px){.site-header-inner{gap:16px}.site-header-links{gap:13px}.site-header-links a{font-size:12px}}
 @media(max-width:800px){.site-header{height:auto;min-height:72px}.site-header-inner{width:calc(100% - 32px);display:grid;grid-template-columns:1fr auto;gap:0;padding-top:12px}.site-header-brand{grid-column:1;grid-row:1}.site-header-cv{grid-column:2;grid-row:1;padding:10px 13px}.site-header-links{grid-column:1/-1;grid-row:2;overflow-x:auto;justify-content:flex-start;width:100%;padding:14px 0 12px;gap:20px;scrollbar-width:thin}.site-header-links a{font-size:12px}.rr-hero-grid{padding-top:55px}}
+
+/* Portada personal: reemplaza las capturas de sitios por un perfil ejecutivo. */
+.rr-executive-panel{position:relative;isolation:isolate;overflow:hidden;min-height:510px;padding:32px;border:1px solid rgba(95,233,208,.28);border-radius:25px;background:linear-gradient(145deg,#122b39 0%,#0d1c2b 60%,#102c35 100%);box-shadow:0 35px 90px rgba(0,0,0,.22);color:#fff}
+.rr-executive-panel:before{content:"";position:absolute;z-index:-1;inset:-110px -180px auto auto;width:380px;height:380px;border:1px solid rgba(31,210,177,.25);border-radius:50%;box-shadow:0 0 0 60px rgba(31,210,177,.035),0 0 0 125px rgba(31,210,177,.025)}
+.rr-executive-top{display:flex;justify-content:space-between;gap:12px;color:#9bdace;font-size:10px;letter-spacing:.12em;font-weight:700}
+.rr-executive-monogram{margin:52px 0 15px;font-size:clamp(90px,10vw,145px);font-weight:900;line-height:.9;letter-spacing:-.09em;color:#f5faf9}
+.rr-executive-monogram span{color:#15cfab}
+.rr-executive-name{font-size:30px;font-weight:800;letter-spacing:-.04em}
+.rr-executive-role{margin:5px 0 0;font-size:14px;color:#b3d0d0}
+.rr-executive-divider{height:1px;background:rgba(255,255,255,.16);margin:25px 0 20px}
+.rr-executive-skills{display:grid;gap:16px}
+.rr-executive-skills>div{display:grid;grid-template-columns:28px 1fr;column-gap:12px;align-items:start}
+.rr-executive-skills>div>span{grid-row:span 2;font-size:12px;font-weight:800;color:#14cdaa}
+.rr-executive-skills strong{font-size:15px}
+.rr-executive-skills small{font-size:12px;color:#b1c4c9;margin-top:3px}
+.rr-executive-link{display:flex;justify-content:space-between;margin-top:26px;padding-top:17px;border-top:1px solid rgba(255,255,255,.16);color:#26dfbc;font-size:13px;font-weight:800}
+@media(max-width:800px){.rr-executive-panel{min-height:auto;padding:25px}.rr-executive-monogram{margin-top:35px;font-size:100px}.rr-executive-name{font-size:27px}}
