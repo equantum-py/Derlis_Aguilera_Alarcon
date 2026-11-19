@@ -16,14 +16,7 @@ export default function ExperienciaPage() {
         WhatsApp
       </a>
 
-      <nav className="nav" aria-label="Navegación principal">
-        <a className="brand" href="/">Derlis Aguilera</a>
-        <div>
-          <a href="/">Inicio</a>
-          <a href="/experiencia">Experiencia</a>
-          <a href="/herramientas">Herramientas</a>
-        </div>
-      </nav>
+
 
       <section className="section page-hero">
         <a className="back-link" href="/">← Volver al inicio</a>
