@@ -12,7 +12,8 @@ export default function Home() {
         <a className="rr-brand" href="#inicio" aria-label="Ir al inicio">DA<span>.</span></a>
         <nav aria-label="Navegación principal">
           <a href="#inicio">Inicio</a>
-          <a href="#servicios">Servicios</a>
+          <a href="#perfil">Mi perfil</a>
+          <a href="/experiencia">Experiencia</a>
           <a href="/marketing-digital">Marketing digital</a>
           <a href="#proyectos">Proyectos</a>
           <a href="/sobre-mi">Sobre mí</a>
@@ -25,13 +26,13 @@ export default function Home() {
         <div className="rr-container rr-hero-grid">
           <Reveal>
             <div className="rr-hero-copy">
-              <div className="rr-status"><i /> Disponible para nuevos proyectos</div>
-              <p className="rr-kicker">Desarrollo web · Apps · Ecommerce · Marketing digital</p>
-              <h1>Desarrollo digital<br/><span>que impulsa negocios.</span></h1>
-              <p className="rr-lead">Diseño y desarrollo páginas web, tiendas Shopify, aplicaciones y estrategias de marketing digital para ayudar a las empresas a vender y crecer.</p>
+              <div className="rr-status"><i /> Perfil profesional · Paraguay</div>
+              <p className="rr-kicker">Ecommerce · Marketing digital · Estrategia · Analítica</p>
+              <h1>Soy Derlis Aguilera.<br/><span>Conecto estrategia, datos y tecnología.</span></h1>
+              <p className="rr-lead">Profesional con más de seis años de experiencia en ecommerce, operaciones digitales, marketing y gestión de equipos. Combino visión comercial, análisis de resultados y tecnología para impulsar mejoras reales en los negocios.</p>
               <div className="rr-actions">
-                <a className="rr-primary" href="#proyectos">Ver proyectos <span>↗</span></a>
-                <a className="rr-secondary" href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noreferrer">Solicitar presupuesto →</a>
+                <a className="rr-primary" href="/experiencia">Ver mi experiencia <span>↗</span></a>
+                <a className="rr-secondary" href="/sobre-mi">Conocer mi historia →</a>
               </div>
               <div className="rr-contact-inline">
                 <a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
@@ -70,21 +71,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="rr-section rr-profile" id="servicios">
+      <section className="rr-section rr-profile" id="perfil">
         <div className="rr-container">
-          <Reveal><div className="rr-section-head"><p>Servicios digitales</p><h2>Soluciones para crear, vender <span>y hacer crecer tu negocio.</span></h2></div></Reveal>
+          <Reveal><div className="rr-section-head"><p>Mi perfil profesional</p><h2>Experiencia que une <span>negocio, marketing y tecnología.</span></h2></div></Reveal>
           <div className="rr-profile-grid">
-            <Reveal><article><span>01</span><h3>Web, apps y sistemas</h3><p>Diseño web, landing pages, aplicaciones, paneles administrativos y soluciones a medida.</p><div>Next.js · React · UX/UI · Desarrollo web</div></article></Reveal>
-            <Reveal><article><span>02</span><h3>Ecommerce y Shopify</h3><p>Creación y optimización de tiendas, catálogos, promociones, conversiones y Google Merchant Center.</p><div>Shopify · Ecommerce · Merchant Center</div></article></Reveal>
-            <Reveal><article><span>03</span><h3>Publicidad y analítica</h3><p>Campañas en Google Ads y Meta Ads, medición con GA4, dashboards, identidad visual y packaging.</p><div>Google Ads · Meta Ads · GA4 · Diseño</div><a href="/marketing-digital" style={{display:"inline-block",marginTop:12,fontWeight:800,fontSize:12,color:"#0b9d86"}}>Ver experiencia en marketing digital ↗</a></article></Reveal>
+            <Reveal><article><span>01</span><h3>Estrategia y operaciones</h3><p>Gestión de canales digitales, coordinación de equipos, procesos comerciales y mejora continua de la experiencia del cliente.</p><div>Ecommerce Strategy · Operaciones · Liderazgo</div></article></Reveal>
+            <Reveal><article><span>02</span><h3>Ecommerce y crecimiento</h3><p>Experiencia en Shopify, gestión de catálogos, promociones, SEO, conversión y análisis de ventas digitales.</p><div>Shopify · SEO · Conversión · KPIs</div></article></Reveal>
+            <Reveal><article><span>03</span><h3>Marketing y analítica</h3><p>Conocimientos de Google Ads, Meta Ads, GA4 y seguimiento de indicadores como CTR, CPC, CPM, alcance y frecuencia.</p><div>Google Ads · Meta Ads · GA4 · Indicadores</div><a href="/marketing-digital" style={{display:"inline-block",marginTop:12,fontWeight:800,fontSize:12,color:"#0b9d86"}}>Ver experiencia en marketing digital ↗</a></article></Reveal>
           </div>
         </div>
       </section>
 
       <section className="rr-section rr-projects" id="proyectos">
         <div className="rr-container">
-          <Reveal><div className="rr-section-head rr-project-head"><p>Portafolio de proyectos</p><h2>Webs, ecommerce y aplicaciones <span>que podés explorar.</span></h2></div></Reveal>
-          <div className="rr-featured-intro"><strong>Proyectos en Paraguay y Colombia</strong><span>Proyectos de Paraguay y Colombia. Diseño, ecommerce y soluciones para marcas que buscan crecer.</span></div>
+          <Reveal><div className="rr-section-head rr-project-head"><p>Proyectos como evidencia</p><h2>Trabajos que reflejan <span>mis conocimientos y experiencia.</span></h2></div></Reveal>
+          <div className="rr-featured-intro"><strong>Experiencia con proyectos de Paraguay y Colombia</strong><span>Una selección de trabajos digitales en los que aplico capacidades de ecommerce, diseño, tecnología y gestión.</span></div>
           <div className="rr-project-grid rr-new-project-grid">
             {highlightedProjects.map((project, index) => (
               <Reveal key={project.title}>
@@ -103,14 +104,14 @@ export default function Home() {
 
       <section className="rr-stack">
         <div className="rr-container">
-          <div className="rr-stack-title"><span>Tecnologías y plataformas</span><p>Trabajo con herramientas profesionales para desarrollar, vender y medir.</p></div>
+          <div className="rr-stack-title"><span>Conocimientos y herramientas</span><p>Competencias que complementan mi experiencia en gestión, marketing, ecommerce y análisis de datos.</p></div>
           <div className="rr-stack-items">{["JavaScript","TypeScript","Python","PHP","HTML5","CSS3","SQL","React","Next.js","Node.js","FastAPI","Tailwind CSS","PostgreSQL","Supabase","Neon","Prisma","Shopify Liquid","Git","GitHub","Despliegue web","APIs REST","PWA","Figma","GA4","Google Ads","Meta Ads"].map(item => <span key={item}>{item}</span>)}</div>
         </div>
       </section>
 
       <section className="rr-equantum">
         <div className="rr-container rr-equantum-grid">
-          <div><p>Emprendimiento</p><h2>eQuantum<span>.</span></h2><p className="rr-equantum-copy">Consultoría digital para empresas que necesitan ordenar, desarrollar y hacer crecer su negocio.</p><a href="https://www.equantum.com.py/" target="_blank" rel="noreferrer">Conocer eQuantum ↗</a></div>
+          <div><p>Parte de mi trayectoria</p><h2>eQuantum<span>.</span></h2><p className="rr-equantum-copy">Además de mi experiencia corporativa, impulso proyectos digitales a través de mi emprendimiento eQuantum, donde aplico conocimientos de tecnología, ecommerce y estrategia.</p><a href="/sobre-mi">Conocer mi historia ↗</a></div>
           <div className="rr-eq-numbers"><div><strong>17</strong><span>proyectos seleccionados</span></div><div><strong>Internacional</strong><span>Paraguay · Colombia</span></div></div>
         </div>
       </section>
@@ -118,10 +119,10 @@ export default function Home() {
       <footer className="rr-footer" id="contacto">
         <div className="rr-container">
           <div className="rr-footer-top">
-            <div className="rr-footer-copy"><p>¿Hablamos?</p><h2>Tu próximo proyecto <span>empieza acá.</span></h2></div>
+            <div className="rr-footer-copy"><p>Contacto profesional</p><h2>Conversemos sobre <span>nuevas oportunidades.</span></h2></div>
             <div className="rr-contact-cards">
-              <a href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noreferrer"><span>WhatsApp</span><strong>{contact.whatsappLabel}</strong><small>Escribirme ahora ↗</small></a>
-              <a href={`mailto:${contact.email}`}><span>Email</span><strong>{contact.email}</strong><small>Enviar correo ↗</small></a>
+              <a href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noreferrer"><span>WhatsApp</span><strong>{contact.whatsappLabel}</strong><small>Contactarme ↗</small></a>
+              <a href={`mailto:${contact.email}`}><span>Email</span><strong>{contact.email}</strong><small>Contacto profesional ↗</small></a>
               <div><span>Ubicación</span><strong>Paraguay</strong><small>Disponible para oportunidades</small></div>
             </div>
           </div>
